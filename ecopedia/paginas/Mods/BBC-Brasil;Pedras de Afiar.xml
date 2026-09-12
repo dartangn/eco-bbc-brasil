@@ -1,0 +1,21 @@
+<ecopedia icon="IronWhetstoneItem">
+  <summary>Repare ferramentas em qualquer lugar: botão direito com a pedra de afiar certa, sem precisar da bancada.</summary>
+
+  <section type="header">Como usar</section>
+  <section>
+Com a pedra de afiar na mão, <b>botão direito</b> repara a ferramenta correspondente, onde você estiver. Neste servidor uma pedra faz o <b>reparo completo</b> (100%).
+  </section>
+
+  <section type="header">As seis pedras</section>
+  <section>
+• [WoodWhetstoneItem] - ferramentas de madeira. [ToolBenchItem], Basic Engineering (qualquer nível).
+• [StoneWhetstoneItem] - ferramentas de pedra. [ToolBenchItem], Basic Engineering 1.
+• [IronWhetstoneItem] - ferramentas de ferro. [GrindstoneItem], Blacksmith 2.
+• [SteelWhetstoneItem] - ferramentas de aço e modernas. [PowerHammerItem], Blacksmith 4.
+• [TractorWhetstoneItem] - os 5 implementos do trator: [SteamTractorScoopItem], [SteamTractorPlowItem], [SteamTractorSowerItem], [SteamTractorHarvesterItem] e [SteamTractorTreeCutterItem]. [AssemblyLineItem], Mechanics 3.
+• [GasolineWhetstoneItem] - [ModernRockDrillItem] e [ChainsawItem]. [PowerHammerItem], Blacksmith 6.
+
+Segundo o autor, também reparam os arcos ([WoodenBowItem], Recurve e [CompositeBowItem]) e os três pulverizadores de tinta.
+  </section>
+
+</ecopedia>

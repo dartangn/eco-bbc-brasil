@@ -1,0 +1,8 @@
+<ecopedia icon="WaterwheelItem">
+  <summary>Roda d'água e moinho de vento não transformam o ambiente externo em industrial.</summary>
+
+  <section>
+<b>Waterwheel Windmill not Industrial</b> (Orflash-EcoSim): segundo o autor, com este mod o seu moinho <b>não transforma o exterior em industrial</b>. O mod substitui os arquivos da [WaterwheelItem], do [WindmillItem], do [SteamEngineItem] e do [CombustionGeneratorItem]; as receitas continuam as do jogo normal.
+  </section>
+
+</ecopedia>

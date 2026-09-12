@@ -1,0 +1,13 @@
+<ecopedia icon="AshlarGraniteItem">
+  <summary>Parede diagonal a 45 graus e coluna de um quarto para os seis tipos de pedra lavrada (Ashlar).</summary>
+
+  <section>
+<b>ExtraShapes</b> (McMiller) acrescenta duas formas de bloco, com as texturas do próprio jogo, para todas as pedras lavradas: [AshlarGraniteItem], [AshlarLimestoneItem], [AshlarBasaltItem], [AshlarGneissItem], [AshlarSandstoneItem] e [AshlarShaleItem].
+
+• <b>Diagonal</b>: parede a 45 graus, com a textura de tijolo lavrado em todas as faces.
+• <b>Quarter Column</b>: coluna de um quarto, com forma dinâmica e textura bruta nas faces que não são da coluna.
+
+As formas aparecem no <b>seletor de forma</b> ao construir com pedra lavrada. Não existem para outros materiais (Mortared, Brick, Lumber, Concrete).
+  </section>
+
+</ecopedia>

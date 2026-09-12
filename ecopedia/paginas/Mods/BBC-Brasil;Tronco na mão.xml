@@ -1,0 +1,22 @@
+<ecopedia icon="IronAxeItem">
+  <summary>Ao derrubar a árvore, o tronco vem direto para a mão; o que não cabe fica no chão em peças de 5; o toco some e entrega a polpa.</summary>
+
+  <section type="header">O que muda</section>
+  <section>
+No Eco normal, a árvore cai inteira, você aperta E no tronco e só consegue pegar peça de até 5 toras; o resto precisa ser cortado com o machado, peça por peça, e o toco fica.
+
+Neste servidor, ao derrubar:
+
+• O <b>tronco vem direto para a mão</b>, até onde ela aguenta (100 toras com a mão vazia, pela pilha 5x).
+• O que <b>não cabe fica no chão já cortado em peças de 5</b>, que se pegam com a tecla E, sem machado.
+• Os <b>resíduos dos galhos</b> (polpa, sementes, fibra) vão para a mochila.
+• O <b>toco desaparece</b> sozinho e entrega a polpa dele, como se você o tivesse cortado.
+  </section>
+
+  <section type="header">Como usar bem</section>
+  <section>
+• Com a <b>mão vazia</b> você leva o máximo. Com outro item na mão, o tronco cai no chão como no jogo normal e você pega as peças de 5 com E.
+• Espere a árvore terminar de cair: a entrega acontece nos primeiros segundos depois da queda.
+  </section>
+
+</ecopedia>

@@ -1,0 +1,1929 @@
+CLASSE -> NOME DE EXIBICAO. O /give usa o NOME DE EXIBICAO.
+Argumentos separados por VIRGULA: /give Modern Axe, 5
+
+AcornItem                              Acorn                            Acorn.cs
+AcornPackItem                          Acorn Pack                       Acorn.cs
+AcornPowderItem                        Acorn Powder                     AcornPowder.cs
+AdobeDoorItem                          Adobe Door                       AdobeDoor.cs
+AdobeItem                              Adobe                            Adobe.cs
+AdornedAshlarBasaltBenchItem           Adorned Ashlar Basalt Bench      AdornedAshlarBasaltBench.cs
+AdornedAshlarBasaltChairItem           Adorned Ashlar Basalt Chair      AdornedAshlarBasaltChair.cs
+AdornedAshlarBasaltTableItem           Adorned Ashlar Basalt Table      AdornedAshlarBasaltTable.cs
+AdornedAshlarGneissBenchItem           Adorned Ashlar Gneiss Bench      AdornedAshlarGneissBench.cs
+AdornedAshlarGneissChairItem           Adorned Ashlar Gneiss Chair      AdornedAshlarGneissChair.cs
+AdornedAshlarGneissTableItem           Adorned Ashlar Gneiss Table      AdornedAshlarGneissTable.cs
+AdornedAshlarGraniteBenchItem          Adorned Ashlar Granite Bench     AdornedAshlarGraniteBench.cs
+AdornedAshlarGraniteChairItem          Adorned Ashlar Granite Chair     AdornedAshlarGraniteChair.cs
+AdornedAshlarGraniteTableItem          Adorned Ashlar Granite Table     AdornedAshlarGraniteTable.cs
+AdornedAshlarLimestoneBenchItem        Adorned Ashlar Limestone Bench   AdornedAshlarLimestoneBench.cs
+AdornedAshlarLimestoneChairItem        Adorned Ashlar Limestone Chair   AdornedAshlarLimestoneChair.cs
+AdornedAshlarLimestoneTableItem        Adorned Ashlar Limestone Table   AdornedAshlarLimestoneTable.cs
+AdornedAshlarSandstoneBenchItem        Adorned Ashlar Sandstone Bench   AdornedAshlarSandstoneBench.cs
+AdornedAshlarSandstoneChairItem        Adorned Ashlar Sandstone Chair   AdornedAshlarSandstoneChair.cs
+AdornedAshlarSandstoneTableItem        Adorned Ashlar Sandstone Table   AdornedAshlarSandstoneTable.cs
+AdornedAshlarShaleBenchItem            Adorned Ashlar Shale Bench       AdornedAshlarShaleBench.cs
+AdornedAshlarShaleChairItem            Adorned Ashlar Shale Chair       AdornedAshlarShaleChair.cs
+AdornedAshlarShaleTableItem            Adorned Ashlar Shale Table       AdornedAshlarShaleTable.cs
+AdornedAshlarStoneBenchItem            Adorned Ashlar Stone Bench       AdornedAshlarStoneBench.cs
+AdornedAshlarStoneChairItem            Adorned Ashlar Stone Chair       AdornedAshlarStoneChair.cs
+AdornedAshlarStoneTableItem            Adorned Ashlar Stone Table       AdornedAshlarStoneTable.cs
+AdvancedBakingSkillBook                Advanced Baking Skill Book       AdvancedBaking.cs
+AdvancedBakingSkillScroll              Advanced Baking Skill Scroll     AdvancedBaking.cs
+AdvancedBakingUpgradeItem              Advanced Baking Upgrade          AdvancedBakingUpgrade.cs
+AdvancedCarpentryTableItem             Advanced Carpentry Table         AdvancedCarpentryTable.cs
+AdvancedCircuitItem                    Advanced Circuit                 AdvancedCircuit.cs
+AdvancedCombustionEngineItem           Advanced Combustion Engine       AdvancedCombustionEngine.cs
+AdvancedCookingSkillBook               Advanced Cooking Skill Book      AdvancedCooking.cs
+AdvancedCookingSkillScroll             Advanced Cooking Skill Scroll    AdvancedCooking.cs
+AdvancedCookingUpgradeItem             Advanced Cooking Upgrade         AdvancedCookingUpgrade.cs
+AdvancedMasonrySkillBook               Advanced Masonry Skill Book      AdvancedMasonry.cs
+AdvancedMasonrySkillScroll             Advanced Masonry Skill Scroll    AdvancedMasonry.cs
+AdvancedMasonryTableItem               Advanced Masonry Table           AdvancedMasonryTable.cs
+AdvancedMasonryUpgradeItem             Advanced Masonry Upgrade         AdvancedMasonryUpgrade.cs
+AdvancedMixologySkillBook              Advanced Mixology Skill Book     Advanced Mixology.cs
+AdvancedMixologySkillScroll            Advanced Mixology Skill Scroll   Advanced Mixology.cs
+AdvancedMixologyTableItem              Advanced Mixology Table          AdvancedMixologyTable.cs
+AdvancedMixologyUpgradeItem            Advanced Mixology Upgrade        MixologyUpgradeAdvanced.cs
+AdvancedPollutionFilterItem            Advanced Pollution Filter        FilterItems.cs
+AdvancedSmeltingSkillBook              Advanced Smelting Skill Book     AdvancedSmelting.cs
+AdvancedSmeltingSkillScroll            Advanced Smelting Skill Scroll   AdvancedSmelting.cs
+AdvancedSmeltingUpgradeItem            Advanced Smelting Upgrade        AdvancedSmeltingUpgrade.cs
+AdvancedTailoringTableItem             Advanced Tailoring Table         AdvancedTailoringTable.cs
+AdvancedUpgradeItem                    Advanced Upgrade                 AdvancedUpgrade.cs
+AdvancedUpgradeLvl1Item                Advanced Upgrade 1               AdvancedUpgradeLvl1.cs
+AdvancedUpgradeLvl2Item                Advanced Upgrade 2               AdvancedUpgradeLvl2.cs
+AdvancedUpgradeLvl3Item                Advanced Upgrade 3               AdvancedUpgradeLvl3.cs
+AdvancedUpgradeLvl4Item                Advanced Upgrade 4               AdvancedUpgradeLvl4.cs
+AdvancedWindmillItem                   Advanced Windmill                AdvancedWindmill.cs
+AgaveJuiceItem                         Agave Juice                      AgaveJuice.cs
+AgaveLeavesItem                        Agave Leaves                     AgaveLeaves.cs
+AgaveSeedItem                          Agave Seed                       AgaveSeed.cs
+AgaveSeedPackItem                      Agave Seed Pack                  AgaveSeed.cs
+AgoutiCarcassItem                      Agouti Carcass                   AgoutiCarcass.cs
+AgoutiEnchiladasItem                   Agouti Enchiladas                AgoutiEnchiladas.cs
+AgricultureResearchPaperAdvancedItem   Agriculture Research Paper Advanced AgricultureResearchPaperAdvanced.cs
+AgricultureResearchPaperBasicItem      Agriculture Research Paper Basic AgricultureResearchPaperBasic.cs
+AgricultureResearchPaperModernItem     Agriculture Research Paper Modern AgricultureResearchPaperModern.cs
+AirPollutionGeneratorItem              Air Pollution Generator          AirPollutionGenerator.cs
+AlchoholItem                           Alcohol                          FermentAlcohol.cs
+AlligatorCarcassItem                   Alligator Carcass                AlligatorCarcass.cs
+AluminaItem                            Alumina                          Alumina.cs
+AluminumBarItem                        Aluminum Bar                     AluminumBar.cs
+AluminumSheetItem                      Aluminum Sheet                   AluminumSheet.cs
+AmanitaMushroomSporesItem              Amanita Mushroom Spores          AmanitaMushroomSpores.cs
+AmanitaMushroomSporesPackItem          Amanita Mushroom Spores Pack     AmanitaMushroomSpores.cs
+AmanitaMushroomsItem                   Amanita Mushrooms                AmanitaMushrooms.cs
+AmendmentsItem                         Amendments                       Amendments.cs
+AnatomyBookItem                        Anatomy Book                     AnatomyBook.cs
+AnvilItem                              Anvil                            Anvil.cs
+ArcticWillowSeedItem                   Arctic Willow Seed               ArcticWillowSeed.cs
+ArcticWillowSeedPackItem               Arctic Willow Seed Pack          ArcticWillowSeed.cs
+ArrastraItem                           Arrastra                         Arrastra.cs
+ArrowItem                              Arrow                            Arrow.cs
+ArtSuppliesItem                        Art Supplies                     ArtSupplies.cs
+AshlarBasaltBenchItem                  Ashlar Basalt Bench              AshlarBasaltBench.cs
+AshlarBasaltChairItem                  Ashlar Basalt Chair              AshlarBasaltChair.cs
+AshlarBasaltDoorItem                   Ashlar Basalt Door               AshlarBasaltDoor.cs
+AshlarBasaltFireplaceItem              Ashlar Basalt Fireplace          AshlarBasaltFireplace.cs
+AshlarBasaltItem                       Ashlar Basalt                    AshlarBasalt.cs
+AshlarBasaltTableItem                  Ashlar Basalt Table              AshlarBasaltTable.cs
+AshlarGneissBenchItem                  Ashlar Gneiss Bench              AshlarGneissBench.cs
+AshlarGneissChairItem                  Ashlar Gneiss Chair              AshlarGneissChair.cs
+AshlarGneissDoorItem                   Ashlar Gneiss Door               AshlarGneissDoor.cs
+AshlarGneissFireplaceItem              Ashlar Gneiss Fireplace          AshlarGneissFireplace.cs
+AshlarGneissItem                       Ashlar Gneiss                    AshlarGneiss.cs
+AshlarGneissTableItem                  Ashlar Gneiss Table              AshlarGneissTable.cs
+AshlarGraniteBenchItem                 Ashlar Granite Bench             AshlarGraniteBench.cs
+AshlarGraniteChairItem                 Ashlar Granite Chair             AshlarGraniteChair.cs
+AshlarGraniteDoorItem                  Ashlar Granite Door              AshlarGraniteDoor.cs
+AshlarGraniteFireplaceItem             Ashlar Granite Fireplace         AshlarGraniteFireplace.cs
+AshlarGraniteItem                      Ashlar Granite                   AshlarGranite.cs
+AshlarGraniteTableItem                 Ashlar Granite Table             AshlarGraniteTable.cs
+AshlarLargeBasaltFountainItem          Ashlar Large Basalt Fountain     AshlarLargeBasaltFountain.cs
+AshlarLargeGneissFountainItem          Ashlar Large Gneiss Fountain     AshlarLargeGneissFountain.cs
+AshlarLargeGraniteFountainItem         Ashlar Large Granite Fountain    AshlarLargeGraniteFountain.cs
+AshlarLargeLimestoneFountainItem       Ashlar Large Limestone Fountain  AshlarLargeLimestoneFountain.cs
+AshlarLargeSandstoneFountainItem       Ashlar Large Sandstone Fountain  AshlarLargeSandstoneFountain.cs
+AshlarLargeShaleFountainItem           Ashlar Large Shale Fountain      AshlarLargeShaleFountain.cs
+AshlarLargeStoneFountainItem           Ashlar Large Stone Fountain      AshlarLargeStoneFountain.cs
+AshlarLimestoneBenchItem               Ashlar Limestone Bench           AshlarLimestoneBench.cs
+AshlarLimestoneChairItem               Ashlar Limestone Chair           AshlarLimestoneChair.cs
+AshlarLimestoneDoorItem                Ashlar Limestone Door            AshlarLimestoneDoor.cs
+AshlarLimestoneFireplaceItem           Ashlar Limestone Fireplace       AshlarLimestoneFireplace.cs
+AshlarLimestoneItem                    Ashlar Limestone                 AshlarLimestone.cs
+AshlarLimestoneTableItem               Ashlar Limestone Table           AshlarLimestoneTable.cs
+AshlarSandstoneBenchItem               Ashlar Sandstone Bench           AshlarSandstoneBench.cs
+AshlarSandstoneChairItem               Ashlar Sandstone Chair           AshlarSandstoneChair.cs
+AshlarSandstoneDoorItem                Ashlar Sandstone Door            AshlarSandstoneDoor.cs
+AshlarSandstoneFireplaceItem           Ashlar Sandstone Fireplace       AshlarSandstoneFireplace.cs
+AshlarSandstoneItem                    Ashlar Sandstone                 AshlarSandstone.cs
+AshlarSandstoneTableItem               Ashlar Sandstone Table           AshlarSandstoneTable.cs
+AshlarShaleBenchItem                   Ashlar Shale Bench               AshlarShaleBench.cs
+AshlarShaleChairItem                   Ashlar Shale Chair               AshlarShaleChair.cs
+AshlarShaleDoorItem                    Ashlar Shale Door                AshlarShaleDoor.cs
+AshlarShaleFireplaceItem               Ashlar Shale Fireplace           AshlarShaleFireplace.cs
+AshlarShaleItem                        Ashlar Shale                     AshlarShale.cs
+AshlarShaleTableItem                   Ashlar Shale Table               AshlarShaleTable.cs
+AshlarSmallBasaltFountainItem          Ashlar Small Basalt Fountain     AshlarSmallBasaltFountain.cs
+AshlarSmallGneissFountainItem          Ashlar Small Gneiss Fountain     AshlarSmallGneissFountain.cs
+AshlarSmallGraniteFountainItem         Ashlar Small Granite Fountain    AshlarSmallGraniteFountain.cs
+AshlarSmallLimestoneFountainItem       Ashlar Small Limestone Fountain  AshlarSmallLimestoneFountain.cs
+AshlarSmallSandstoneFountainItem       Ashlar Small Sandstone Fountain  AshlarSmallSandstoneFountain.cs
+AshlarSmallShaleFountainItem           Ashlar Small Shale Fountain      AshlarSmallShaleFountain.cs
+AshlarSmallStoneFountainItem           Ashlar Small Stone Fountain      AshlarSmallStoneFountain.cs
+AshlarStoneBenchItem                   Ashlar Stone Bench               AshlarStoneBench.cs
+AshlarStoneChairItem                   Ashlar Stone Chair               AshlarStoneChair.cs
+AshlarStoneDoorItem                    Ashlar Stone Door                AshlarStoneDoor.cs
+AshlarStoneFireplaceItem               Ashlar Stone Fireplace           AshlarStoneFireplace.cs
+AshlarStoneTableItem                   Ashlar Stone Table               AshlarStoneTable.cs
+AsphaltConcreteItem                    Asphalt Concrete                 AsphaltConcrete.cs
+AssemblyLineItem                       Assembly Line                    AssemblyLine.cs
+AtlasBookItem                          Atlas Book                       AtlasBook.cs
+AutomaticLoomItem                      Automatic Loom                   AutomaticLoom.cs
+AutumnBerriesTubItem                   Autumn Berries Ice Cream Tub     IceCreamTub.cs
+AutumnCreamTubItem                     Autumn Cream Ice Cream Tub       IceCreamTub.cs
+AutumnStewItem                         Autumn Stew                      AutumnStew.cs
+BakedAgaveItem                         Baked Agave                      BakedAgave.cs
+BakedBeetItem                          Baked Beet                       BakedBeet.cs
+BakedCornItem                          Baked Corn                       BakedCorn.cs
+BakedHeartOfPalmItem                   Baked Heart Of Palm              BakedHeartOfPalm.cs
+BakedMeatItem                          Baked Meat                       BakedMeat.cs
+BakedRoastItem                         Baked Roast                      BakedRoast.cs
+BakedTaroItem                          Baked Taro                       BakedTaro.cs
+BakedTomatoItem                        Baked Tomato                     BakedTomato.cs
+BakerSignItem                          Baker Sign                       BakerSign.cs
+BakeryOvenItem                         Bakery Oven                      BakeryOven.cs
+BakingSkillBook                        Baking Skill Book                Baking.cs
+BakingSkillScroll                      Baking Skill Scroll              Baking.cs
+BakingUpgradeItem                      Baking Upgrade                   BakingUpgrade.cs
+BallotBoxItem                          Ballot Box                       BallotBox.cs
+BananaRugItem                          Banana Rug                       BananaRug.cs
+BananaShirtItem                        Banana Shirt                     BananaShirt.cs
+BandanaItem                            Bandana                          Bandana.cs
+BanhXeoItem                            Banh Xeo                         BanhXeo.cs
+BankItem                               Bank                             Bank.cs
+BannockItem                            Bannock                          Bannock.cs
+BarrelCactusSeedItem                   Barrel Cactus Seed               BarrelCactusSeed.cs
+BarrelCactusSeedPackItem               Barrel Cactus Seed Pack          BarrelCactusSeed.cs
+BarrelItem                             Barrel                           Barrel.cs
+BasaltItem                             Basalt                           Basalt.cs
+BasePaintItem                          Base Paint                       BasePaint.cs
+BasicBackpackItem                      Basic Backpack                   BasicBackpack.cs
+BasicCircuitItem                       Basic Circuit                    BasicCircuit.cs
+BasicEngineeringSkillBook              Basic Engineering Skill Book     BasicEngineering.cs
+BasicEngineeringSkillScroll            Basic Engineering Skill Scroll   BasicEngineering.cs
+BasicEngineeringUpgradeItem            Basic Engineering Upgrade        BasicEngineeringUpgrade.cs
+BasicPollutionFilterItem               Basic Pollution Filter           FilterItems.cs
+BasicSaladItem                         Basic Salad                      BasicSalad.cs
+BasicUpgradeItem                       Basic Upgrade                    BasicUpgrade.cs
+BasicUpgradeLvl1Item                   Basic Upgrade 1                  BasicUpgradeLvl1.cs
+BasicUpgradeLvl2Item                   Basic Upgrade 2                  BasicUpgradeLvl2.cs
+BasicUpgradeLvl3Item                   Basic Upgrade 3                  BasicUpgradeLvl3.cs
+BasicUpgradeLvl4Item                   Basic Upgrade 4                  BasicUpgradeLvl4.cs
+BassItem                               Bass                             Bass.cs
+BathroomItem                           Bathroom                         Bathroom.cs
+BathtubItem                            Bathtub                          Bathtub.cs
+BeanPasteItem                          Bean Paste                       BeanPaste.cs
+BeanSproutItem                         Bean Sprout                      BeanSprout.cs
+BeansItem                              Beans                            Beans.cs
+BeansPackItem                          Beans Pack                       Beans.cs
+BearSUPREMEItem                        Bear S U P R E M E               BearSUPREME.cs
+BearclawItem                           Bearclaw                         Bearclaw.cs
+BearpackItem                           Bearpack                         Bearpack.cs
+BeaverCarcassItem                      Beaver Carcass                   BeaverCarcass.cs
+BedroomItem                            Bedroom                          Bedroom.cs
+BeetCampfireSaladItem                  Beet Campfire Salad              BeetCampfireSalad.cs
+BeetGreensItem                         Beet Greens                      BeetGreens.cs
+BeetItem                               Beet                             Beet.cs
+BeetSeedItem                           Beet Seed                        BeetSeed.cs
+BeetSeedPackItem                       Beet Seed Pack                   BeetSeed.cs
+BenneGravatItem                        Dumping Bin                      StorageMore_English.cs
+BerryBubbleTeaItem                     Berry Bubble Tea                 BerryBubbleTea.cs
+BerryExtractFertilizerItem             Berry Extract Fertilizer         BerryExtractFertilizer.cs
+BerryTrioTubItem                       Berry Trio Ice Cream Tub         IceCreamTub.cs
+BicycleFrameItem                       Bicycle Frame                    BicycleFrame.cs
+BicycleItem                            Bicycle                          Bicycle.cs
+BigBackpackItem                        Big Backpack                     BigBackpack.cs
+BigBagItem                             Big Bag                          StorageMore_English.cs
+BigBluestemSeedItem                    Big Bluestem Seed                BigBluestemSeed.cs
+BigBluestemSeedPackItem                Big Bluestem Seed Pack           BigBluestemSeed.cs
+BighornCarcassItem                     Bighorn Carcass                  BighornCarcass.cs
+BioResidueItem                         Bio Residue                      BioResidue.cs
+BiodieselItem                          Biodiesel                        Biodiesel.cs
+BiowasteSorterItem                     Biowaste Sorter                  BiowasteSorter.cs
+BirchHewnDoubleDoorItem                Birch Hewn Double Door           BirchHewnDoubleDoor.cs
+BirchLogItem                           Birch Log                        BirchLog.cs
+BirchLumberDoubleDoorItem              Birch Lumber Double Door         BirchLumberDoubleDoor.cs
+BirchSeedItem                          Birch Seed                       BirchSeed.cs
+BirchSeedPackItem                      Birch Seed Pack                  BirchSeed.cs
+BisonCarcassItem                       Bison Carcass                    BisonCarcass.cs
+BisonChowFunItem                       Bison Chow Fun                   BisonChowFun.cs
+BisonMountItem                         Bison Mount                      BisonMount.cs
+BisonPeltItem                          Bison Pelt                       BisonPelt.cs
+BlackCoffeeItem                        Black Coffee                     Black Coffee.cs
+BlackPowderItem                        Black Powder                     BlackPowder.cs
+BlackboardItem                         Blackboard                       Blackboard.cs
+BlacksmithAdvancedUpgradeItem          Blacksmith Advanced Upgrade      BlacksmithAdvancedUpgrade.cs
+BlacksmithSkillBook                    Blacksmith Skill Book            Blacksmith.cs
+BlacksmithSkillScroll                  Blacksmith Skill Scroll          Blacksmith.cs
+BlacksmithTableItem                    Blacksmith Table                 BlacksmithTable.cs
+BlacksmithUpgradeItem                  Blacksmith Upgrade               BlacksmithUpgrade.cs
+BlastFurnaceItem                       Blast Furnace                    BlastFurnace.cs
+BlastingCapItem                        Blasting Cap                     BlastingCap.cs
+BlastingChargeItem                     Blasting Charge                  BlastingChargeItem.cs
+BlinkyEyelidsItem                      Blinky Eyelids                   BlinkyEyelids.cs
+BloodMealFertilizerItem                Blood Meal Fertilizer            BloodMealFertilizer.cs
+BloodyMarryItem                        Bloody Mary                      BloodyMarry.cs
+BloomeryItem                           Bloomery                         Bloomery.cs
+BluePowderItem                         Blue Powder                      BluePowder.cs
+BlueSharkItem                          Blue Shark                       BlueShark.cs
+BoardItem                              Board                            Board.cs
+BoardOfElectionsItem                   Board Of Elections               BoardOfElections.cs
+BoiledGrainsItem                       Boiled Grains                    BoiledGrains.cs
+BoiledRiceItem                         Boiled Rice                      BoiledRice.cs
+BoiledSausageItem                      Boiled Sausage                   BoiledSausage.cs
+BoilerItem                             Boiler                           Boiler.cs
+BoleteMushroomSporesItem               Bolete Mushroom Spores           BoleteMushroomSpores.cs
+BoleteMushroomSporesPackItem           Bolete Mushroom Spores Pack      BoleteMushroomSpores.cs
+BoleteMushroomsItem                    Bolete Mushrooms                 BoleteMushrooms.cs
+BonsaiItem                             Bonsai                           Bonsai.cs
+BookshelfItem                          Bookshelf                        Bookshelf.cs
+BorderlessFrameLargeSquareItem         Borderless Frame Large Square    BorderlessFrameLargeSquare.cs
+BorderlessFrameLargeTallItem           Borderless Frame Large Tall      BorderlessFrameLargeTall.cs
+BorderlessFrameLargeWideItem           Borderless Frame Large Wide      BorderlessFrameLargeWide.cs
+BorderlessFrameSquareItem              Borderless Frame Square          BorderlessFrameSquare.cs
+BorderlessFrameTallItem                Borderless Frame Tall            BorderlessFrameTall.cs
+BorderlessFrameWideItem                Borderless Frame Wide            BorderlessFrameWide.cs
+BotanicalBookItem                      Botanical Book                   BotanicalBook.cs
+BowItem                                Bow                              BowItem.cs
+BrazierItem                            Brazier                          Brazier.cs
+BreadItem                              Bread                            Bread.cs
+BrickFireplaceItem                     Brick Fireplace                  BrickFireplace.cs
+BrickItem                              Brick                            Brick.cs
+BuilderBootsItem                       Builder Boots                    BuilderBoots.cs
+BuilderGlovesItem                      Builder Gloves                   BuilderGloves.cs
+BuilderHelmetItem                      Builder Helmet                   BuilderHelmet.cs
+BuilderOverallsItem                    Builder Overalls                 BuilderOveralls.cs
+BuilderShirtItem                       Builder Shirt                    BuilderShirt.cs
+BullrushSeedItem                       Bullrush Seed                    BullrushSeed.cs
+BullrushSeedPackItem                   Bullrush Seed Pack               BullrushSeed.cs
+BunchgrassSeedItem                     Bunchgrass Seed                  BunchgrassSeed.cs
+BunchgrassSeedPackItem                 Bunchgrass Seed Pack             BunchgrassSeed.cs
+ButcherySkillBook                      Butchery Skill Book              Butchery.cs
+ButcherySkillScroll                    Butchery Skill Scroll            Butchery.cs
+ButcheryTableItem                      Butchery Table                   ButcheryTable.cs
+ButcheryUpgradeItem                    Butchery Upgrade                 ButcheryUpgrade.cs
+BycocketItem                           Bycocket                         Bycocket.cs
+CO2CanisterItem                        CO2 Canister                     CO2Canister.cs
+CaisseOutilsItem                       Toolbox                          StorageMore_English.cs
+CamasAshFertilizerItem                 Camas Ash Fertilizer             CamasAshFertilizer.cs
+CamasBreadItem                         Camas Bread                      CamasBread.cs
+CamasBulbBakeItem                      Camas Bulb Bake                  CamasBulbBake.cs
+CamasBulbItem                          Camas Bulb                       CamasBulb.cs
+CamasBulbPackItem                      Camas Bulb Pack                  CamasBulb.cs
+CamasPasteItem                         Camas Paste                      CamasPaste.cs
+CameraFilmItem                         Camera Film                      CameraFilm.cs
+CameraItem                             Camera                           Camera.cs
+CamoPantsItem                          Camo Pants                       CamoPants.cs
+CamoShirtItem                          Camo Shirt                       CamoShirt.cs
+CampfireCookingUpgradeItem             Campfire Cooking Upgrade         CampfireCookingUpgrade.cs
+CampfireItem                           Campfire                         Campfire.cs
+CampfireRoastItem                      Campfire Roast                   CampfireRoast.cs
+CampfireSaladItem                      Campfire Salad                   CampfireSalad.cs
+CampfireStewItem                       Campfire Stew                    CampfireStew.cs
+CampsiteItem                           Campsite                         Campsite.cs
+CandleStandItem                        Candle Stand                     CandleStand.cs
+CanningAssemblyItem                    Canning Assembly                 CanningAssembly.cs
+CanvasItem                             Canvas                           Canvas.cs
+CapitolItem                            Capitol                          Capitol.cs
+CappuccinoItem                         Cappuccino                       Cappuccino.cs
+CaprisItem                             Capris                           Capris.cs
+CarbideHelmetLampItem                  Carbide Helmet Lamp              CarbideHelmetLamp.cs
+CarbonFilterItem                       Carbon Filter                    CarbonFilter.cs
+CarpenterMarketItem                    Carpenter Market                 CarpenterMarket.cs
+CarpenterSignItem                      Carpenter Sign                   CarpenterSign.cs
+CarpentryAdvancedUpgradeItem           Carpentry Advanced Upgrade       CarpentryAdvancedUpgrade.cs
+CarpentryBasicUpgradeItem              Carpentry Basic Upgrade          CarpentryBasicUpgrade.cs
+CarpentrySkillBook                     Carpentry Skill Book             Carpentry.cs
+CarpentrySkillScroll                   Carpentry Skill Scroll           Carpentry.cs
+CarpentryTableItem                     Carpentry Table                  CarpentryTable.cs
+CartBlueprintPosterItem                Cart Blueprint Poster            CartBlueprintPoster.cs
+CarvedPumpkinItem                      Carved Pumpkin                   CarvedPumpkin.cs
+CastIronBedItem                        Cast Iron Bed                    CastIronBed.cs
+CastIronBenchItem                      Cast Iron Bench                  CastIronBench.cs
+CastIronChairItem                      Cast Iron Chair                  CastIronChair.cs
+CastIronPlaqueItem                     Cast Iron Plaque                 CastIronPlaque.cs
+CastIronRoyalBedItem                   Cast Iron Royal Bed              CastIronRoyalBed.cs
+CastIronStoveItem                      Cast Iron Stove                  CastIronStove.cs
+CastIronTableItem                      Cast Iron Table                  CastIronTable.cs
+CastleDrawBridgeItem                   Castle Draw Bridge               CastleDrawBridge.cs
+CedarHewnDoubleDoorItem                Cedar Hewn Double Door           CedarHewnDoubleDoor.cs
+CedarLogItem                           Cedar Log                        CedarLog.cs
+CedarLumberDoubleDoorItem              Cedar Lumber Double Door         CedarLumberDoubleDoor.cs
+CedarSeedItem                          Cedar Seed                       CedarSeed.cs
+CedarSeedPackItem                      Cedar Seed Pack                  CedarSeed.cs
+CeibaHewnDoubleDoorItem                Ceiba Hewn Double Door           CeibaHewnDoubleDoor.cs
+CeibaLogItem                           Ceiba Log                        CeibaLog.cs
+CeibaLumberDoubleDoorItem              Ceiba Lumber Double Door         CeibaLumberDoubleDoor.cs
+CeibaSeedItem                          Ceiba Seed                       CeibaSeed.cs
+CeibaSeedPackItem                      Ceiba Seed Pack                  CeibaSeed.cs
+CeilingCandleItem                      Ceiling Candle                   CeilingCandle.cs
+CelluloseFiberItem                     Cellulose Fiber                  CelluloseFiber.cs
+CelluloseInsulationItem                Cellulose Insulation             CelluloseInsulation.cs
+CementItem                             Cement                           Cement.cs
+CementKilnItem                         Cement Kiln                      CementKiln.cs
+CensusBureauItem                       Census Bureau                    CensusBureau.cs
+CeramicMoldItem                        Ceramic Mold                     CeramicMold.cs
+CeramicScrapItem                       Ceramic Scrap                    CeramicScrap.cs
+CeramicTeaCupItem                      Ceramic Tea Cup                  CeramicTeaCup.cs
+CeramicTeaPotItem                      Ceramic Tea Pot                  CeramicTeaPot.cs
+CeramicTrayItem                        Ceramic Tray                     CeramicTray.cs
+CerealGermItem                         Cereal Germ                      CerealGerm.cs
+ChainsawItem                           Chainsaw                         Chainsaw.cs
+ChandelierItem                         Chandelier                       Chandelier.cs
+CharcoalItem                           Charcoal                         Charcoal.cs
+CharcoalPowderItem                     Charcoal Powder                  CharcoalPowder.cs
+CharredAgaveItem                       Charred Agave                    CharredAgave.cs
+CharredBeansItem                       Charred Beans                    CharredBeans.cs
+CharredBeetItem                        Charred Beet                     CharredBeet.cs
+CharredCactusFruitItem                 Charred Cactus Fruit             CharredCactusFruit.cs
+CharredCamasBulbItem                   Charred Camas Bulb               CharredCamasBulb.cs
+CharredCornItem                        Charred Corn                     CharredCorn.cs
+CharredFireweedShootsItem              Charred Fireweed Shoots          CharredFireweedShoots.cs
+CharredFishItem                        Charred Fish                     CharredFish.cs
+CharredHeartOfPalmItem                 Charred Heart Of Palm            CharredHeartOfPalm.cs
+CharredMeatItem                        Charred Meat                     CharredMeat.cs
+CharredMushroomsItem                   Charred Mushrooms                CharredMushrooms.cs
+CharredPapayaItem                      Charred Papaya                   CharredPapaya.cs
+CharredPineappleItem                   Charred Pineapple                CharredPineapple.cs
+CharredSausageItem                     Charred Sausage                  CharredSausage.cs
+CharredTaroItem                        Charred Taro                     CharredTaro.cs
+CharredTomatoItem                      Charred Tomato                   CharredTomato.cs
+ChefHatItem                            Chef Hat                         ChefHat.cs
+ChefMarketItem                         Chef Market                      ChefMarket.cs
+ChefPantsItem                          Chef Pants                       ChefPants.cs
+ChefShirtItem                          Chef Shirt                       ChefShirt.cs
+ChefShoesItem                          Chef Shoes                       ChefShoes.cs
+ChemicalDecontaminantItem              Chemical Neutralizer             ChemicalDecontaminant.cs
+ChemicalPollutantItem                  Chemical Pollutant               ChemicalPollutant.cs
+ChemicalWasteFluidItem                 Chemical Waste                   Fluids.cs
+ChemicalWasteItem                      Chemical Waste                   ChemicalWaste.cs
+ChiseledLegsItem                       Chiseled Legs                    ChiseledLegs.cs
+ClaimToolItem                          Claim Tool                       ClaimTool.cs
+ClamChowderItem                        Clam Chowder                     ClamChowder.cs
+ClamItem                               Clam                             Clam.cs
+ClayItem                               Clay                             Clay.cs
+ClayMoldItem                           Clay Mold                        ClayMold.cs
+ClothBeltItem                          Cloth Belt                       ClothBelt.cs
+ClothCapeItem                          Cloth Cape                       ClothCape.cs
+ClothItem                              Cloth                            Cloth.cs
+CoalItem                               Coal                             Coal.cs
+CoarseStoneItem                        Coarse Stone                     CoarseStone.cs
+CocktailGlassItem                      Cocktail Glass                   CocktailGlass.cs
+CocktailItem                           Cocktail                         Cocktail.cs
+CocktailShakerItem                     Cocktail Shaker                  CocktailShaker.cs
+CodItem                                Cod                              Cod.cs
+CoffeeCakeItem                         Coffee Cake                      CoffeeCake.cs
+CoffeeItem                             Coffee                           Coffee.cs
+CoffeeLatteItem                        Coffee Latte                     Coffee Latte.cs
+CoffeeTableItem                        Coffee Table                     CoffeeTable.cs
+CokeItem                               Coke                             Coke.cs
+ColoredPowderItem                      Colored Powder                   ColoredPowder.cs
+CombustionEngineItem                   Combustion Engine                CombustionEngine.cs
+CombustionGeneratorItem                Combustion Generator             CombustionGenerator.cs
+CompositeBirchBenchItem                Composite Birch Bench            CompositeBirchBench.cs
+CompositeBirchChairItem                Composite Birch Chair            CompositeBirchChair.cs
+CompositeBirchDoorItem                 Composite Birch Door             CompositeBirchDoor.cs
+CompositeBirchLumberItem               Composite Birch Lumber           CompositeBirchLumber.cs
+CompositeBirchTableItem                Composite Birch Table            CompositeBirchTable.cs
+CompositeBowItem                       Composite Bow                    CompositeBow.cs
+CompositeCedarBenchItem                Composite Cedar Bench            CompositeCedarBench.cs
+CompositeCedarChairItem                Composite Cedar Chair            CompositeCedarChair.cs
+CompositeCedarDoorItem                 Composite Cedar Door             CompositeCedarDoor.cs
+CompositeCedarLumberItem               Composite Cedar Lumber           CompositeCedarLumber.cs
+CompositeCedarTableItem                Composite Cedar Table            CompositeCedarTable.cs
+CompositeCeibaBenchItem                Composite Ceiba Bench            CompositeCeibaBench.cs
+CompositeCeibaChairItem                Composite Ceiba Chair            CompositeCeibaChair.cs
+CompositeCeibaDoorItem                 Composite Ceiba Door             CompositeCeibaDoor.cs
+CompositeCeibaLumberItem               Composite Ceiba Lumber           CompositeCeibaLumber.cs
+CompositeCeibaTableItem                Composite Ceiba Table            CompositeCeibaTable.cs
+CompositeFillerItem                    Composite Filler                 CompositeFiller.cs
+CompositeFirBenchItem                  Composite Fir Bench              CompositeFirBench.cs
+CompositeFirChairItem                  Composite Fir Chair              CompositeFirChair.cs
+CompositeFirDoorItem                   Composite Fir Door               CompositeFirDoor.cs
+CompositeFirLumberItem                 Composite Fir Lumber             CompositeFirLumber.cs
+CompositeFirTableItem                  Composite Fir Table              CompositeFirTable.cs
+CompositeHardwoodBenchItem             Composite Hardwood Bench         CompositeHardwoodBench.cs
+CompositeHardwoodChairItem             Composite Hardwood Chair         CompositeHardwoodChair.cs
+CompositeHardwoodDoorItem              Composite Hardwood Door          CompositeHardwoodDoor.cs
+CompositeHardwoodTableItem             Composite Hardwood Table         CompositeHardwoodTable.cs
+CompositeJoshuaBenchItem               Composite Joshua Bench           CompositeJoshuaBench.cs
+CompositeJoshuaChairItem               Composite Joshua Chair           CompositeJoshuaChair.cs
+CompositeJoshuaDoorItem                Composite Joshua Door            CompositeJoshuaDoor.cs
+CompositeJoshuaLumberItem              Composite Joshua Lumber          CompositeJoshuaLumber.cs
+CompositeJoshuaTableItem               Composite Joshua Table           CompositeJoshuaTable.cs
+CompositeLumberBenchItem               Composite Lumber Bench           CompositeLumberBench.cs
+CompositeLumberChairItem               Composite Lumber Chair           CompositeLumberChair.cs
+CompositeLumberDoorItem                Composite Lumber Door            CompositeLumberDoor.cs
+CompositeLumberDresserItem             Composite Lumber Dresser         CompositeLumberDresser.cs
+CompositeLumberItem                    Composite Lumber                 CompositeLumber.cs
+CompositeLumberTableItem               Composite Lumber Table           CompositeLumberTable.cs
+CompositeOakBenchItem                  Composite Oak Bench              CompositeOakBench.cs
+CompositeOakChairItem                  Composite Oak Chair              CompositeOakChair.cs
+CompositeOakDoorItem                   Composite Oak Door               CompositeOakDoor.cs
+CompositeOakLumberItem                 Composite Oak Lumber             CompositeOakLumber.cs
+CompositeOakTableItem                  Composite Oak Table              CompositeOakTable.cs
+CompositePalmBenchItem                 Composite Palm Bench             CompositePalmBench.cs
+CompositePalmChairItem                 Composite Palm Chair             CompositePalmChair.cs
+CompositePalmDoorItem                  Composite Palm Door              CompositePalmDoor.cs
+CompositePalmLumberItem                Composite Palm Lumber            CompositePalmLumber.cs
+CompositePalmTableItem                 Composite Palm Table             CompositePalmTable.cs
+CompositeRedwoodBenchItem              Composite Redwood Bench          CompositeRedwoodBench.cs
+CompositeRedwoodChairItem              Composite Redwood Chair          CompositeRedwoodChair.cs
+CompositeRedwoodDoorItem               Composite Redwood Door           CompositeRedwoodDoor.cs
+CompositeRedwoodLumberItem             Composite Redwood Lumber         CompositeRedwoodLumber.cs
+CompositeRedwoodTableItem              Composite Redwood Table          CompositeRedwoodTable.cs
+CompositeSaguaroBenchItem              Composite Saguaro Bench          CompositeSaguaroBench.cs
+CompositeSaguaroChairItem              Composite Saguaro Chair          CompositeSaguaroChair.cs
+CompositeSaguaroDoorItem               Composite Saguaro Door           CompositeSaguaroDoor.cs
+CompositeSaguaroLumberItem             Composite Saguaro Lumber         CompositeSaguaroLumber.cs
+CompositeSaguaroTableItem              Composite Saguaro Table          CompositeSaguaroTable.cs
+CompositeSoftwoodBenchItem             Composite Softwood Bench         CompositeSoftwoodBench.cs
+CompositeSoftwoodChairItem             Composite Softwood Chair         CompositeSoftwoodChair.cs
+CompositeSoftwoodDoorItem              Composite Softwood Door          CompositeSoftwoodDoor.cs
+CompositeSoftwoodTableItem             Composite Softwood Table         CompositeSoftwoodTable.cs
+CompositeSpruceBenchItem               Composite Spruce Bench           CompositeSpruceBench.cs
+CompositeSpruceChairItem               Composite Spruce Chair           CompositeSpruceChair.cs
+CompositeSpruceDoorItem                Composite Spruce Door            CompositeSpruceDoor.cs
+CompositeSpruceLumberItem              Composite Spruce Lumber          CompositeSpruceLumber.cs
+CompositeSpruceTableItem               Composite Spruce Table           CompositeSpruceTable.cs
+CompositesSkillBook                    Composites Skill Book            Composites.cs
+CompositesSkillScroll                  Composites Skill Scroll          Composites.cs
+CompositesUpgradeItem                  Composites Upgrade               CompositesUpgrade.cs
+CompostFertilizerItem                  Compost Fertilizer               CompostFertilizer.cs
+CompostItem                            Compost                          CompostItem.cs
+ComputerLabItem                        Computer Lab                     ComputerLab.cs
+ConstructableItem                      Constructable                    StorageMore_English.cs
+ConstructionPostItem                   Construction Post                ConstructionPost.cs
+ConstructionScrapSorterItem            Construction Scrap Sorter        ConstructionScrapSorter.cs
+ContainerItem                          Container                        BasicDrinkContainer.cs
+ContractBoardItem                      Contract Board                   ContractBoard.cs
+CookeinaMushroomSporesItem             Cookeina Mushroom Spores         CookeinaMushroomSpores.cs
+CookeinaMushroomSporesPackItem         Cookeina Mushroom Spores Pack    CookeinaMushroomSpores.cs
+CookeinaMushroomsItem                  Cookeina Mushrooms               CookeinaMushrooms.cs
+CookingSkillBook                       Cooking Skill Book               Cooking.cs
+CookingSkillScroll                     Cooking Skill Scroll             Cooking.cs
+CookingUpgradeItem                     Cooking Upgrade                  CookingUpgrade.cs
+CookingUtensilsItem                    Cooking Utensils                 CookingUtensils.cs
+CopperBarItem                          Copper Bar                       CopperBar.cs
+CopperConcentrateItem                  Copper Concentrate               CopperConcentrate.cs
+CopperFenceItem                        Copper Fence                     CopperFence.cs
+CopperFrameLandscapeItem               Copper Frame Landscape           CopperFrameLandscape.cs
+CopperFrameLargeSquareItem             Copper Frame Large Square        CopperFrameLargeSquare.cs
+CopperFrameLargeTallItem               Copper Frame Large Tall          CopperFrameLargeTall.cs
+CopperFrameLargeWideItem               Copper Frame Large Wide          CopperFrameLargeWide.cs
+CopperFramePortraitItem                Copper Frame Portrait            CopperFramePortrait.cs
+CopperFrameSquareItem                  Copper Frame Square              CopperFrameSquare.cs
+CopperFrameTallItem                    Copper Frame Tall                CopperFrameTall.cs
+CopperFrameWideItem                    Copper Frame Wide                CopperFrameWide.cs
+CopperGrillItem                        Copper Grill                     CopperGrill.cs
+CopperHydroxideItem                    Copper Hydroxide                 CopperHydroxide.cs
+CopperOreItem                          Copper Ore                       CopperOre.cs
+CopperPipeItem                         Copper Pipe                      CopperPipe.cs
+CopperPlateItem                        Copper Plate                     CopperPlate.cs
+CopperScrapItem                        Copper Scrap                     CopperScrap.cs
+CopperWiringItem                       Copper Wiring                    CopperWiring.cs
+CornFrittersItem                       Corn Fritters                    CornFritters.cs
+CornItem                               Corn                             Corn.cs
+CornSeedItem                           Corn Seed                        CornSeed.cs
+CornSeedPackItem                       Corn Seed Pack                   CornSeed.cs
+CornStarchItem                         Corn Starch                      CornStarch.cs
+CornetItem                             Cone                             baseIce.cs
+CornmealItem                           Cornmeal                         Cornmeal.cs
+CornrowsItem                           Cornrows                         Cornrows.cs
+CorrugatedSteelDoorItem                Corrugated Steel Door            CorrugatedSteelDoor.cs
+CorrugatedSteelFenceDoorItem           Corrugated Steel Fence Door      CorrugatedSteelFenceDoor.cs
+CorrugatedSteelItem                    Corrugated Steel                 CorrugatedSteel.cs
+CottonBollItem                         Cotton Boll                      CottonBoll.cs
+CottonCarpetItem                       Cotton Carpet                    CottonCarpet.cs
+CottonCurtainsItem                     Cotton Curtains                  CottonCurtains.cs
+CottonFabricItem                       Cotton Fabric                    CottonFabric.cs
+CottonLintItem                         Cotton Lint                      CottonLint.cs
+CottonSeedItem                         Cotton Seed                      CottonSeed.cs
+CottonSeedPackItem                     Cotton Seed Pack                 CottonSeed.cs
+CottonStreamerStarsItem                Cotton Streamer Stars            CottonStreamerStars.cs
+CottonStreamerStripesItem              Cotton Streamer Stripes          CottonStreamerStripes.cs
+CottonThreadItem                       Cotton Thread                    CottonThread.cs
+CouchItem                              Couch                            Couch.cs
+CountryFoundationItem                  Country Foundation               CountryFoundation.cs
+CourtChairItem                         Court Chair                      CourtChair.cs
+CourtTableItem                         Court Table                      CourtTable.cs
+CoyoteCarcassItem                      Coyote Carcass                   CoyoteCarcass.cs
+CrabCarcassItem                        Crab Carcass                     CrabCarcass.cs
+CrabPotItem                            Crab Pot                         CrabPot.cs
+CraneItem                              Crane                            Crane.cs
+CreosoteBushSeedItem                   Creosote Bush Seed               CreosoteBushSeed.cs
+CreosoteBushSeedPackItem               Creosote Bush Seed Pack          CreosoteBushSeed.cs
+CreosoteFlowerItem                     Creosote Flower                  CreosoteFlower.cs
+CriminiMushroomSporesItem              Crimini Mushroom Spores          CriminiMushroomSpores.cs
+CriminiMushroomSporesPackItem          Crimini Mushroom Spores Pack     CriminiMushroomSpores.cs
+CriminiMushroomsItem                   Crimini Mushrooms                CriminiMushrooms.cs
+CrimsonSaladItem                       Crimson Salad                    CrimsonSalad.cs
+CrispyBaconItem                        Crispy Bacon                     CrispyBacon.cs
+CrushedBasaltItem                      Crushed Basalt                   CrushedBasalt.cs
+CrushedCoalItem                        Crushed Coal                     CrushedCoal.cs
+CrushedCopperOreItem                   Crushed Copper Ore               CrushedCopperOre.cs
+CrushedGneissItem                      Crushed Gneiss                   CrushedGneiss.cs
+CrushedGoldOreItem                     Crushed Gold Ore                 CrushedGoldOre.cs
+CrushedGraniteItem                     Crushed Granite                  CrushedGranite.cs
+CrushedIronOreItem                     Crushed Iron Ore                 CrushedIronOre.cs
+CrushedLimestoneItem                   Crushed Limestone                CrushedLimestone.cs
+CrushedMixedRockItem                   Crushed Mixed Rock               CrushedMixedRock.cs
+CrushedOilShaleItem                    Crushed Oil Shale                CrushedOilShale.cs
+CrushedRockItem                        CrushedRock                      StorageMore_English.cs
+CrushedSandstoneItem                   Crushed Sandstone                CrushedSandstone.cs
+CrushedShaleItem                       Crushed Shale                    CrushedShale.cs
+CrushedSlagItem                        Crushed Slag                     CrushedSlag.cs
+CrushedSulfurItem                      Crushed Sulfur                   CrushedSulfur.cs
+CulinaryResearchPaperAdvancedDrinksItem Culinary Research Paper Advanced Drinks CulinaryResearchPaperAdvanced.cs
+CulinaryResearchPaperAdvancedItem      Culinary Research Paper Advanced CulinaryResearchPaperAdvanced.cs
+CulinaryResearchPaperBasicItem         Culinary Research Paper Basic    CulinaryResearchPaperBasic.cs
+CulinaryResearchPaperModernAMItem      Culinary Research Paper Modern Advanced Mixology CulinaryResearchPaperModernADVMixology.cs
+CulinaryResearchPaperModernItem        Culinary Research Paper Modern   CulinaryResearchPaperModern.cs
+CultureItem                            Culture                          Culture.cs
+CurlyItem                              Curly                            Curly.cs
+CurrencyExchangeItem                   Currency Exchange                CurrencyExchange.cs
+CuttingEdgeCookingSkillBook            Cutting Edge Cooking Skill Book  CuttingEdgeCooking.cs
+CuttingEdgeCookingSkillScroll          Cutting Edge Cooking Skill Scroll CuttingEdgeCooking.cs
+CuttingEdgeCookingUpgradeItem          Cutting Edge Cooking Upgrade     CuttingEdgeCookingUpgrade.cs
+CyanPowderItem                         Cyan Powder                      CyanPowder.cs
+DaisyItem                              Daisy                            Daisy.cs
+DaisySeedItem                          Daisy Seed                       DaisySeed.cs
+DaisySeedPackItem                      Daisy Seed Pack                  DaisySeed.cs
+DecorativeAnchorItem                   Decorative Anchor                DecorativeAnchor.cs
+DecorativeBowlItem                     Decorative Bowl                  DecorativeBowl.cs
+DecorativeGlassBuoyBlueItem            Decorative Glass Buoy Blue       DecorativeGlassBuoyBlue.cs
+DecorativeGlassBuoyGreenItem           Decorative Glass Buoy Green      DecorativeGlassBuoyGreen.cs
+DecorativeGlassBuoyRedItem             Decorative Glass Buoy Red        DecorativeGlassBuoyRed.cs
+DecorativeGlassBuoyVioletItem          Decorative Glass Buoy Violet     DecorativeGlassBuoyViolet.cs
+DecorativeGlassBuoyYellowItem          Decorative Glass Buoy Yellow     DecorativeGlassBuoyYellow.cs
+DecorativeHangingBuoyItem              Decorative Hanging Buoy          DecorativeHangingBuoy.cs
+DecorativeLifePreserverItem            Decorative Life Preserver        DecorativeLifePreserver.cs
+DecorativeShipWheelItem                Decorative Ship Wheel            DecorativeShipWheel.cs
+DeerCarcassItem                        Deer Carcass                     DeerCarcass.cs
+DeerPeltItem                           Deer Pelt                        DeerPelt.cs
+DendrologyResearchPaperAdvancedItem    Dendrology Research Paper Advanced DendrologyResearchPaperAdvanced.cs
+DendrologyResearchPaperBasicItem       Dendrology Research Paper Basic  DendrologyResearchPaperBasic.cs
+DendrologyResearchPaperModernItem      Dendrology Research Paper Modern DendrologyResearchPaperModern.cs
+DerpyHatItem                           Derpy Hat                        DerpyHat.cs
+DesalinatorItem                        Desalinator                      Desalinator.cs
+DesertMultivitaminTubItem              Desert Multivitamin Ice Cream Tub IceCreamTub.cs
+DesertSmoothieItem                     Desert Smoothie                  DesertSmoothie.cs
+DevFloodToolItem                       Dev Flood Tool                   DevFloodToolItem.cs
+DevPaintToolItem                       Dev Paint Tool                   PaintToolItem.cs
+DevtoolItem                            Dev Tool                         DevtoolItem.cs
+DigitalWorkStationItem                 Digital Work Station             DigitalWorkStation.cs
+DirtItem                               Dirt                             LandscapeItems.cs
+DirtRampItem                           Dirt Ramp                        Roads.cs
+DirtRoadItem                           Dirt Road                        DirtRoad.cs
+DistributionStationItem                Distribution Station             DistributionStation.cs
+DowelItem                              Dowel                            Dowel.cs
+DressingItem                           Dressing                         StorageMore_English.cs
+DriedFishItem                          Dried Fish                       DriedFish.cs
+DriedMeatItem                          Dried Meat                       DriedMeat.cs
+DrillItem                              Drill                            DrillItem.cs
+DryTeaLeavesItem                       Dry Tea Leaves                   DryTeaLeaves.cs
+DumpsterCompostItem                    Dumpster Compost                 DumpsterCompost.cs
+DumpsterGarbageItem                    Dumpster Garbage                 DumpsterGarbage.cs
+DumpsterRecycleItem                    Dumpster Recycle                 DumpsterRecycle.cs
+DwarfWillowSeedItem                    Dwarf Willow Seed                DwarfWillowSeed.cs
+DwarfWillowSeedPackItem                Dwarf Willow Seed Pack           DwarfWillowSeed.cs
+DynamiteItem                           Dynamite                         Dynamite.cs
+EaselItem                              Easel                            Easel.cs
+EckoStatueItem                         Ecko Statue                      EckoStatue.cs
+EckoTheDolphinItem                     Ecko The Dolphin                 EckoTheDolphin.cs
+EcoBookItem                            Eco Book                         EcoBook.cs
+EcoylentItem                           Ecoylent                         Ecoylent.cs
+EgyptianCanoeItem                      Egyptian Canoe                   EgyptianCanoe.cs
+ElectionPosterItem                     Election Poster                  ElectionPoster.cs
+ElectricLatheItem                      Electric Lathe                   ElectricLathe.cs
+ElectricMachinistTableItem             Electric Machinist Table         ElectricMachinistTable.cs
+ElectricMotorItem                      Electric Motor                   ElectricMotor.cs
+ElectricPlanerItem                     Electric Planer                  ElectricPlaner.cs
+ElectricStampingPressItem              Electric Stamping Press          ElectricStampingPress.cs
+ElectricWallLampItem                   Electric Wall Lamp               ElectricWallLamp.cs
+ElectricWaterPumpItem                  Electric Water Pump              ElectricWaterPump.cs
+ElectroStaticFilterItem                Electro Static Filter            ElectroStaticFilter.cs
+ElectronicScrapItem                    Electronic Scrap                 ElectronicScrap.cs
+ElectronicsAssemblyItem                Electronics Assembly             ElectronicsAssembly.cs
+ElectronicsSkillBook                   Electronics Skill Book           Electronics.cs
+ElectronicsSkillScroll                 Electronics Skill Scroll         Electronics.cs
+ElectronicsUpgradeItem                 Electronics Upgrade              ElectronicsUpgrade.cs
+ElevatorCallPostItem                   Elevator Call Post               ElevatorCallPost.cs
+ElkCarcassItem                         Elk Carcass                      ElkCarcass.cs
+ElkGongItem                            Elk Gong                         ElkGong.cs
+ElkMountItem                           Elk Mount                        ElkMount.cs
+ElkSkypiercerItem                      Elk Skypiercer                   ElkSkypiercer.cs
+ElkStatuetteItem                       Elk Statuette                    ElkStatuette.cs
+ElkTacoItem                            Elk Taco                         ElkTaco.cs
+ElkWellingtonItem                      Elk Wellington                   ElkWellington.cs
+EmbassyDeskItem                        Embassy Desk                     EmbassyDesk.cs
+EmptyPaperCupItem                      Empty Paper Cup                  EmptyPaperCup.cs
+EngineerMarketItem                     Engineer Market                  EngineerMarket.cs
+EngineerSignItem                       Engineer Sign                    EngineerSign.cs
+EngineeringResearchPaperAdvancedItem   Engineering Research Paper Advanced EngineeringResearchPaperAdvanced.cs
+EngineeringResearchPaperModernItem     Engineering Research Paper Modern EngineeringResearchPaperModern.cs
+EnglishBreakfastTeaItem                English Breakfast Tea            EnglishBreakfastTea.cs
+EpoxyItem                              Epoxy                            Epoxy.cs
+EspressoMartiniItem                    Espresso Martini                 EspressoMartini.cs
+EthanolItem                            Ethanol                          Ethanol.cs
+ExcavatableItem                        Excavatable                      StorageMore_English.cs
+ExcavatorItem                          Excavator                        Excavator.cs
+ExecutiveOfficeItem                    Executive Office                 ExecutiveOffice.cs
+ExplorerBootsItem                      Explorer Boots                   ExplorerBoots.cs
+ExplorerGlovesItem                     Explorer Gloves                  ExplorerGloves.cs
+ExplorerHatItem                        Explorer Hat                     ExplorerHat.cs
+ExplorerPantsItem                      Explorer Pants                   ExplorerPants.cs
+ExplorerShirtItem                      Explorer Shirt                   ExplorerShirt.cs
+ExtruderItem                           Extruder                         Extruder.cs
+FancyHewnDoorItem                      Fancy Hewn Door                  FancyHewnDoor.cs
+FancyMediumLumberStoreWindowItem       Fancy Medium Lumber Store Window FancyMediumLumberStoreWindow.cs
+FantasticForestPizzaItem               Fantastic Forest Pizza           FantasticForestPizza.cs
+FarEastLumberItem                      Far East Lumber                  FarEastLumber.cs
+FarmerBootsItem                        Farmer Boots                     FarmerBoots.cs
+FarmerGlovesItem                       Farmer Gloves                    FarmerGloves.cs
+FarmerHatItem                          Farmer Hat                       FarmerHat.cs
+FarmerMarketItem                       Farmer Market                    FarmerMarket.cs
+FarmerOverallsItem                     Farmer Overalls                  FarmerOveralls.cs
+FarmerShirtItem                        Farmer Shirt                     FarmerShirt.cs
+FarmerSignItem                         Farmer Sign                      FarmerSign.cs
+FarmersTableItem                       Farmers Table                    FarmersTable.cs
+FarmingSkillBook                       Farming Skill Book               Farming.cs
+FarmingSkillScroll                     Farming Skill Scroll             Farming.cs
+FarmingUpgradeItem                     Farming Upgrade                  FarmingUpgrade.cs
+FederationFoundationItem               Federation Foundation            FederationFoundation.cs
+FeminineMannequinItem                  Feminine Mannequin               FeminineMannequin.cs
+FernCampfireSaladItem                  Fern Campfire Salad              FernCampfireSalad.cs
+FernSporeItem                          Fern Spore                       FernSpore.cs
+FernSporePackItem                      Fern Spore Pack                  FernSpore.cs
+FertilizersSkillBook                   Fertilizers Skill Book           Fertilizers.cs
+FertilizersSkillScroll                 Fertilizers Skill Scroll         Fertilizers.cs
+FertilizersUpgradeItem                 Fertilizers Upgrade              FertilizersUpgrade.cs
+FiberFillerItem                        Fiber Filler                     FiberFiller.cs
+FiberScutchingStationItem              Fiber Scutching Station          FiberScutchingStation.cs
+FiberglassItem                         Fiberglass                       Fiberglass.cs
+FiddleheadsItem                        Fiddleheads                      Fiddleheads.cs
+FieldCampfireStewItem                  Field Campfire Stew              FieldCampfireStew.cs
+FieldSmoothieItem                      Field Smoothie                   FieldSmoothie.cs
+FilmyFernSporeItem                     Filmy Fern Spore                 FilmyFernSpore.cs
+FilmyFernSporePackItem                 Filmy Fern Spore Pack            FilmyFernSpore.cs
+FirHewnDoubleDoorItem                  Fir Hewn Double Door             FirHewnDoubleDoor.cs
+FirLogItem                             Fir Log                          FirLog.cs
+FirLumberDoubleDoorItem                Fir Lumber Double Door           FirLumberDoubleDoor.cs
+FirSeedItem                            Fir Seed                         FirSeed.cs
+FirSeedPackItem                        Fir Seed Pack                    FirSeed.cs
+FireweedSeedItem                       Fireweed Seed                    FireweedSeed.cs
+FireweedSeedPackItem                   Fireweed Seed Pack               FireweedSeed.cs
+FireweedShootsItem                     Fireweed Shoots                  FireweedShoots.cs
+FishKitesItem                          Fish Kites                       FishKites.cs
+FishNChipsItem                         Fish N Chips                     FishNChips.cs
+FishRackItem                           Fish Rack                        FishRack.cs
+FishTrapItem                           Fish Trap                        FishTrap.cs
+FisheryItem                            Fishery                          Fishery.cs
+FishingPoleItem                        Fishing Pole                     FishingPoleItem.cs
+FitTorsoItem                           Fit Torso                        FitTorso.cs
+FlatSteelDoorItem                      Flat Steel Door                  FlatSteelDoor.cs
+FlatSteelItem                          Flat Steel                       FlatSteel.cs
+FlatbreadItem                          Flatbread                        Flatbread.cs
+FlaxFiberItem                          Flax Fiber                       FlaxFiber.cs
+FlaxFlowerItem                         Flax Flower                      FlaxFlower.cs
+FlaxSeedItem                           Flax Seed                        FlaxSeed.cs
+FlaxSeedPackItem                       Flax Seed Pack                   FlaxSeed.cs
+FlaxStemItem                           Flax Stem                        FlaxStem.cs
+FlaxTrawlerNetItem                     Flax Trawler Net                 FlaxTrawlerNet.cs
+FlaxseedOilItem                        Flaxseed Oil                     FlaxseedOil.cs
+FletchingTableItem                     Fletching Table                  FletchingTable.cs
+FlourItem                              Flour                            Flour.cs
+FoodScrapItem                          Food Scrap                       FoodScrap.cs
+FoodSignItem                           Food Sign                        FoodSign.cs
+ForestSmoothieItem                     Forest Smoothie                  ForestSmoothie.cs
+FoxCarcassItem                         Fox Carcass                      FoxCarcass.cs
+FoxPeltItem                            Fox Pelt                         FoxPelt.cs
+FramedGlassDoorItem                    Framed Glass Door                FramedGlassDoor.cs
+FramedGlassItem                        Framed Glass                     FramedGlass.cs
+FriedCamasItem                         Fried Camas                      FriedCamas.cs
+FriedFiddleheadsItem                   Fried Fiddleheads                FriedFiddleheads.cs
+FriedHareHaunchesItem                  Fried Hare Haunches              FriedHareHaunches.cs
+FriedHeartsOfPalmItem                  Fried Hearts Of Palm             FriedHeartsOfPalm.cs
+FriedTaroItem                          Fried Taro                       FriedTaro.cs
+FriedTomatoesItem                      Fried Tomatoes                   FriedTomatoes.cs
+FriedVegetablesItem                    Fried Vegetables                 FriedVegetables.cs
+FriendlyScarecrowItem                  Friendly Scarecrow               FriendlyScarecrow.cs
+FrothFloatationCellItem                Froth Floatation Cell            FrothFloatationCell.cs
+FruitMuffinItem                        Fruit Muffin                     FruitMuffin.cs
+FruitSaladItem                         Fruit Salad                      FruitSalad.cs
+FruitTartItem                          Fruit Tart                       FruitTart.cs
+FungiFeetItem                          Fungi Feet                       FungiFeet.cs
+FurPeltItem                            Fur Pelt                         FurPelt.cs
+FuseItem                               Fuse                             Fuse.cs
+GalaxyVaseItem                         Galaxy Vase                      GalaxyVase.cs
+GarbageItem                            Garbage                          Waste.cs
+GarbageSorterItem                      Garbage Sorter                   GarbageSorter.cs
+GardenBootsItem                        Garden Boots                     GardenBoots.cs
+GardenGravelItem                       Garden Gravel                    GardenGravel.cs
+GardenPondItem                         Garden Pond                      GardenPond.cs
+GasolineItem                           Gasoline                         Gasoline.cs
+GasolineWhetstoneItem                  Modern Gas Whetstones            Whetstones.cs
+GatheringAdvancedUpgradeItem           Gathering Advanced Upgrade       GatheringAdvancedUpgrade.cs
+GatheringBasicUpgradeItem              Gathering Basic Upgrade          GatheringBasicUpgrade.cs
+GatheringResearchPaperAdvancedItem     Gathering Research Paper Advanced GatheringResearchPaperAdvanced.cs
+GatheringResearchPaperBasicItem        Gathering Research Paper Basic   GatheringResearchPaperBasic.cs
+GearboxItem                            Gearbox                          Gearbox.cs
+GeologyResearchPaperAdvancedItem       Geology Research Paper Advanced  GeologyResearchPaperAdvanced.cs
+GeologyResearchPaperBasicItem          Geology Research Paper Basic     GeologyResearchPaperBasic.cs
+GeologyResearchPaperModernItem         Geology Research Paper Modern    GeologyResearchPaperModern.cs
+GiantCactusFruitCornetItem             GiantCactusFruit Cone            Cone.cs
+GiantCactusFruitItem                   Giant Cactus Fruit               GiantCactusFruit.cs
+GiantCactusFruitPopsicleItem           GiantCactusFruit Popsicle        PopsicleRecipe.cs
+GigotSleeveShirtItem                   Gigot Sleeve Shirt               GigotSleeveShirt.cs
+GlassInsulationItem                    Glass Insulation                 GlassInsulation.cs
+GlassItem                              Glass                            Glass.cs
+GlassLensItem                          Glass Lens                       GlassLens.cs
+GlassScrapItem                         Glass Scrap                      GlassScrap.cs
+GlassworkingAdvancedUpgradeItem        Glassworking Advanced Upgrade    GlassworkingAdvancedUpgrade.cs
+GlassworkingModernUpgradeItem          Glassworking Modern Upgrade      GlassworkingModernUpgrade.cs
+GlassworkingSkillBook                  Glassworking Skill Book          Glassworking.cs
+GlassworkingSkillScroll                Glassworking Skill Scroll        Glassworking.cs
+GlassworksItem                         Glassworks                       Glassworks.cs
+GneissItem                             Gneiss                           Gneiss.cs
+GoatMountItem                          Goat Mount                       GoatMount.cs
+GoldBarItem                            Gold Bar                         GoldBar.cs
+GoldConcentrateItem                    Gold Concentrate                 GoldConcentrate.cs
+GoldFenceItem                          Gold Fence                       GoldFence.cs
+GoldFlakesItem                         Gold Flakes                      GoldFlakes.cs
+GoldFrameLandscapeItem                 Gold Frame Landscape             GoldFrameLandscape.cs
+GoldFrameLargeSquareItem               Gold Frame Large Square          GoldFrameLargeSquare.cs
+GoldFrameLargeTallItem                 Gold Frame Large Tall            GoldFrameLargeTall.cs
+GoldFrameLargeWideItem                 Gold Frame Large Wide            GoldFrameLargeWide.cs
+GoldFramePortraitItem                  Gold Frame Portrait              GoldFramePortrait.cs
+GoldFrameSquareItem                    Gold Frame Square                GoldFrameSquare.cs
+GoldFrameTallItem                      Gold Frame Tall                  GoldFrameTall.cs
+GoldFrameWideItem                      Gold Frame Wide                  GoldFrameWide.cs
+GoldGrillItem                          Gold Grill                       GoldGrill.cs
+GoldOreItem                            Gold Ore                         GoldOre.cs
+GoldScrapItem                          Gold Scrap                       GoldScrap.cs
+GoldTrimBookItem                       Gold Trim Book                   GoldTrimBook.cs
+GoldWiringItem                         Gold Wiring                      GoldWiring.cs
+GovernmentOfficeItem                   Government Office                GovernmentOffice.cs
+GrandStockageWoodItem                  Large Wood Storage               StorageMore_English.cs
+Grande_Double_EtagereItem              Large Double Shelf               StorageMore_English.cs
+Grande_Simple_EtagereItem              Large Single Shelf               StorageMore_English.cs
+GraniteItem                            Granite                          Granite.cs
+GraniteSpiralFountainItem              Granite Spiral Fountain          GraniteSpiralFountain.cs
+GraniteTerraceFountainItem             Granite Terrace Fountain         GraniteTerraceFountain.cs
+GrassSeedItem                          Grass Seed                       GrassSeed.cs
+GrassSeedPackItem                      Grass Seed Pack                  GrassSeed.cs
+GrindstoneItem                         Grindstone                       Grindstone.cs
+HammerItem                             Hammer                           HammerItem.cs
+HandPlowItem                           Hand Plow                        HandPlow.cs
+HandheldCameraItem                     Handheld Camera                  HandheldCamera.cs
+HangingBasketItem                      Hanging Basket                   HangingBasket.cs
+HangingElectricWallLampItem            Hanging Electric Wall Lamp       HangingElectricWallLamp.cs
+HangingLongSteelSignItem               Hanging Long Steel Sign          HangingLongSteelSign.cs
+HangingSteelFramedSignItem             Hanging Steel Framed Sign        HangingSteelFramedSign.cs
+HangingSteelMineSignItem               Hanging Steel Mine Sign          HangingSteelMineSign.cs
+HangingSteelPlainSignItem              Hanging Steel Plain Sign         HangingSteelPlainSign.cs
+HangingSteelShopSignItem               Hanging Steel Shop Sign          HangingSteelShopSign.cs
+HardwoodBoardItem                      Hardwood Board                   HardwoodBoard.cs
+HardwoodDoubleShelfItem                Hardwood Double Shelf            HardwoodDoubleShelf.cs
+HardwoodHewnLogItem                    Hardwood Hewn Log                HardwoodHewnLog.cs
+HardwoodLumberBenchItem                Hardwood Lumber Bench            HardwoodLumberBench.cs
+HardwoodLumberChairItem                Hardwood Lumber Chair            HardwoodLumberChair.cs
+HardwoodLumberDoorItem                 Hardwood Lumber Door             HardwoodLumberDoor.cs
+HardwoodLumberDresserItem              Hardwood Lumber Dresser          HardwoodLumberDresser.cs
+HardwoodLumberHallwayTableItem         Hardwood Lumber Hallway Table    HardwoodLumberHallwayTable.cs
+HardwoodLumberItem                     Hardwood Lumber                  HardwoodLumber.cs
+HardwoodLumberTableItem                Hardwood Lumber Table            HardwoodLumberTable.cs
+HardyBeardItem                         Hardy Beard                      HardyBeard.cs
+HareCarcassItem                        Hare Carcass                     HareCarcass.cs
+HarePeltItem                           Hare Pelt                        HarePelt.cs
+HeartOfPalmItem                        Heart Of Palm                    HeartOfPalm.cs
+HeartyHometownPizzaItem                Hearty Hometown Pizza            HeartyHometownPizza.cs
+HeatSinkItem                           Heat Sink                        HeatSink.cs
+HeatedDisplayCabinetItem               Heated Display Cabinet           HeatedDisplayCabinet.cs
+HeavyMineralDecontaminantItem          Heavy Mineral Decontaminant      HeavyMineralDecontaminant.cs
+HeavyMineralPollutantItem              Heavy Mineral Pollutant          HeavyMineralPollutant.cs
+HeliconiaSeedItem                      Heliconia Seed                   HeliconiaSeed.cs
+HeliconiaSeedPackItem                  Heliconia Seed Pack              HeliconiaSeed.cs
+HempMooringRopeItem                    Hemp Mooring Rope                HempMooringRope.cs
+HenleyItem                             Henley                           Henley.cs
+HewnBenchItem                          Hewn Bench                       HewnBench.cs
+HewnChairItem                          Hewn Chair                       HewnChair.cs
+HewnDoorItem                           Hewn Door                        HewnDoor.cs
+HewnDoubleDoorItem                     Hewn Double Door                 HewnDoubleDoor.cs
+HewnDresserItem                        Hewn Dresser                     HewnDresser.cs
+HewnHardwoodBenchItem                  Hewn Hardwood Bench              HewnHardwoodBench.cs
+HewnHardwoodChairItem                  Hewn Hardwood Chair              HewnHardwoodChair.cs
+HewnHardwoodDoorItem                   Hewn Hardwood Door               HewnHardwoodDoor.cs
+HewnHardwoodTableItem                  Hewn Hardwood Table              HewnHardwoodTable.cs
+HewnLogItem                            Hewn Log                         HewnLog.cs
+HewnNightstandItem                     Hewn Nightstand                  HewnNightstand.cs
+HewnSoftwoodBenchItem                  Hewn Softwood Bench              HewnSoftwoodBench.cs
+HewnSoftwoodChairItem                  Hewn Softwood Chair              HewnSoftwoodChair.cs
+HewnSoftwoodDoorItem                   Hewn Softwood Door               HewnSoftwoodDoor.cs
+HewnSoftwoodTableItem                  Hewn Softwood Table              HewnSoftwoodTable.cs
+HewnTableItem                          Hewn Table                       HewnTable.cs
+HideAshFertilizerItem                  Hide Ash Fertilizer              HideAshFertilizer.cs
+HoeItem                                Hoe                              HoeItem.cs
+HosomakiItem                           Hosomaki                         Hosomaki.cs
+HourglassItem                          Hourglass                        Hourglass.cs
+HuckleberriesCornetItem                Huckleberries Cone               Cone.cs
+HuckleberriesItem                      Huckleberries                    Huckleberries.cs
+HuckleberriesJuiceItem                 Huckleberries Juice              HuckleberriesJuice.cs
+HuckleberriesPopsicleItem              Huckleberries Popsicle           PopsicleRecipe.cs
+HuckleberryExtractItem                 Huckleberry Extract              HuckleberryExtract.cs
+HuckleberryFritterItem                 Huckleberry Fritter              HuckleberryFritter.cs
+HuckleberryPieItem                     Huckleberry Pie                  HuckleberryPie.cs
+HuckleberrySeedItem                    Huckleberry Seed                 HuckleberrySeed.cs
+HuckleberrySeedPackItem                Huckleberry Seed Pack            HuckleberrySeed.cs
+HugeBannerSignItem                     Huge Banner Sign                 HugeBannerSign.cs
+HugeIronBannerSignItem                 Huge Iron Banner Sign            HugeIronBannerSign.cs
+HugeIronSignItem                       Huge Iron Sign                   HugeIronSign.cs
+HugeSteelBannerSignItem                Huge Steel Banner Sign           HugeSteelBannerSign.cs
+HugeSteelSignItem                      Huge Steel Sign                  HugeSteelSign.cs
+HugeWoodenBannerSignItem               Huge Wooden Banner Sign          HugeWoodenBannerSign.cs
+HumanLimbsItem                         Human Limbs                      HumanLimbs.cs
+HunterMarketItem                       Hunter Market                    HunterMarket.cs
+HuntingUpgradeItem                     Hunting Upgrade                  HuntingUpgrade.cs
+HydrocolloidsItem                      Hydrocolloids                    Hydrocolloids.cs
+HydrometerItem                         Hydrometer                       HydrometerItem.cs
+IceCreamBasicUpgradeItem               IceCream Upgrade                 IceCreamAdvancedUpgrade.cs
+IceCreamMachinItem                     Ice Cream Machine                'IceCreamMachin.cs
+IceCreamSkillBook                      Ice Cream Skill Book             IceCream.cs
+IceCreamSkillScroll                    Ice Cream Skill Scroll           IceCream.cs
+IceCreamTubItem                        Ice Cream Tub                    baseIce.cs
+IceCubeItem                            Ice Cube                         IceCube.cs
+IceboxItem                             Icebox                           Icebox.cs
+IcedCoffeeItem                         Iced Coffee                      IcedCoffee.cs
+ImmigrationDeskItem                    Immigration Desk                 ImmigrationDesk.cs
+IncineratorItem                        Incinerator                      Incinerator.cs
+IndustrialBargeItem                    Industrial Barge                 IndustrialBarge.cs
+IndustrialElevatorItem                 Industrial Elevator              IndustrialElevator.cs
+IndustrialGeneratorItem                Industrial Generator             IndustrialGenerator.cs
+IndustrialItem                         Industrial                       Industrial.cs
+IndustrialMillItem                     Industrial Mill                  IndustrialMill.cs
+IndustrialPollutionFilterItem          Industrial Pollution Filter      FilterItems.cs
+IndustrialRefrigeratorItem             Industrial Refrigerator          IndustrialRefrigerator.cs
+IndustrialSewageItem                   Industrial Sewage                Fluids.cs
+IndustrialWasteSorterItem              Industrial Waste Sorter          IndustrialWasteSorter.cs
+IndustrySkillBook                      Industry Skill Book              Industry.cs
+IndustrySkillScroll                    Industry Skill Scroll            Industry.cs
+IndustryUpgradeItem                    Industry Upgrade                 IndustryUpgrade.cs
+InfusedOilItem                         Infused Oil                      InfusedOil.cs
+InjectionMoldMachineItem               Injection Mold Machine           InjectionMoldMachine.cs
+InkItem                                Ink                              Ink.cs
+InsulatedCopperWiringItem              Insulated Copper Wiring          InsulatedCopperWiring.cs
+IronAnchorItem                         Iron Anchor                      IronAnchor.cs
+IronAxeItem                            Iron Axe                         IronAxe.cs
+IronAxleItem                           Iron Axle                        IronAxle.cs
+IronBarItem                            Iron Bar                         IronBar.cs
+IronChainItem                          Iron Chain                       IronChain.cs
+IronConcentrateItem                    Iron Concentrate                 IronConcentrate.cs
+IronFenceItem                          Iron Fence                       IronFence.cs
+IronFrameLandscapeItem                 Iron Frame Landscape             IronFrameLandscape.cs
+IronFrameLargeSquareItem               Iron Frame Large Square          IronFrameLargeSquare.cs
+IronFrameLargeTallItem                 Iron Frame Large Tall            IronFrameLargeTall.cs
+IronFrameLargeWideItem                 Iron Frame Large Wide            IronFrameLargeWide.cs
+IronFramePortraitItem                  Iron Frame Portrait              IronFramePortrait.cs
+IronFrameSquareItem                    Iron Frame Square                IronFrameSquare.cs
+IronFrameTallItem                      Iron Frame Tall                  IronFrameTall.cs
+IronFrameWideItem                      Iron Frame Wide                  IronFrameWide.cs
+IronGearItem                           Iron Gear                        IronGear.cs
+IronGrillItem                          Iron Grill                       IronGrill.cs
+IronHammerItem                         Iron Hammer                      IronHammer.cs
+IronHoeItem                            Iron Hoe                         IronHoe.cs
+IronHullSheetItem                      Iron Hull Sheet                  IronHullSheet.cs
+IronMacheteItem                        Iron Machete                     IronMachete.cs
+IronOreItem                            Iron Ore                         IronOre.cs
+IronOxideItem                          Iron Oxide                       IronOxide.cs
+IronPaintSprayerItem                   Iron Paint Sprayer               IronPaintSprayer.cs
+IronPickaxeItem                        Iron Pickaxe                     IronPickaxe.cs
+IronPipeItem                           Iron Pipe                        IronPipe.cs
+IronPlateItem                          Iron Plate                       IronPlate.cs
+IronRoadToolItem                       Iron Road Tool                   IronRoadTool.cs
+IronRockDrillItem                      Iron Rock Drill                  IronRockDrill.cs
+IronSawBladeItem                       Iron Saw Blade                   IronSawBlade.cs
+IronScrapItem                          Iron Scrap                       IronScrap.cs
+IronShovelItem                         Iron Shovel                      IronShovel.cs
+IronSickleItem                         Iron Sickle                      IronSickle.cs
+IronWheelItem                          Iron Wheel                       IronWheel.cs
+IronWhetstoneItem                      Iron Whetstones                  Whetstones.cs
+JaguarCarcassItem                      Jaguar Carcass                   JaguarCarcass.cs
+JawCrusherItem                         Jaw Crusher                      JawCrusher.cs
+JazzHandsItem                          Jazz Hands                       JazzHands.cs
+JetSkiItem                             Jet Ski                          JetSki.cs
+JointfirSeedItem                       Jointfir Seed                    JointfirSeed.cs
+JointfirSeedPackItem                   Jointfir Seed Pack               JointfirSeed.cs
+JoshuaLogItem                          Joshua Log                       JoshuaLog.cs
+JoshuaSeedItem                         Joshua Seed                      JoshuaSeed.cs
+JoshuaSeedPackItem                     Joshua Seed Pack                 JoshuaSeed.cs
+JuiceItem                              Juice                            Juice.cs
+JungleCampfireSaladItem                Jungle Campfire Salad            JungleCampfireSalad.cs
+JungleCampfireStewItem                 Jungle Campfire Stew             JungleCampfireStew.cs
+KelpItem                               Kelp                             Kelp.cs
+KelpSeedItem                           Kelp Seed                        KelpSeed.cs
+KelpSeedPackItem                       Kelp Seed Pack                   KelpSeed.cs
+KelpyCrabRollItem                      Kelpy Crab Roll                  KelpyCrabRoll.cs
+KilnItem                               Kiln                             Kiln.cs
+KingFernSporeItem                      King Fern Spore                  KingFernSpore.cs
+KingFernSporePackItem                  King Fern Spore Pack             KingFernSpore.cs
+KitchenItem                            Kitchen                          Kitchen.cs
+KitchenroomItem                        Kitchenroom                      Kitchenroom.cs
+KiteItem                               Kite                             Kite.cs
+KoiPondItem                            Koi Pond                         KoiPond.cs
+LaboratoryItem                         Laboratory                       Laboratory.cs
+LargeBathMatItem                       Large Bath Mat                   LargeBathMat.cs
+LargeCanoeItem                         Large Canoe                      LargeCanoe.cs
+LargeCorrugatedSteelDoorItem           Large Corrugated Steel Door      LargeCorrugatedSteelDoor.cs
+LargeCottonBuntingFestiveItem          Large Cotton Bunting Festive     LargeCottonBuntingFestive.cs
+LargeCottonBuntingRedItem              Large Cotton Bunting Red         LargeCottonBuntingRed.cs
+LargeCottonBuntingRegalItem            Large Cotton Bunting Regal       LargeCottonBuntingRegal.cs
+LargeCottonBuntingVibrantItem          Large Cotton Bunting Vibrant     LargeCottonBuntingVibrant.cs
+LargeCourtItem                         Large Court                      LargeCourt.cs
+LargeFestivePaperLanternItem           Large Festive Paper Lantern      LargeFestivePaperLantern.cs
+LargeGlassStoreWindowItem              Large Glass Store Window         LargeGlassStoreWindow.cs
+LargeHangingAshlarBasaltSignItem       Large Hanging Ashlar Basalt Sign LargeHangingAshlarBasaltSign.cs
+LargeHangingAshlarGneissSignItem       Large Hanging Ashlar Gneiss Sign LargeHangingAshlarGneissSign.cs
+LargeHangingAshlarGraniteSignItem      Large Hanging Ashlar Granite Sign LargeHangingAshlarGraniteSign.cs
+LargeHangingAshlarLimestoneSignItem    Large Hanging Ashlar Limestone Sign LargeHangingAshlarLimestoneSign.cs
+LargeHangingAshlarSandstoneSignItem    Large Hanging Ashlar Sandstone Sign LargeHangingAshlarSandstoneSign.cs
+LargeHangingAshlarShaleSignItem        Large Hanging Ashlar Shale Sign  LargeHangingAshlarShaleSign.cs
+LargeHangingAshlarStoneSignItem        Large Hanging Ashlar Stone Sign  LargeHangingAshlarStoneSign.cs
+LargeHangingBirchSignItem              Large Hanging Birch Sign         LargeHangingBirchSign.cs
+LargeHangingCedarSignItem              Large Hanging Cedar Sign         LargeHangingCedarSign.cs
+LargeHangingCeibaSignItem              Large Hanging Ceiba Sign         LargeHangingCeibaSign.cs
+LargeHangingFirSignItem                Large Hanging Fir Sign           LargeHangingFirSign.cs
+LargeHangingHardwoodSignItem           Large Hanging Hardwood Sign      LargeHangingHardwoodSign.cs
+LargeHangingJoshuaSignItem             Large Hanging Joshua Sign        LargeHangingJoshuaSign.cs
+LargeHangingLumberSignItem             Large Hanging Lumber Sign        LargeHangingLumberSign.cs
+LargeHangingMortaredGraniteSignItem    Large Hanging Mortared Granite Sign LargeHangingMortaredGraniteSign.cs
+LargeHangingMortaredLimestoneSignItem  Large Hanging Mortared Limestone Sign LargeHangingMortaredLimestoneSign.cs
+LargeHangingMortaredSandstoneSignItem  Large Hanging Mortared Sandstone Sign LargeHangingMortaredSandstoneSign.cs
+LargeHangingMortaredStoneSignItem      Large Hanging Mortared Stone Sign LargeHangingMortaredStoneSign.cs
+LargeHangingOakSignItem                Large Hanging Oak Sign           LargeHangingOakSign.cs
+LargeHangingPalmSignItem               Large Hanging Palm Sign          LargeHangingPalmSign.cs
+LargeHangingRedwoodSignItem            Large Hanging Redwood Sign       LargeHangingRedwoodSign.cs
+LargeHangingSaguaroSignItem            Large Hanging Saguaro Sign       LargeHangingSaguaroSign.cs
+LargeHangingSoftwoodSignItem           Large Hanging Softwood Sign      LargeHangingSoftwoodSign.cs
+LargeHangingSpruceSignItem             Large Hanging Spruce Sign        LargeHangingSpruceSign.cs
+LargeHangingStoneSignItem              Large Hanging Stone Sign         LargeHangingStoneSign.cs
+LargeHangingWoodSignItem               Large Hanging Wood Sign          LargeHangingWoodSign.cs
+LargeLumberDoorItem                    Large Lumber Door                LargeLumberDoor.cs
+LargeLumberStockpileItem               Large Lumber Stockpile           LargeLumberStockpile.cs
+LargeLumberStoreWindowItem             Large Lumber Store Window        LargeLumberStoreWindow.cs
+LargeMetalShipFrameItem                Large Metal Ship Frame           LargeMetalShipFrame.cs
+LargeNylonBuntingGreenItem             Large Nylon Bunting Green        LargeNylonBuntingGreen.cs
+LargeNylonBuntingPurpleItem            Large Nylon Bunting Purple       LargeNylonBuntingPurple.cs
+LargeNylonBuntingYellowItem            Large Nylon Bunting Yellow       LargeNylonBuntingYellow.cs
+LargePaperLanternItem                  Large Paper Lantern              LargePaperLantern.cs
+LargeStandingAshlarBasaltSignItem      Large Standing Ashlar Basalt Sign LargeStandingAshlarBasaltSign.cs
+LargeStandingAshlarGneissSignItem      Large Standing Ashlar Gneiss Sign LargeStandingAshlarGneissSign.cs
+LargeStandingAshlarGraniteSignItem     Large Standing Ashlar Granite Sign LargeStandingAshlarGraniteSign.cs
+LargeStandingAshlarLimestoneSignItem   Large Standing Ashlar Limestone Sign LargeStandingAshlarLimestoneSign.cs
+LargeStandingAshlarSandstoneSignItem   Large Standing Ashlar Sandstone Sign LargeStandingAshlarSandstoneSign.cs
+LargeStandingAshlarShaleSignItem       Large Standing Ashlar Shale Sign LargeStandingAshlarShaleSign.cs
+LargeStandingAshlarStoneSignItem       Large Standing Ashlar Stone Sign LargeStandingAshlarStoneSign.cs
+LargeStandingBirchSignItem             Large Standing Birch Sign        LargeStandingBirchSign.cs
+LargeStandingCedarSignItem             Large Standing Cedar Sign        LargeStandingCedarSign.cs
+LargeStandingCeibaSignItem             Large Standing Ceiba Sign        LargeStandingCeibaSign.cs
+LargeStandingFirSignItem               Large Standing Fir Sign          LargeStandingFirSign.cs
+LargeStandingHardwoodSignItem          Large Standing Hardwood Sign     LargeStandingHardwoodSign.cs
+LargeStandingJoshuaSignItem            Large Standing Joshua Sign       LargeStandingJoshuaSign.cs
+LargeStandingLumberSignItem            Large Standing Lumber Sign       LargeStandingLumberSign.cs
+LargeStandingMortaredGraniteSignItem   Large Standing Mortared Granite Sign LargeStandingMortaredGraniteSign.cs
+LargeStandingMortaredLimestoneSignItem Large Standing Mortared Limestone Sign LargeStandingMortaredLimestoneSign.cs
+LargeStandingMortaredSandstoneSignItem Large Standing Mortared Sandstone Sign LargeStandingMortaredSandstoneSign.cs
+LargeStandingMortaredStoneSignItem     Large Standing Mortared Stone Sign LargeStandingMortaredStoneSign.cs
+LargeStandingOakSignItem               Large Standing Oak Sign          LargeStandingOakSign.cs
+LargeStandingPalmSignItem              Large Standing Palm Sign         LargeStandingPalmSign.cs
+LargeStandingRedwoodSignItem           Large Standing Redwood Sign      LargeStandingRedwoodSign.cs
+LargeStandingSaguaroSignItem           Large Standing Saguaro Sign      LargeStandingSaguaroSign.cs
+LargeStandingSoftwoodSignItem          Large Standing Softwood Sign     LargeStandingSoftwoodSign.cs
+LargeStandingSpruceSignItem            Large Standing Spruce Sign       LargeStandingSpruceSign.cs
+LargeStandingStoneSignItem             Large Standing Stone Sign        LargeStandingStoneSign.cs
+LargeStandingWoodSignItem              Large Standing Wood Sign         LargeStandingWoodSign.cs
+LargeWindowedLumberDoorItem            Large Windowed Lumber Door       LargeWindowedLumberDoor.cs
+LargeWoodenBookshelfItem               Large Wooden Bookshelf           LargeWoodenBookshelf.cs
+LargeWoodenShipFrameItem               Large Wooden Ship Frame          LargeWoodenShipFrame.cs
+LaserItem                              Laser                            Laser.cs
+LatheItem                              Lathe                            Lathe.cs
+LatrineItem                            Wooden Latrine                   Latrine.cs
+LatticeMushroomSporesItem              Lattice Mushroom Spores          LatticeMushroomSpores.cs
+LatticeMushroomSporesPackItem          Lattice Mushroom Spores Pack     LatticeMushroomSpores.cs
+LeatherHideItem                        Leather Hide                     LeatherHide.cs
+LeavenedDoughItem                      Leavened Dough                   LeavenedDough.cs
+LightBackpackItem                      Light Backpack                   LightBackpack.cs
+LightBulbItem                          Light Bulb                       LightBulb.cs
+LighthouseLampItem                     Lighthouse Lamp                  LighthouseLamp.cs
+LimestoneBisonStatueItem               Limestone Bison Statue           LimestoneBisonStatue.cs
+LimestoneItem                          Limestone                        Limestone.cs
+LimestoneOtterStatueItem               Limestone Otter Statue           LimestoneOtterStatue.cs
+LimestoneOwlStatueItem                 Limestone Owl Statue             LimestoneOwlStatue.cs
+LimestonePodiumItem                    Limestone Podium                 LimestonePodium.cs
+LimestoneWolfStatueItem                Limestone Wolf Statue            LimestoneWolfStatue.cs
+LinenFabricItem                        Linen Fabric                     LinenFabric.cs
+LinenYarnItem                          Linen Yarn                       LinenYarn.cs
+LiquidCrafterItem                      Liquid Converter                 LiquidCrafterObject.cs
+LiquidNitrogenItem                     Liquid Nitrogen                  LiquidNitrogen.cs
+LivingroomItem                         Livingroom                       Livingroom.cs
+LoadedTaroFriesItem                    Loaded Taro Fries                LoadedTaroFries.cs
+LogItem                                Log                              Log.cs
+LoggingAdvancedUpgradeItem             Logging Advanced Upgrade         LoggingAdvancedUpgrade.cs
+LoggingBasicUpgradeItem                Logging Basic Upgrade            LoggingBasicUpgrade.cs
+LongBasicHardwoodShelfItem             Long Basic Hardwood Shelf        LongBasicHardwoodShelf.cs
+LongBasicSoftwoodShelfItem             Long Basic Softwood Shelf        LongBasicSoftwoodShelf.cs
+LongBasicWoodShelfItem                 Long Basic Wood Shelf            LongBasicWoodShelf.cs
+LongFloatingHardwoodShelfItem          Long Floating Hardwood Shelf     LongFloatingHardwoodShelf.cs
+LongFloatingSoftwoodShelfItem          Long Floating Softwood Shelf     LongFloatingSoftwoodShelf.cs
+LongFloatingWoodShelfItem              Long Floating Wood Shelf         LongFloatingWoodShelf.cs
+LongHardwoodLumberShelfItem            Long Hardwood Lumber Shelf       LongHardwoodLumberShelf.cs
+LongHardwoodVeneerShelfItem            Long Hardwood Veneer Shelf       LongHardwoodVeneerShelf.cs
+LongLumberShelfItem                    Long Lumber Shelf                LongLumberShelf.cs
+LongSoftwoodLumberShelfItem            Long Softwood Lumber Shelf       LongSoftwoodLumberShelf.cs
+LongSoftwoodVeneerShelfItem            Long Softwood Veneer Shelf       LongSoftwoodVeneerShelf.cs
+LongSteelShelfItem                     Long Steel Shelf                 LongSteelShelf.cs
+LongThinHardwoodVeneerShelfItem        Long Thin Hardwood Veneer Shelf  LongThinHardwoodVeneerShelf.cs
+LongThinSoftwoodVeneerShelfItem        Long Thin Softwood Veneer Shelf  LongThinSoftwoodVeneerShelf.cs
+LongThinWoodVeneerShelfItem            Long Thin Wood Veneer Shelf      LongThinWoodVeneerShelf.cs
+LongWoodVeneerShelfItem                Long Wood Veneer Shelf           LongWoodVeneerShelf.cs
+LoomItem                               Loom                             Loom.cs
+LowTopShoesItem                        Low Top Shoes                    LowTopShoes.cs
+LubricantItem                          Lubricant                        Lubricant.cs
+LumberBenchItem                        Lumber Bench                     LumberBench.cs
+LumberChairItem                        Lumber Chair                     LumberChair.cs
+LumberDoorItem                         Lumber Door                      LumberDoor.cs
+LumberDoubleDoorItem                   Lumber Double Door               LumberDoubleDoor.cs
+LumberDresserItem                      Lumber Dresser                   LumberDresser.cs
+LumberHallwayTableItem                 Lumber Hallway Table             LumberHallwayTable.cs
+LumberItem                             Lumber                           Lumber.cs
+LumberStockpileItem                    Lumber Stockpile                 LumberStockpile.cs
+LumberTableItem                        Lumber Table                     LumberTable.cs
+LumberWarehouseShelvesItem             Lumber Warehouse Shelves         LumberWarehouseShelves.cs
+LupineItem                             Lupine                           Lupine.cs
+LupineSeedItem                         Lupine Seed                      LupineSeed.cs
+LupineSeedPackItem                     Lupine Seed Pack                 LupineSeed.cs
+MacaronsItem                           Macarons                         Macarons.cs
+MachinistTableItem                     Machinist Table                  MachinistTable.cs
+MagentaPowderItem                      Magenta Powder                   MagentaPowder.cs
+MagnetItem                             Magnet                           Magnet.cs
+MailboxItem                            Mailbox                          Mailbox.cs
+MaltodextrinItem                       Maltodextrin                     Maltodextrin.cs
+MarmotCarcassItem                      Marmot Carcass                   MarmotCarcass.cs
+MasculineMannequinItem                 Masculine Mannequin              MasculineMannequin.cs
+MasonMarketItem                        Mason Market                     MasonMarket.cs
+MasonSignItem                          Mason Sign                       MasonSign.cs
+MasonryAdvancedUpgradeItem             Masonry Advanced Upgrade         MasonryAdvancedUpgrade.cs
+MasonryBasicUpgradeItem                Masonry Basic Upgrade            MasonryBasicUpgrade.cs
+MasonrySkillBook                       Masonry Skill Book               Masonry.cs
+MasonrySkillScroll                     Masonry Skill Scroll             Masonry.cs
+MasonryTableItem                       Masonry Table                    MasonryTable.cs
+MatchaTeaLatteItem                     Matcha Tea Latte                 MatchaTeaLatte.cs
+MeatPieItem                            Meat Pie                         MeatPie.cs
+MeatStockItem                          Meat Stock                       MeatStock.cs
+MeatyStewItem                          Meaty Stew                       MeatyStew.cs
+MechanicalTransmissionPoleItem         Mechanical Transmission Pole     MechanicalTransmissionPole.cs
+MechanicalWaterPumpItem                Mechanical Water Pump            MechanicalWaterPump.cs
+MechanicsAdvancedUpgradeItem           Mechanics Advanced Upgrade       MechanicsAdvancedUpgrade.cs
+MechanicsModernUpgradeItem             Mechanics Modern Upgrade         MechanicsModernUpgrade.cs
+MechanicsSkillBook                     Mechanics Skill Book             Mechanics.cs
+MechanicsSkillScroll                   Mechanics Skill Scroll           Mechanics.cs
+MediumFishingTrawlerItem               Medium Fishing Trawler           MediumFishingTrawler.cs
+MediumLumberStoreWindowItem            Medium Lumber Store Window       MediumLumberStoreWindow.cs
+MediumMetalShipFrameItem               Medium Metal Ship Frame          MediumMetalShipFrame.cs
+MediumShipyardItem                     Medium Shipyard                  MediumShipyard.cs
+MediumWoodenShipFrameItem              Medium Wooden Ship Frame         MediumWoodenShipFrame.cs
+MeshFilterItem                         Mesh Filter                      MeshFilter.cs
+MetalKeelItem                          Metal Keel                       MetalKeel.cs
+MetalRudderItem                        Metal Rudder                     MetalRudder.cs
+MetalScrapSorterItem                   Metal Scrap Sorter               MetalScrapSorter.cs
+MetallurgyResearchPaperAdvancedItem    Metallurgy Research Paper Advanced MetallurgyResearchPaperAdvanced.cs
+MetallurgyResearchPaperBasicItem       Metallurgy Research Paper Basic  MetallurgyResearchPaperBasic.cs
+MetallurgyResearchPaperModernItem      Metallurgy Research Paper Modern MetallurgyResearchPaperModern.cs
+MilkItem                               Milk                             Milk.cs
+MillItem                               Mill                             Mill.cs
+MillStoneItem                          Mill Stone                       MillStone.cs
+MillingSkillBook                       Milling Skill Book               Milling.cs
+MillingSkillScroll                     Milling Skill Scroll             Milling.cs
+MillingUpgradeItem                     Milling Upgrade                  MillingUpgrade.cs
+MillionairesSaladItem                  Millionaires Salad               MillionairesSalad.cs
+MiningAdvancedUpgradeItem              Mining Advanced Upgrade          MiningAdvancedUpgrade.cs
+MiningBasicUpgradeItem                 Mining Basic Upgrade             MiningBasicUpgrade.cs
+MiningChargeItem                       Mining Charge                    MiningCharge.cs
+MiningModernUpgradeItem                Mining Modern Upgrade            MiningModernUpgrade.cs
+MintItem                               Mint                             Mint.cs
+MixedBiowasteItem                      Mixed Biowaste                   Waste.cs
+MixedConstructionScrapItem             Mixed Construction Scrap         Waste.cs
+MixedGarbageItem                       Mixed Garbage                    Waste.cs
+MixedIndustrialWasteItem               Mixed Industrial Waste           Waste.cs
+MixedMetalScrapItem                    Mixed Metal Scrap                Waste.cs
+MixedResidualsItem                     Mixed Residuals                  Waste.cs
+MixologySkillBook                      Mixology Skill Book              Mixology.cs
+MixologySkillScroll                    Mixology Skill Scroll            Mixology.cs
+MixologyTableItem                      Mixology Table                   MixologyTable.cs
+MixologyUpgradeItem                    Mixology Upgrade                 MixologyUpgrade.cs
+MochiItem                              Mochi                            Mochi.cs
+ModernAxeItem                          Modern Axe                       ModernAxe.cs
+ModernCompostBinItem                   Modern Compost Bin               ModernCompostBin.cs
+ModernDoubleStreetLightItem            Modern Double Street Light       ModernDoubleStreetLight.cs
+ModernGarbageBinItem                   Modern Garbage Bin               ModernGarbageBin.cs
+ModernHammerItem                       Modern Hammer                    ModernHammer.cs
+ModernHoeItem                          Modern Hoe                       ModernHoe.cs
+ModernMacheteItem                      Modern Machete                   ModernMachete.cs
+ModernPaintSprayerItem                 Modern Paint Sprayer             ModernPaintSprayer.cs
+ModernPickaxeItem                      Modern Pickaxe                   ModernPickaxe.cs
+ModernRecyclingBinItem                 Modern Recycling Bin             ModernRecyclingBin.cs
+ModernRockDrillItem                    Modern Rock Drill                ModernRockDrill.cs
+ModernScytheItem                       Modern Scythe                    ModernScythe.cs
+ModernShovelItem                       Modern Shovel                    ModernShovel.cs
+ModernStreetLightItem                  Modern Street Light              ModernStreetLight.cs
+ModernUpgradeItem                      Modern Upgrade                   ModernUpgrade.cs
+ModernUpgradeLvl1Item                  Modern Upgrade 1                 ModernUpgradeLvl1.cs
+ModernUpgradeLvl2Item                  Modern Upgrade 2                 ModernUpgradeLvl2.cs
+ModernUpgradeLvl3Item                  Modern Upgrade 3                 ModernUpgradeLvl3.cs
+ModernUpgradeLvl4Item                  Modern Upgrade 4                 ModernUpgradeLvl4.cs
+MoonJellyfishItem                      Moon Jellyfish                   MoonJellyfish.cs
+MortarItem                             Mortar                           Mortar.cs
+MortaredBasaltItem                     Mortared Basalt                  MortaredBasalt.cs
+MortaredGneissItem                     Mortared Gneiss                  MortaredGneiss.cs
+MortaredGraniteBenchItem               Mortared Granite Bench           MortaredGraniteBench.cs
+MortaredGraniteChairItem               Mortared Granite Chair           MortaredGraniteChair.cs
+MortaredGraniteDoorItem                Mortared Granite Door            MortaredGraniteDoor.cs
+MortaredGraniteFireplaceItem           Mortared Granite Fireplace       MortaredGraniteFireplace.cs
+MortaredGraniteItem                    Mortared Granite                 MortaredGranite.cs
+MortaredGraniteTableItem               Mortared Granite Table           MortaredGraniteTable.cs
+MortaredLimestoneBenchItem             Mortared Limestone Bench         MortaredLimestoneBench.cs
+MortaredLimestoneChairItem             Mortared Limestone Chair         MortaredLimestoneChair.cs
+MortaredLimestoneDoorItem              Mortared Limestone Door          MortaredLimestoneDoor.cs
+MortaredLimestoneFireplaceItem         Mortared Limestone Fireplace     MortaredLimestoneFireplace.cs
+MortaredLimestoneItem                  Mortared Limestone               MortaredLimestone.cs
+MortaredLimestoneTableItem             Mortared Limestone Table         MortaredLimestoneTable.cs
+MortaredSandstoneBenchItem             Mortared Sandstone Bench         MortaredSandstoneBench.cs
+MortaredSandstoneChairItem             Mortared Sandstone Chair         MortaredSandstoneChair.cs
+MortaredSandstoneDoorItem              Mortared Sandstone Door          MortaredSandstoneDoor.cs
+MortaredSandstoneFireplaceItem         Mortared Sandstone Fireplace     MortaredSandstoneFireplace.cs
+MortaredSandstoneItem                  Mortared Sandstone               MortaredSandstone.cs
+MortaredSandstoneTableItem             Mortared Sandstone Table         MortaredSandstoneTable.cs
+MortaredShaleItem                      Mortared Shale                   MortaredShale.cs
+MortaredStoneBenchItem                 Mortared Stone Bench             MortaredStoneBench.cs
+MortaredStoneChairItem                 Mortared Stone Chair             MortaredStoneChair.cs
+MortaredStoneDoorItem                  Mortared Stone Door              MortaredStoneDoor.cs
+MortaredStoneFireplaceItem             Mortared Stone Fireplace         MortaredStoneFireplace.cs
+MortaredStoneItem                      Mortared Stone                   MortaredStone.cs
+MortaredStoneTableItem                 Mortared Stone Table             MortaredStoneTable.cs
+MotoItem                               Moto                             Moto.cs
+MountainGoatCarcassItem                Mountain Goat Carcass            MountainGoatCarcass.cs
+MoyenStockageWoodItem                  Medium Wood Storage              StorageMore_English.cs
+MuffinHatItem                          Muffin Hat                       MuffinHat.cs
+MysticForestTubItem                    Mystic Forest Ice Cream Tub      IceCreamTub.cs
+NailItem                               Nail                             Nail.cs
+NitricAcidItem                         Nitric Acid                      NitricAcid.cs
+NormalHairItem                         Normal Hair                      NormalHair.cs
+NorseAxeItem                           Norse Axe                        NorseAxe.cs
+NorseCanoeItem                         Norse Canoe                      NorseCanoe.cs
+NuclearFuelItem                        Nuclear Fuel                     NuclearFuel.cs
+NylonCarpetItem                        Nylon Carpet                     NylonCarpet.cs
+NylonChipsItem                         Nylon Chips                      NylonChips.cs
+NylonCurtainsItem                      Nylon Curtains                   NylonCurtains.cs
+NylonFabricItem                        Nylon Fabric                     NylonFabric.cs
+NylonFutonBedItem                      Nylon Futon Bed                  NylonFutonBed.cs
+NylonFutonCouchItem                    Nylon Futon Couch                NylonFutonCouch.cs
+NylonItem                              Nylon                            Nylon.cs
+NylonMooringRopeItem                   Nylon Mooring Rope               NylonMooringRope.cs
+NylonThreadItem                        Nylon Thread                     NylonThread.cs
+NylonTrawlerNetItem                    Nylon Trawler Net                NylonTrawlerNet.cs
+OakHewnDoubleDoorItem                  Oak Hewn Double Door             OakHewnDoubleDoor.cs
+OakLogItem                             Oak Log                          OakLog.cs
+OakLumberDoubleDoorItem                Oak Lumber Double Door           OakLumberDoubleDoor.cs
+OatMilkItem                            Oat Milk                         OatMilk.cs
+OceanSpraySeedItem                     Ocean Spray Seed                 OceanSpraySeed.cs
+OceanSpraySeedPackItem                 Ocean Spray Seed Pack            OceanSpraySeed.cs
+OfficeMailboxItem                      Office Mailbox                   OfficeMailbox.cs
+OilDrillingSkillBook                   Oil Drilling Skill Book          OilDrilling.cs
+OilDrillingSkillScroll                 Oil Drilling Skill Scroll        OilDrilling.cs
+OilDrillingUpgradeItem                 Oil Drilling Upgrade             OilDrillingUpgrade.cs
+OilHeadLampItem                        Oil Head Lamp                    OilHeadLamp.cs
+OilItem                                Oil                              Oil.cs
+OilPaintItem                           Oil Paint                        OilPaint.cs
+OilRefineryItem                        Oil Refinery                     OilRefinery.cs
+OrangeVaseItem                         Orange Vase                      OrangeVase.cs
+OrchidItem                             Orchid                           Orchid.cs
+OrchidSeedItem                         Orchid Seed                      OrchidSeed.cs
+OrchidSeedPackItem                     Orchid Seed Pack                 OrchidSeed.cs
+OrchidTeaItem                          Orchid Tea                       OrchidTea.cs
+OrnateCastIronPlaqueItem               Ornate Cast Iron Plaque          OrnateCastIronPlaque.cs
+OrnateGoldFrameLandscapeItem           Ornate Gold Frame Landscape      OrnateGoldFrameLandscape.cs
+OrnateGoldFrameLargeSquareItem         Ornate Gold Frame Large Square   OrnateGoldFrameLargeSquare.cs
+OrnateGoldFrameLargeTallItem           Ornate Gold Frame Large Tall     OrnateGoldFrameLargeTall.cs
+OrnateGoldFrameLargeWideItem           Ornate Gold Frame Large Wide     OrnateGoldFrameLargeWide.cs
+OrnateGoldFramePortraitItem            Ornate Gold Frame Portrait       OrnateGoldFramePortrait.cs
+OrnateGoldFrameSquareItem              Ornate Gold Frame Square         OrnateGoldFrameSquare.cs
+OrnateGoldFrameTallItem                Ornate Gold Frame Tall           OrnateGoldFrameTall.cs
+OrnateGoldFrameWideItem                Ornate Gold Frame Wide           OrnateGoldFrameWide.cs
+OrnateIronFrameLandscapeItem           Ornate Iron Frame Landscape      OrnateIronFrameLandscape.cs
+OrnateIronFrameLargeSquareItem         Ornate Iron Frame Large Square   OrnateIronFrameLargeSquare.cs
+OrnateIronFrameLargeTallItem           Ornate Iron Frame Large Tall     OrnateIronFrameLargeTall.cs
+OrnateIronFrameLargeWideItem           Ornate Iron Frame Large Wide     OrnateIronFrameLargeWide.cs
+OrnateIronFramePortraitItem            Ornate Iron Frame Portrait       OrnateIronFramePortrait.cs
+OrnateIronFrameSquareItem              Ornate Iron Frame Square         OrnateIronFrameSquare.cs
+OrnateIronFrameTallItem                Ornate Iron Frame Tall           OrnateIronFrameTall.cs
+OrnateIronFrameWideItem                Ornate Iron Frame Wide           OrnateIronFrameWide.cs
+OrnateStonePlaqueItem                  Ornate Stone Plaque              OrnateStonePlaque.cs
+OrnateWoodPlaqueItem                   Ornate Wood Plaque               OrnateWoodPlaque.cs
+OrnateWoodenFrameLandscapeItem         Ornate Wooden Frame Landscape    OrnateWoodenFrameLandscape.cs
+OrnateWoodenFrameLargeSquareItem       Ornate Wooden Frame Large Square OrnateWoodenFrameLargeSquare.cs
+OrnateWoodenFrameLargeTallItem         Ornate Wooden Frame Large Tall   OrnateWoodenFrameLargeTall.cs
+OrnateWoodenFrameLargeWideItem         Ornate Wooden Frame Large Wide   OrnateWoodenFrameLargeWide.cs
+OrnateWoodenFramePortraitItem          Ornate Wooden Frame Portrait     OrnateWoodenFramePortrait.cs
+OrnateWoodenFrameSquareItem            Ornate Wooden Frame Square       OrnateWoodenFrameSquare.cs
+OrnateWoodenFrameTallItem              Ornate Wooden Frame Tall         OrnateWoodenFrameTall.cs
+OrnateWoodenFrameWideItem              Ornate Wooden Frame Wide         OrnateWoodenFrameWide.cs
+OrreryItem                             Orrery                           Orrery.cs
+OtterCarcassItem                       Otter Carcass                    OtterCarcass.cs
+OutpostNettingItem                     Outpost Netting                  OutpostNetting.cs
+OutpostTableItem                       Outpost Table                    OutpostTable.cs
+PacificSardineItem                     Pacific Sardine                  PacificSardine.cs
+PaddedChairItem                        Padded Chair                     PaddedChair.cs
+PaintBucketItem                        Paint Bucket                     PaintBucket.cs
+PaintMixerItem                         Paint Mixer                      PaintMixer.cs
+PaintingSkillBook                      Painting Skill Book              Painting.cs
+PaintingSkillScroll                    Painting Skill Scroll            Painting.cs
+PaintingUpgradeItem                    Painting Upgrade                 PaintingUpgrade.cs
+PaletteItem                            Pallet                           StorageMore_English.cs
+PalmHewnDoubleDoorItem                 Palm Hewn Double Door            PalmHewnDoubleDoor.cs
+PalmLogItem                            Palm Log                         PalmLog.cs
+PalmLumberDoubleDoorItem               Palm Lumber Double Door          PalmLumberDoubleDoor.cs
+PalmSeedItem                           Palm Seed                        PalmSeed.cs
+PalmSeedPackItem                       Palm Seed Pack                   PalmSeed.cs
+PapayaCornetItem                       Papaya Cone                      Cone.cs
+PapayaItem                             Papaya                           Papaya.cs
+PapayaJuiceItem                        Papaya Juice                     PapayaJuice.cs
+PapayaPopsicleItem                     Papaya Popsicle                  PopsicleRecipe.cs
+PapayaSeedItem                         Papaya Seed                      PapayaSeed.cs
+PapayaSeedPackItem                     Papaya Seed Pack                 PapayaSeed.cs
+PaperItem                              Paper                            Paper.cs
+PaperMachineItem                       Paper Machine                    PaperMachine.cs
+PaperMillingSkillBook                  Paper Milling Skill Book         PaperMilling.cs
+PaperMillingSkillScroll                Paper Milling Skill Scroll       PaperMilling.cs
+PaperMillingUpgradeItem                Paper Milling Upgrade            PaperMillingUpgrade.cs
+PaperStreamersItem                     Paper Streamers                  PaperStreamers.cs
+ParaffinItem                           Paraffin                         Paraffin.cs
+ParticipationTrophyItem                Participation Trophy             ParticipationTrophy.cs
+PastryDoughItem                        Pastry Dough                     PastryDough.cs
+PeasantHairItem                        Peasant Hair                     PeasantHair.cs
+PeatItem                               Peat                             Peat.cs
+PeltFertilizerItem                     Pelt Fertilizer                  PeltFertilizer.cs
+PeriodicTablePosterItem                Periodic Table Poster            PeriodicTablePoster.cs
+PetitStockageWoodItem                  Small Wood Storage               StorageMore_English.cs
+Petite_Double_EtagereItem              Small Double Shelf               StorageMore_English.cs
+Petite_Simple_EtagereItem              Small Single Shelf               StorageMore_English.cs
+PetroleumItem                          Petroleum                        Petroleum.cs
+PhadThaiItem                           Phad Thai                        PhadThai.cs
+PhosphateFertilizerItem                Phosphate Fertilizer             PhosphateFertilizer.cs
+PickaxeItem                            Pickaxe                          PickaxeItem.cs
+PictureFrameItem                       Picture Frame                    PictureFrame.cs
+PinaColadaItem                         Pina Colada                      PinaColada.cs
+PineappleCornetItem                    Pineapple Cone                   Cone.cs
+PineappleFriendRiceItem                Pineapple Friend Rice            PineappleFriendRice.cs
+PineappleItem                          Pineapple                        Pineapple.cs
+PineappleJuiceItem                     Pineapple Juice                  PineappleJuice.cs
+PineapplePopsicleItem                  Pineapple Popsicle               PopsicleRecipe.cs
+PineappleSeedItem                      Pineapple Seed                   PineappleSeed.cs
+PineappleSeedPackItem                  Pineapple Seed Pack              PineappleSeed.cs
+PinkPotionTubItem                      Pink Potion Ice Cream Tub        IceCreamTub.cs
+PinkSunTubItem                         Pink Sun Ice Cream Tub           IceCreamTub.cs
+PirozhokItem                           Pirozhok                         Pirozhok.cs
+PistonItem                             Piston                           Piston.cs
+PlantFibersItem                        Plant Fibers                     PlantFibers.cs
+PlantVaseItem                          Plant Vase                       PlantVase.cs
+PlanterPotRoundItem                    Round Pot                        PlanterPotRound.cs
+PlanterPotSquareItem                   Square Pot                       PlanterPotSquare.cs
+PlasticBuoyItem                        Plastic Buoy                     PlasticBuoy.cs
+PlasticItem                            Plastic                          Plastic.cs
+PlasticOutdoorBenchItem                Plastic Outdoor Bench            PlasticOutdoorBench.cs
+PlasticOutdoorChairItem                Plastic Outdoor Chair            PlasticOutdoorChair.cs
+PlasticOutdoorTableItem                Plastic Outdoor Table            PlasticOutdoorTable.cs
+PlasticScrapItem                       Plastic Scrap                    PlasticScrap.cs
+PlasticWindowPlanterItem               Plastic Window Planter           PlasticWindowPlanter.cs
+PokeBowlItem                           Poke Bowl                        PokeBowl.cs
+PolishingPasteItem                     Polishing Paste                  PolishingPaste.cs
+PollutedSaltWaterItem                  Polluted Salt Water              Fluids.cs
+PollutedWaterItem                      Polluted Water                   Fluids.cs
+PonytailItem                           Ponytail                         Ponytail.cs
+PopsicleItem                           Popsicle                         baseIce.cs
+PortableSteamEngineItem                Portable Steam Engine            PortableSteamEngine.cs
+PotterySkillBook                       Pottery Skill Book               Pottery.cs
+PotterySkillScroll                     Pottery Skill Scroll             Pottery.cs
+PotteryTableItem                       Pottery Table                    PotteryTable.cs
+PotteryUpgradeItem                     Pottery Upgrade                  PotteryUpgrade.cs
+PoubelleItem                           Green Trash Bin                  StorageMore_English.cs
+PowerHammerItem                        Power Hammer                     PowerHammer.cs
+PoweredCartItem                        Powered Cart                     PoweredCart.cs
+PoweredStorageSiloItem                 Powered Storage Silo             PoweredStorageSilo.cs
+PrairieDogCarcassItem                  Prairie Dog Carcass              PrairieDogCarcass.cs
+PreparedMeatItem                       Prepared Meat                    PreparedMeat.cs
+PricklyPearFruitCornetItem             PricklyPearFruit Cone            Cone.cs
+PricklyPearFruitItem                   Prickly Pear Fruit               PricklyPearFruit.cs
+PricklyPearFruitJuiceItem              Prickly Pear Fruit Juice         PricklyPearFruitJuice.cs
+PricklyPearFruitPopsicleItem           PricklyPearFruit Popsicle        PopsicleRecipe.cs
+PricklyPearSeedItem                    Prickly Pear Seed                PricklyPearSeed.cs
+PricklyPearSeedPackItem                Prickly Pear Seed Pack           PricklyPearSeed.cs
+PrimeCutItem                           Prime Cut                        PrimeCut.cs
+PrimitiveBinItem                       Primitive Bin                    PrimitiveBin.cs
+PrimitiveCanvasBootsItem               Primitive Canvas Boots           PrimitiveCanvasBoots.cs
+PrimitiveCanvasPantsItem               Primitive Canvas Pants           PrimitiveCanvasPants.cs
+PrimitiveCanvasShortsItem              Primitive Canvas Shorts          PrimitiveCanvasShorts.cs
+PrimitiveDumpItem                      Primitive Dump                   PrimitiveDump.cs
+PrimitiveFurBeltItem                   Primitive Fur Belt               PrimitiveFurBelt.cs
+PrimitiveLeatherBootsItem              Primitive Leather Boots          PrimitiveLeatherBoots.cs
+PrimitiveLeatherPantsItem              Primitive Leather Pants          PrimitiveLeatherPants.cs
+PrimitiveLeatherShirtItem              Primitive Leather Shirt          PrimitiveLeatherShirt.cs
+PrimitiveLeatherShortsItem             Primitive Leather Shorts         PrimitiveLeatherShorts.cs
+PrintingPressItem                      Printing Press                   PrintingPress.cs
+PrintingSuppliesItem                   Printing Supplies                PrintingSupplies.cs
+ProteinPowderItem                      Protein Powder                   ProteinPowder.cs
+ProteinSmoothieItem                    Protein Smoothie                 ProteinSmoothie.cs
+PulpFillerItem                         Pulp Filler                      PulpFiller.cs
+PumpJackItem                           Pump Jack                        PumpJack.cs
+PumpgasItem                            Fuel Pump                        PumpGas_English.cs
+PumpkinCornetItem                      Pumpkin Cone                     Cone.cs
+PumpkinItem                            Pumpkin                          Pumpkin.cs
+PumpkinPopsicleItem                    Pumpkin Popsicle                 PopsicleRecipe.cs
+PumpkinSeedItem                        Pumpkin Seed                     PumpkinSeed.cs
+PumpkinSeedPackItem                    Pumpkin Seed Pack                PumpkinSeed.cs
+PupusasItem                            Pupusas                          Pupusas.cs
+PurpleRainItem                         Purple Rain                      PurpleRain.cs
+PurpleVaseItem                         Purple Vase                      PurpleVase.cs
+QuicklimeItem                          Quicklime                        Quicklime.cs
+RadiatorItem                           Radiator                         Radiator.cs
+RawBaconItem                           Raw Bacon                        RawBacon.cs
+RawFishItem                            Raw Fish                         RawFish.cs
+RawMeatItem                            Raw Meat                         RawMeat.cs
+RawRoastItem                           Raw Roast                        RawRoast.cs
+RawSausageItem                         Raw Sausage                      RawSausage.cs
+RealEstateDeskItem                     Real Estate Desk                 RealEstateDesk.cs
+RebarItem                              Rebar                            Rebar.cs
+RecurveBowItem                         Recurve Bow                      RecurveBow.cs
+RecyclerItem                           Recycler                         Recycler.cs
+RecyclingSkillBook                     Recycling Skill Book             Recycling.cs
+RecyclingSkillScroll                   Recycling Skill Scroll           Recycling.cs
+RedCactusTubItem                       Red Cactus Ice Cream Tub         IceCreamTub.cs
+RedVaseItem                            Red Vase                         RedVase.cs
+RedwoodHewnDoubleDoorItem              Redwood Hewn Double Door         RedwoodHewnDoubleDoor.cs
+RedwoodLogItem                         Redwood Log                      RedwoodLog.cs
+RedwoodLumberDoubleDoorItem            Redwood Lumber Double Door       RedwoodLumberDoubleDoor.cs
+RedwoodSeedItem                        Redwood Seed                     RedwoodSeed.cs
+RedwoodSeedPackItem                    Redwood Seed Pack                RedwoodSeed.cs
+RedwoodsPosterItem                     Redwoods Poster                  RedwoodsPoster.cs
+RefrigeratedDisplayCabinetItem         Refrigerated Display Cabinet     RefrigeratedDisplayCabinet.cs
+RefrigeratorItem                       Refrigerator                     Refrigerator.cs
+RegistrarItem                          Registrar                        Registrar.cs
+ReinforcedConcreteItem                 Reinforced Concrete              ReinforcedConcrete.cs
+RemoteDetonatorItem                    Remote Detonator                 RemoteDetonator.cs
+RepairToolItem                         Universal Repair Tool            Whetstones.cs
+ResearchTableItem                      Research Table                   ResearchTable.cs
+ResidualWasteSorterItem                Residual Waste Sorter            ResidualWasteSorter.cs
+RiceFlourItem                          Rice Flour                       RiceFlour.cs
+RiceItem                               Rice                             Rice.cs
+RiceNoodlesItem                        Rice Noodles                     RiceNoodles.cs
+RicePackItem                           Rice Pack                        Rice.cs
+RivetItem                              Rivet                            Rivet.cs
+RoastCoffeeItem                        Roast Coffee                     RoastCoffee.cs
+RoastPumpkinItem                       Roast Pumpkin                    RoastPumpkin.cs
+RoboticAssemblyLineItem                Robotic Assembly Line            RoboticAssemblyLine.cs
+RockInsulationItem                     Rock Insulation                  RockInsulation.cs
+RockerBoxItem                          Rocker Box                       RockerBox.cs
+RollingMillItem                        Rolling Mill                     RollingMill.cs
+RootCampfireSaladItem                  Root Campfire Salad              RootCampfireSalad.cs
+RootCampfireStewItem                   Root Campfire Stew               RootCampfireStew.cs
+RoseItem                               Rose                             Rose.cs
+RoseSeedItem                           Rose Seed                        RoseSeed.cs
+RoseSeedPackItem                       Rose Seed Pack                   RoseSeed.cs
+RotatingCubeItem                       Rotating Cube                    RotatingCube.cs
+RoundedFaceItem                        Rounded Face                     RoundedFace.cs
+RubberWheelItem                        Rubber Wheel                     RubberWheel.cs
+RugLargeItem                           Rug Large                        RugLarge.cs
+RugMediumItem                          Rug Medium                       RugMedium.cs
+RugSmallItem                           Rug Small                        RugSmall.cs
+RunningShoesItem                       Running Shoes                    RunningShoes.cs
+RusticWindowPlanterItem                Rustic Window Planter            RusticWindowPlanter.cs
+SaguaroRibItem                         Saguaro Rib                      SaguaroRib.cs
+SaguaroSeedItem                        Saguaro Seed                     SaguaroSeed.cs
+SaguaroSeedPackItem                    Saguaro Seed Pack                SaguaroSeed.cs
+SalmonItem                             Salmon                           Salmon.cs
+SaltBasketItem                         Salt Basket                      SaltBasket.cs
+SaltWaterItem                          Salt Water                       Fluids.cs
+SandItem                               Sand                             LandscapeItems.cs
+SandalsItem                            Sandals                          Sandals.cs
+SandstoneItem                          Sandstone                        Sandstone.cs
+SavedTheWorldAchievementTrophyItem     Saved The World Achievement Trophy SavedTheWorldAchievementTrophy.cs
+SawmillItem                            Sawmill                          Sawmill.cs
+SaxifrageSeedItem                      Saxifrage Seed                   SaxifrageSeed.cs
+SaxifrageSeedPackItem                  Saxifrage Seed Pack              SaxifrageSeed.cs
+ScarecrowItem                          Scarecrow                        Scarecrow.cs
+SchoolBusItem                          School Bus                       SchoolBus.cs
+ScooterItem                            Scooter                          Scooter.cs
+ScorpionItem                           Scorpion                         Scorpion.cs
+ScrapMeatItem                          Scrap Meat                       ScrapMeat.cs
+ScreeningMachineItem                   Screening Machine                ScreeningMachine.cs
+ScrewPressItem                         Screw Press                      ScrewPress.cs
+ScrewsItem                             Screws                           Screws.cs
+ScruffyHairItem                        Scruffy Hair                     ScruffyHair.cs
+SeagrassSeedItem                       Seagrass Seed                    SeagrassSeed.cs
+SeagrassSeedPackItem                   Seagrass Seed Pack               SeagrassSeed.cs
+SearedMeatItem                         Seared Meat                      SearedMeat.cs
+SeedbarrelItem                         Seed Barrel                      StorageMore_English.cs
+SeededCamasRollItem                    Seeded Camas Roll                SeededCamasRoll.cs
+SensorBasedBeltSorterItem              Sensor Based Belt Sorter         SensorBasedBeltSorter.cs
+SensuousSeaPizzaItem                   Sensuous Sea Pizza               SensuousSeaPizza.cs
+ServoItem                              Servo                            Servo.cs
+SettlementCraftingTableItem            Settlement Crafting Table        SettlementCraftingTable.cs
+SewageItem                             Sewage                           LandscapeItems.cs
+ShaleItem                              Shale                            Shale.cs
+ShaperItem                             Shaper                           Shaper.cs
+SharkFilletSoupItem                    Shark Fillet Soup                SharkFilletSoup.cs
+SharpeningSteelItem                    Sharpening Steel                 SharpeningSteel.cs
+SheepMountItem                         Sheep Mount                      SheepMount.cs
+ShelfCabinetItem                       Shelf Cabinet                    ShelfCabinet.cs
+ShippingContainerBlueItem              Shipping Container Blue          ShippingContainerBlue.cs
+ShippingContainerGreenItem             Shipping Container Green         ShippingContainerGreen.cs
+ShippingContainerRedItem               Shipping Container Red           ShippingContainerRed.cs
+Shipping_01Item                        Blue Container 5m                StorageMore_English.cs
+Shipping_02Item                        Green Container 10m              StorageMore_English.cs
+Shipping_03Item                        Red Container 12m                StorageMore_English.cs
+Shipping_dechetItem                    Polluting Waste Container        StorageMore_English.cs
+ShipwrightAdvancedUpgradeItem          Shipwright Advanced Upgrade      ShipwrightAdvancedUpgrade.cs
+ShipwrightBasicUpgradeItem             Shipwright Basic Upgrade         ShipwrightBasicUpgrade.cs
+ShipwrightHatItem                      Shipwright Hat                   ShipwrightHat.cs
+ShipwrightOverallsItem                 Shipwright Overalls              ShipwrightOveralls.cs
+ShipwrightSandalsItem                  Shipwright Sandals               ShipwrightSandals.cs
+ShipwrightShirtItem                    Shipwright Shirt                 ShipwrightShirt.cs
+ShipwrightSignItem                     Shipwright Sign                  ShipwrightSign.cs
+ShipwrightSkillBook                    Shipwright Skill Book            Shipwright.cs
+ShipwrightSkillScroll                  Shipwright Skill Scroll          Shipwright.cs
+ShojiDoorItem                          Shoji Door                       ShojiDoor.cs
+ShornWoolItem                          Shorn Wool                       ShornWool.cs
+ShortBasicHardwoodShelfItem            Short Basic Hardwood Shelf       ShortBasicHardwoodShelf.cs
+ShortBasicSoftwoodShelfItem            Short Basic Softwood Shelf       ShortBasicSoftwoodShelf.cs
+ShortBasicWoodShelfItem                Short Basic Wood Shelf           ShortBasicWoodShelf.cs
+ShortBeardItem                         Short Beard                      ShortBeard.cs
+ShortCurvedHardwoodVeneerShelfItem     Short Curved Hardwood Veneer Shelf ShortCurvedHardwoodVeneerShelf.cs
+ShortCurvedSoftwoodVeneerShelfItem     Short Curved Softwood Veneer Shelf ShortCurvedSoftwoodVeneerShelf.cs
+ShortCurvedWoodVeneerShelfItem         Short Curved Wood Veneer Shelf   ShortCurvedWoodVeneerShelf.cs
+ShortFloatingHardwoodShelfItem         Short Floating Hardwood Shelf    ShortFloatingHardwoodShelf.cs
+ShortFloatingSoftwoodShelfItem         Short Floating Softwood Shelf    ShortFloatingSoftwoodShelf.cs
+ShortFloatingWoodShelfItem             Short Floating Wood Shelf        ShortFloatingWoodShelf.cs
+ShortHardwoodVeneerShelfItem           Short Hardwood Veneer Shelf      ShortHardwoodVeneerShelf.cs
+ShortSoftwoodVeneerShelfItem           Short Softwood Veneer Shelf      ShortSoftwoodVeneerShelf.cs
+ShortSteelShelfItem                    Short Steel Shelf                ShortSteelShelf.cs
+ShortThinHardwoodVeneerShelfItem       Short Thin Hardwood Veneer Shelf ShortThinHardwoodVeneerShelf.cs
+ShortThinSoftwoodVeneerShelfItem       Short Thin Softwood Veneer Shelf ShortThinSoftwoodVeneerShelf.cs
+ShortThinWoodVeneerShelfItem           Short Thin Wood Veneer Shelf     ShortThinWoodVeneerShelf.cs
+ShortWoodVeneerShelfItem               Short Wood Veneer Shelf          ShortWoodVeneerShelf.cs
+ShortsItem                             Shorts                           Shorts.cs
+ShovelItem                             Shovel                           ShovelItem.cs
+SilicaItem                             Silica                           StorageMore_English.cs
+SiliconItem                            Silicon                          Silicon.cs
+SiliconPlateItem                       Silicon Plate                    SiliconPlate.cs
+SiloPetroleItem                        Oil Refinery Silo                StorageMore_English.cs
+SimmeredMeatItem                       Simmered Meat                    SimmeredMeat.cs
+SimpleSyrupItem                        Simple Syrup                     SimpleSyrup.cs
+SinkItem                               Sink                             Sink.cs
+SkidSteerItem                          Skid Steer                       SkidSteer.cs
+SlagItem                               Slag                             Slag.cs
+SleekShortHairItem                     Sleek Short Hair                 SleekShortHair.cs
+SmallBathMatItem                       Small Bath Mat                   SmallBathMat.cs
+SmallCanoeItem                         Small Canoe                      SmallCanoe.cs
+SmallClayPotItem                       Small Clay Pot                   SmallClayPot.cs
+SmallCottonBuntingFestiveItem          Small Cotton Bunting Festive     SmallCottonBuntingFestive.cs
+SmallCottonBuntingRedItem              Small Cotton Bunting Red         SmallCottonBuntingRed.cs
+SmallCottonBuntingRegalItem            Small Cotton Bunting Regal       SmallCottonBuntingRegal.cs
+SmallCottonBuntingVibrantItem          Small Cotton Bunting Vibrant     SmallCottonBuntingVibrant.cs
+SmallCourtItem                         Small Court                      SmallCourt.cs
+SmallFacetedSteelPotItem               Small Faceted Steel Pot          SmallFacetedSteelPot.cs
+SmallFestivePaperLanternItem           Small Festive Paper Lantern      SmallFestivePaperLantern.cs
+SmallHangingAshlarBasaltSignItem       Small Hanging Ashlar Basalt Sign SmallHangingAshlarBasaltSign.cs
+SmallHangingAshlarGneissSignItem       Small Hanging Ashlar Gneiss Sign SmallHangingAshlarGneissSign.cs
+SmallHangingAshlarGraniteSignItem      Small Hanging Ashlar Granite Sign SmallHangingAshlarGraniteSign.cs
+SmallHangingAshlarLimestoneSignItem    Small Hanging Ashlar Limestone Sign SmallHangingAshlarLimestoneSign.cs
+SmallHangingAshlarSandstoneSignItem    Small Hanging Ashlar Sandstone Sign SmallHangingAshlarSandstoneSign.cs
+SmallHangingAshlarShaleSignItem        Small Hanging Ashlar Shale Sign  SmallHangingAshlarShaleSign.cs
+SmallHangingAshlarStoneSignItem        Small Hanging Ashlar Stone Sign  SmallHangingAshlarStoneSign.cs
+SmallHangingBirchSignItem              Small Hanging Birch Sign         SmallHangingBirchSign.cs
+SmallHangingCedarSignItem              Small Hanging Cedar Sign         SmallHangingCedarSign.cs
+SmallHangingCeibaSignItem              Small Hanging Ceiba Sign         SmallHangingCeibaSign.cs
+SmallHangingFirSignItem                Small Hanging Fir Sign           SmallHangingFirSign.cs
+SmallHangingHardwoodSignItem           Small Hanging Hardwood Sign      SmallHangingHardwoodSign.cs
+SmallHangingJoshuaSignItem             Small Hanging Joshua Sign        SmallHangingJoshuaSign.cs
+SmallHangingLumberSignItem             Small Hanging Lumber Sign        SmallHangingLumberSign.cs
+SmallHangingMortaredGraniteSignItem    Small Hanging Mortared Granite Sign SmallHangingMortaredGraniteSign.cs
+SmallHangingMortaredLimestoneSignItem  Small Hanging Mortared Limestone Sign SmallHangingMortaredLimestoneSign.cs
+SmallHangingMortaredSandstoneSignItem  Small Hanging Mortared Sandstone Sign SmallHangingMortaredSandstoneSign.cs
+SmallHangingMortaredStoneSignItem      Small Hanging Mortared Stone Sign SmallHangingMortaredStoneSign.cs
+SmallHangingOakSignItem                Small Hanging Oak Sign           SmallHangingOakSign.cs
+SmallHangingPalmSignItem               Small Hanging Palm Sign          SmallHangingPalmSign.cs
+SmallHangingRedwoodSignItem            Small Hanging Redwood Sign       SmallHangingRedwoodSign.cs
+SmallHangingSaguaroSignItem            Small Hanging Saguaro Sign       SmallHangingSaguaroSign.cs
+SmallHangingSoftwoodSignItem           Small Hanging Softwood Sign      SmallHangingSoftwoodSign.cs
+SmallHangingSpruceSignItem             Small Hanging Spruce Sign        SmallHangingSpruceSign.cs
+SmallHangingStoneSignItem              Small Hanging Stone Sign         SmallHangingStoneSign.cs
+SmallHangingWoodSignItem               Small Hanging Wood Sign          SmallHangingWoodSign.cs
+SmallLeatherPouchItem                  Small Leather Pouch              SmallLeatherPouch.cs
+SmallLumberStoreWindowItem             Small Lumber Store Window        SmallLumberStoreWindow.cs
+SmallMeetingChairItem                  Small Meeting Chair              SmallMeetingChair.cs
+SmallMeetingTableItem                  Small Meeting Table              SmallMeetingTable.cs
+SmallNylonBuntingGreenItem             Small Nylon Bunting Green        SmallNylonBuntingGreen.cs
+SmallNylonBuntingPurpleItem            Small Nylon Bunting Purple       SmallNylonBuntingPurple.cs
+SmallNylonBuntingYellowItem            Small Nylon Bunting Yellow       SmallNylonBuntingYellow.cs
+SmallPaperLanternItem                  Small Paper Lantern              SmallPaperLantern.cs
+SmallPaperMachineItem                  Small Paper Machine              SmallPaperMachine.cs
+SmallRoughBasaltPotItem                Small Rough Basalt Pot           SmallRoughBasaltPot.cs
+SmallRoughLimestonePotItem             Small Rough Limestone Pot        SmallRoughLimestonePot.cs
+SmallRoundLimestonePotItem             Small Round Limestone Pot        SmallRoundLimestonePot.cs
+SmallShipyardItem                      Small Shipyard                   SmallShipyard.cs
+SmallSinkItem                          Small Sink                       SmallSink.cs
+SmallSquareBasaltPotItem               Small Square Basalt Pot          SmallSquareBasaltPot.cs
+SmallSquareClayPotItem                 Small Square Clay Pot            SmallSquareClayPot.cs
+SmallSquareLimestonePotItem            Small Square Limestone Pot       SmallSquareLimestonePot.cs
+SmallStandingAshlarBasaltSignItem      Small Standing Ashlar Basalt Sign SmallStandingAshlarBasaltSign.cs
+SmallStandingAshlarGneissSignItem      Small Standing Ashlar Gneiss Sign SmallStandingAshlarGneissSign.cs
+SmallStandingAshlarGraniteSignItem     Small Standing Ashlar Granite Sign SmallStandingAshlarGraniteSign.cs
+SmallStandingAshlarLimestoneSignItem   Small Standing Ashlar Limestone Sign SmallStandingAshlarLimestoneSign.cs
+SmallStandingAshlarSandstoneSignItem   Small Standing Ashlar Sandstone Sign SmallStandingAshlarSandstoneSign.cs
+SmallStandingAshlarShaleSignItem       Small Standing Ashlar Shale Sign SmallStandingAshlarShaleSign.cs
+SmallStandingAshlarStoneSignItem       Small Standing Ashlar Stone Sign SmallStandingAshlarStoneSign.cs
+SmallStandingBirchSignItem             Small Standing Birch Sign        SmallStandingBirchSign.cs
+SmallStandingCedarSignItem             Small Standing Cedar Sign        SmallStandingCedarSign.cs
+SmallStandingCeibaSignItem             Small Standing Ceiba Sign        SmallStandingCeibaSign.cs
+SmallStandingFirSignItem               Small Standing Fir Sign          SmallStandingFirSign.cs
+SmallStandingHardwoodSignItem          Small Standing Hardwood Sign     SmallStandingHardwoodSign.cs
+SmallStandingJoshuaSignItem            Small Standing Joshua Sign       SmallStandingJoshuaSign.cs
+SmallStandingLumberSignItem            Small Standing Lumber Sign       SmallStandingLumberSign.cs
+SmallStandingMortaredGraniteSignItem   Small Standing Mortared Granite Sign SmallStandingMortaredGraniteSign.cs
+SmallStandingMortaredLimestoneSignItem Small Standing Mortared Limestone Sign SmallStandingMortaredLimestoneSign.cs
+SmallStandingMortaredSandstoneSignItem Small Standing Mortared Sandstone Sign SmallStandingMortaredSandstoneSign.cs
+SmallStandingMortaredStoneSignItem     Small Standing Mortared Stone Sign SmallStandingMortaredStoneSign.cs
+SmallStandingOakSignItem               Small Standing Oak Sign          SmallStandingOakSign.cs
+SmallStandingPalmSignItem              Small Standing Palm Sign         SmallStandingPalmSign.cs
+SmallStandingRedwoodSignItem           Small Standing Redwood Sign      SmallStandingRedwoodSign.cs
+SmallStandingSaguaroSignItem           Small Standing Saguaro Sign      SmallStandingSaguaroSign.cs
+SmallStandingSoftwoodSignItem          Small Standing Softwood Sign     SmallStandingSoftwoodSign.cs
+SmallStandingSpruceSignItem            Small Standing Spruce Sign       SmallStandingSpruceSign.cs
+SmallStandingStoneSignItem             Small Standing Stone Sign        SmallStandingStoneSign.cs
+SmallStandingWoodSignItem              Small Standing Wood Sign         SmallStandingWoodSign.cs
+SmallSteelPotItem                      Small Steel Pot                  SmallSteelPot.cs
+SmallStockpileItem                     Small Stockpile                  SmallStockpile.cs
+SmallStumpStoreWindowItem              Small Stump Store Window         SmallStumpStoreWindow.cs
+SmallWoodCartItem                      Small Wood Cart                  SmallWoodCart.cs
+SmallWoodenBoatItem                    Small Wooden Boat                SmallWoodenBoat.cs
+SmallWoodenShipFrameItem               Small Wooden Ship Frame          SmallWoodenShipFrame.cs
+SmeltingBasicUpgradeItem               Smelting Basic Upgrade           SmeltingBasicUpgrade.cs
+SmeltingSkillBook                      Smelting Skill Book              Smelting.cs
+SmeltingSkillScroll                    Smelting Skill Scroll            Smelting.cs
+SmeltingUpgradeItem                    Smelting Upgrade                 SmeltingUpgrade.cs
+SmithApronItem                         Smith Apron                      SmithApron.cs
+SmithBandanaItem                       Smith Bandana                    SmithBandana.cs
+SmithBootsItem                         Smith Boots                      SmithBoots.cs
+SmithGlovesItem                        Smith Gloves                     SmithGloves.cs
+SmithMarketItem                        Smith Market                     SmithMarket.cs
+SmithPantsItem                         Smith Pants                      SmithPants.cs
+SmithShirtItem                         Smith Shirt                      SmithShirt.cs
+SmoothGutNoodleRollItem                Smooth Gut Noodle Roll           SmoothGutNoodleRoll.cs
+SnappingTurtleCarcassItem              Snapping Turtle Carcass          SnappingTurtleCarcass.cs
+SnowItem                               Snow                             Snow.cs
+SoftwoodBoardItem                      Softwood Board                   SoftwoodBoard.cs
+SoftwoodDoubleShelfItem                Softwood Double Shelf            SoftwoodDoubleShelf.cs
+SoftwoodHewnLogItem                    Softwood Hewn Log                SoftwoodHewnLog.cs
+SoftwoodLumberBenchItem                Softwood Lumber Bench            SoftwoodLumberBench.cs
+SoftwoodLumberChairItem                Softwood Lumber Chair            SoftwoodLumberChair.cs
+SoftwoodLumberDoorItem                 Softwood Lumber Door             SoftwoodLumberDoor.cs
+SoftwoodLumberDresserItem              Softwood Lumber Dresser          SoftwoodLumberDresser.cs
+SoftwoodLumberHallwayTableItem         Softwood Lumber Hallway Table    SoftwoodLumberHallwayTable.cs
+SoftwoodLumberItem                     Softwood Lumber                  SoftwoodLumber.cs
+SoftwoodLumberTableItem                Softwood Lumber Table            SoftwoodLumberTable.cs
+SoilDecontaminantItem                  Soil Decontaminant               SoilDecontaminant.cs
+SoilSamplerItem                        Soil Sampler                     SoilSamplerItem.cs
+SolarGeneratorItem                     Solar Generator                  SolarGenerator.cs
+SolarPanelItem                         Solar Panel                      SolarPanel.cs
+SpikyRollItem                          Spiky Roll                       SpikyRoll.cs
+SpinMelterItem                         Spin Melter                      SpinMelter.cs
+SpinningJennyItem                      Spinning Jenny                   SpinningJenny.cs
+SpoiledFoodItem                        Spoiled Food                     SpoiledFood.cs
+SpruceHewnDoubleDoorItem               Spruce Hewn Double Door          SpruceHewnDoubleDoor.cs
+SpruceLogItem                          Spruce Log                       SpruceLog.cs
+SpruceLumberDoubleDoorItem             Spruce Lumber Double Door        SpruceLumberDoubleDoor.cs
+SpruceSeedItem                         Spruce Seed                      SpruceSeed.cs
+SpruceSeedPackItem                     Spruce Seed Pack                 SpruceSeed.cs
+SquareBeltItem                         Square Belt                      SquareBelt.cs
+SquareJawItem                          Square Jaw                       SquareJaw.cs
+SquareLumberPotItem                    Square Lumber Pot                SquareLumberPot.cs
+StampMillItem                          Stamp Mill                       StampMill.cs
+StandingBasaltPotItem                  Standing Basalt Pot              StandingBasaltPot.cs
+StandingClayPotItem                    Standing Clay Pot                StandingClayPot.cs
+StandingGlassSignItem                  Standing Glass Sign              StandingGlassSign.cs
+StandingLongSteelSignItem              Standing Long Steel Sign         StandingLongSteelSign.cs
+StandingSteelBrickSignItem             Standing Steel Brick Sign        StandingSteelBrickSign.cs
+StarterCampItem                        Starter Camp                     StarterCampItem.cs
+SteamEngineItem                        Steam Engine                     SteamEngine.cs
+SteamPaddleCraftItem                   Steam Paddle Craft               SteamPaddleCraft.cs
+SteamTractorHarvesterItem              Steam Tractor Harvester          SteamTractorHarvester.cs
+SteamTractorItem                       Steam Tractor                    SteamTractor.cs
+SteamTractorPlowItem                   Steam Tractor Plow               SteamTractorPlow.cs
+SteamTractorScoopItem                  Steam Tractor Scoop              SteamTractorScoop.cs
+SteamTractorSowerItem                  Steam Tractor Sower              SteamTractorSower.cs
+SteamTractorTreeCutterItem             Steam Tractor Tree Cutter        SteamTractorTreeCutter.cs
+SteamTruckFlatbedItem                  Steam Truck Flatbed              SteamTruckFlatbed.cs
+SteamTruckGarbageCollectorItem         Steam Truck Garbage Collector    SteamTruckGarbageCollector.cs
+SteamTruckItem                         Steam Truck                      SteamTruck.cs
+SteelAbstractFixtureItem               Steel Abstract Fixture           SteelAbstractFixture.cs
+SteelAxeItem                           Steel Axe                        SteelAxe.cs
+SteelAxleItem                          Steel Axle                       SteelAxle.cs
+SteelBarItem                           Steel Bar                        SteelBar.cs
+SteelBinItem                           Steel Bin                        SteelBin.cs
+SteelBuoyItem                          Steel Buoy                       SteelBuoy.cs
+SteelCeilingLightItem                  Steel Ceiling Light              SteelCeilingLight.cs
+SteelFloorLampItem                     Steel Floor Lamp                 SteelFloorLamp.cs
+SteelGearItem                          Steel Gear                       SteelGear.cs
+SteelGearboxItem                       Steel Gearbox                    SteelGearbox.cs
+SteelHammerItem                        Steel Hammer                     SteelHammer.cs
+SteelHangingFixtureItem                Steel Hanging Fixture            SteelHangingFixture.cs
+SteelHangingLampItem                   Steel Hanging Lamp               SteelHangingLamp.cs
+SteelHoeItem                           Steel Hoe                        SteelHoe.cs
+SteelKitchenLampItem                   Steel Kitchen Lamp               SteelKitchenLamp.cs
+SteelLiquidTankItem                    Steel Liquid Tank                SteelLiquidTank.cs
+SteelMacheteItem                       Steel Machete                    SteelMachete.cs
+SteelMooragePostItem                   Steel Moorage Post               SteelMooragePost.cs
+SteelPickaxeItem                       Steel Pickaxe                    SteelPickaxe.cs
+SteelPipeItem                          Steel Pipe                       SteelPipe.cs
+SteelPlateItem                         Steel Plate                      SteelPlate.cs
+SteelPodiumItem                        Steel Podium                     SteelPodium.cs
+SteelRowSeatingItem                    Steel Row Seating                SteelRowSeating.cs
+SteelSawBladeItem                      Steel Saw Blade                  SteelSawBlade.cs
+SteelSearchlightItem                   Steel Searchlight                SteelSearchlight.cs
+SteelShovelItem                        Steel Shovel                     SteelShovel.cs
+SteelSickleItem                        Steel Sickle                     SteelSickle.cs
+SteelSpringItem                        Steel Spring                     SteelSpring.cs
+SteelSquareFixtureItem                 Steel Square Fixture             SteelSquareFixture.cs
+SteelTableLampItem                     Steel Table Lamp                 SteelTableLamp.cs
+SteelWarehouseShelvesItem              Steel Warehouse Shelves          SteelWarehouseShelves.cs
+SteelWhetstoneItem                     Steel Whetstones                 Whetstones.cs
+StenographersTableItem                 Stenographers Table              StenographersTable.cs
+StockageOutilsItem                     Wall Tool Rack                   StorageMore_English.cs
+StockpileItem                          Stockpile                        Stockpile.cs
+StoneAxeItem                           Stone Axe                        StoneAxe.cs
+StoneBrazierItem                       Stone Brazier                    StoneBrazier.cs
+StoneDoorItem                          Stone Door                       StoneDoor.cs
+StoneHammerItem                        Stone Hammer                     StoneHammer.cs
+StoneItem                              Stone                            Stone.cs
+StoneMacheteItem                       Stone Machete                    StoneMachete.cs
+StonePickaxeItem                       Stone Pickaxe                    StonePickaxe.cs
+StonePlaqueItem                        Stone Plaque                     StonePlaque.cs
+StoneRoadItem                          Stone Road                       StoneRoad.cs
+StoneRoadToolItem                      Stone Road Tool                  StoneRoadTool.cs
+StoneRubbleItem                        Stone Rubble                     Waste.cs
+StoneSickleItem                        Stone Sickle                     StoneSickle.cs
+StoneWhetstoneItem                     Stone Whetstones                 Whetstones.cs
+StopSignItem                           Stop Sign                        StopSign.cs
+StorageChestItem                       Storage Chest                    StorageChest.cs
+StorageSiloItem                        Storage Silo                     StorageSilo.cs
+StoreItem                              Store                            Store.cs
+StoreSignItem                          Store Sign                       StoreSign.cs
+StoveItem                              Stove                            Stove.cs
+StrangeFuelItem                        Strange Fuel                     StrangeFuel.cs
+StreetSignItem                         Street Sign                      StreetSign.cs
+StreetlampItem                         Streetlamp                       Streetlamp.cs
+StudentsDeskT1Item                     Students Desk T1                 StudentsDeskT1.cs
+StudentsDeskT2Item                     Students Desk T2                 StudentsDeskT2.cs
+StudentsDeskT3Item                     Students Desk T3                 StudentsDeskT3.cs
+StuffedAlligatorItem                   Stuffed Alligator                StuffedAlligator.cs
+StuffedBisonItem                       Stuffed Bison                    StuffedBison.cs
+StuffedElkItem                         Stuffed Elk                      StuffedElk.cs
+StuffedGoatItem                        Stuffed Goat                     StuffedGoat.cs
+StuffedJaguarItem                      Stuffed Jaguar                   StuffedJaguar.cs
+StuffedTurkeyItem                      Stuffed Turkey                   StuffedTurkey.cs
+StuffedWolfItem                        Stuffed Wolf                     StuffedWolf.cs
+StumpBedItem                           Stump Bed                        StumpBed.cs
+StumpChairItem                         Stump Chair                      StumpChair.cs
+StumpLatrineItem                       Stump Latrine                    StumpLatrine.cs
+StumpTableItem                         Stump Table                      StumpTable.cs
+SubstrateItem                          Substrate                        Substrate.cs
+SugarItem                              Sugar                            Sugar.cs
+SugarcaneItem                          Sugarcane                        Sugarcane.cs
+SugarcanePackItem                      Sugarcane Pack                   Sugarcane.cs
+SulfurItem                             Sulfur                           Sulfur.cs
+SulfuricAcidItem                       Sulfuric Acid                    SulfuricAcid.cs
+SunButterItem                          Sun Butter                       SunButter.cs
+SunCheeseItem                          Sun Cheese                       SunCheese.cs
+SunflowerItem                          Sunflower                        Sunflower.cs
+SunflowerSeedItem                      Sunflower Seed                   SunflowerSeed.cs
+SunflowerSeedPackItem                  Sunflower Seed Pack              SunflowerSeed.cs
+SweetDeerJerkyItem                     Sweet Deer Jerky                 SweetDeerJerky.cs
+SweetSaladItem                         Sweet Salad                      SweetSalad.cs
+SwirlVaseItem                          Swirl Vase                       SwirlVase.cs
+SyntheticRubberItem                    Synthetic Rubber                 SyntheticRubber.cs
+TailingsItem                           Tailings                         Tailings.cs
+TailorBowlerHatItem                    Tailor Bowler Hat                TailorBowlerHat.cs
+TailorMarketItem                       Tailor Market                    TailorMarket.cs
+TailorPantsItem                        Tailor Pants                     TailorPants.cs
+TailorShirtItem                        Tailor Shirt                     TailorShirt.cs
+TailorShoesItem                        Tailor Shoes                     TailorShoes.cs
+TailorSignItem                         Tailor Sign                      TailorSign.cs
+TailoringModernUpgradeItem             Tailoring Modern Upgrade         TailoringModernUpgrade.cs
+TailoringSkillBook                     Tailoring Skill Book             Tailoring.cs
+TailoringSkillScroll                   Tailoring Skill Scroll           Tailoring.cs
+TailoringTableItem                     Tailoring Table                  TailoringTable.cs
+TailoringUpgradeItem                   Tailoring Basic Upgrade          TailoringUpgrade.cs
+TallBootsItem                          Tall Boots                       TallBoots.cs
+TallLimestonePotItem                   Tall Limestone Pot               TallLimestonePot.cs
+TallowCandleItem                       Tallow Candle                    TallowCandle.cs
+TallowItem                             Tallow                           Tallow.cs
+TallowLampItem                         Tallow Lamp                      TallowLamp.cs
+TallowWallLampItem                     Tallow Wall Lamp                 TallowWallLamp.cs
+TapestryFishItem                       Tapestry Fish                    TapestryFish.cs
+TapestryItem                           Tapestry                         Tapestry.cs
+TapestrySunsetItem                     Tapestry Sunset                  TapestrySunset.cs
+TaroFriesItem                          Taro Fries                       TaroFries.cs
+TaroRootItem                           Taro Root                        TaroRoot.cs
+TaroSeedItem                           Taro Seed                        TaroSeed.cs
+TaroSeedPackItem                       Taro Seed Pack                   TaroSeed.cs
+TastyTropicalPizzaItem                 Tasty Tropical Pizza             TastyTropicalPizza.cs
+TeaItem                                Tea                              Tea.cs
+TeaSprinkledBakeItem                   Tea Sprinkled Bake               TeaSprinkledBake.cs
+TeachersDeskT1Item                     Teachers Desk T1                 TeachersDeskT1.cs
+TeachersDeskT2Item                     Teachers Desk T2                 TeachersDeskT2.cs
+TeachersDeskT3Item                     Teachers Desk T3                 TeachersDeskT3.cs
+TeslaModel3Item                        Tesla Model 3                    TeslaModel3.cs
+TeslaSuperchargerItem                  Tesla Supercharger               TeslaSupercharger.cs
+TextilesItem                           Textiles                         Textiles.cs
+TheBobItem                             The Bob                          TheBob.cs
+TheGrasshopperItem                     The Grasshopper                  TheGrasshopper.cs
+TikiTorchItem                          Tiki Torch                       TikiTorch.cs
+TinyStockpileItem                      Tiny Stockpile                   TinyStockpile.cs
+ToiletItem                             Toilet                           Toilet.cs
+TollItem                               Toll                             TollObject.cs
+TomatoItem                             Tomato                           Tomato.cs
+TomatoJuiceItem                        Tomato Juice                     TomatoJuice.cs
+TomatoSauceItem                        Tomato Sauce                     TomatoSause.cs
+TomatoSeedItem                         Tomato Seed                      TomatoSeed.cs
+TomatoSeedPackItem                     Tomato Seed Pack                 TomatoSeed.cs
+ToolBenchItem                          Tool Bench                       ToolBench.cs
+ToolBreakerItem                        Tool Breaker                     Whetstones.cs
+ToppedPorridgeItem                     Topped Porridge                  ToppedPorridge.cs
+TorchItem                              Torch                            Torch.cs
+TorchStandItem                         Torch Stand                      TorchStand.cs
+TortillaItem                           Tortilla                         Tortilla.cs
+Totem_EnglishItem                      Gas Station Totem                PumpGas_English.cs
+TowelRackItem                          Towel Rack                       TowelRack.cs
+TownBellItem                           Town Bell                        TownBell.cs
+TownClaimStakeObject                   Federation Claim Stake           SettlementClaimStakes.cs
+TownFoundationItem                     Town Foundation                  TownFoundation.cs
+TractorWhetstoneItem                   Tractor Whetstones               Whetstones.cs
+TrailerTruckItem                       Trailer Truck                    TrailerTruck.cs
+TransglutaminaseItem                   Transglutaminase                 Transglutaminase.cs
+TransmissionPoleItem                   Transmission Pole                TransmissionPole.cs
+TrapperFurHatItem                      Trapper Fur Hat                  TrapperFurHat.cs
+TrapperLeatherHatItem                  Trapper Leather Hat              TrapperLeatherHat.cs
+TreasuryItem                           Treasury                         Treasury.cs
+TreeDebrisItem                         Tree Debris                      TreeDebris.cs
+TrilliumFlowerItem                     Trillium Flower                  TrilliumFlower.cs
+TrilliumSeedItem                       Trillium Seed                    TrilliumSeed.cs
+TrilliumSeedPackItem                   Trillium Seed Pack               TrilliumSeed.cs
+TrilliumTeaItem                        Trillium Tea                     TrilliumTea.cs
+TripodCameraItem                       Tripod Camera                    TripodCamera.cs
+TrophyArtistItem                       Trophy Artist                    TrophyArtist.cs
+TrophyBakerItem                        Trophy Baker                     TrophyBaker.cs
+TrophyFarmerItem                       Trophy Farmer                    TrophyFarmer.cs
+TrophyLoggerItem                       Trophy Logger                    TrophyLogger.cs
+TrophyMinerItem                        Trophy Miner                     TrophyMiner.cs
+TropicalDuoTubItem                     Tropical Duo Ice Cream Tub       IceCreamTub.cs
+TropicalExplosionTubItem               Tropical Explosion Ice Cream Tub IceCreamTub.cs
+TropicalSmoothTubItem                  Tropical Smooth Ice Cream Tub    IceCreamTub.cs
+TropicalSmoothieItem                   Tropical Smoothie                TropicalSmoothie.cs
+TrousersItem                           Trousers                         Trousers.cs
+TroutItem                              Trout                            Trout.cs
+TruckDumpsterLoaderItem                Truck Dumpster Loader            TruckDumpsterLoader.cs
+TruckFlatbedItem                       Truck Flatbed                    TruckFlatbed.cs
+TruckGarbageCollectorItem              Truck Garbage Collector          TruckGarbageCollector.cs
+TruckItem                              Truck                            Truck.cs
+TulipItem                              Tulip                            Tulip.cs
+TulipSeedItem                          Tulip Seed                       TulipSeed.cs
+TulipSeedPackItem                      Tulip Seed Pack                  TulipSeed.cs
+TunaItem                               Tuna                             Tuna.cs
+TunicItem                              Tunic                            Tunic.cs
+TurkeyCarcassItem                      Turkey Carcass                   TurkeyCarcass.cs
+UpholsteredChairItem                   Upholstered Chair                UpholsteredChair.cs
+UpholsteredCouchItem                   Upholstered Couch                UpholsteredCouch.cs
+UrchinItem                             Urchin                           Urchin.cs
+ValveItem                              Valve                            Valve.cs
+VegetableMedleyItem                    Vegetable Medley                 VegetableMedley.cs
+VegetableSoupItem                      Vegetable Soup                   VegetableSoup.cs
+VegetableStockItem                     Vegetable Stock                  VegetableStock.cs
+VillagersCowlLoweredItem               Villagers Cowl Lowered           VillagersCowlLowered.cs
+VillagersCowlRaisedItem                Villagers Cowl Raised            VillagersCowlRaised.cs
+WainwrightTableItem                    Wainwright Table                 WainwrightTable.cs
+WallCandleItem                         Wall Candle                      WallCandle.cs
+WallChargerItem                        Wall Charger                     WallCharger.cs
+WallMountedChestItem                   Wall Mounted Chest               WallMountedChest.cs
+WallMountedTrunkItem                   Wall Mounted Trunk               WallMountedTrunk.cs
+WanderersHoodLoweredItem               Wanderers Hood Lowered           WanderersHoodLowered.cs
+WanderersHoodRaisedItem                Wanderers Hood Raised            WanderersHoodRaised.cs
+WashboardItem                          Washboard                        Washboard.cs
+WashingMachineItem                     Washing Machine                  WashingMachine.cs
+WasteFilterItem                        Waste Filter                     WasteFilter.cs
+WaterFilterItem                        Water Filter                     WaterFilter.cs
+WaterItem                              Fresh Water                      LandscapeItems.cs
+WaterTowerItem                         Water Tower                      WaterTower.cs
+WaterweedSeedItem                      Waterweed Seed                   WaterweedSeed.cs
+WaterweedSeedPackItem                  Waterweed Seed Pack              WaterweedSeed.cs
+WaterwheelItem                         Waterwheel                       Waterwheel.cs
+WaxedPaperItem                         Waxed Paper                      WaxedPaper.cs
+WetBrickItem                           Wet Brick                        WetBrick.cs
+WetTailingsItem                        Wet Tailings                     WetTailings.cs
+WheatItem                              Wheat                            Wheat.cs
+WheatSeedItem                          Wheat Seed                       WheatSeed.cs
+WheatSeedPackItem                      Wheat Seed Pack                  WheatSeed.cs
+WheelbarrowItem                        Wheelbarrow                      Wheelbarrow.cs
+WhetstoneItem                          Whetstone                        Whetstone.cs
+WhiteBursageSeedItem                   White Bursage Seed               WhiteBursageSeed.cs
+WhiteBursageSeedPackItem               White Bursage Seed Pack          WhiteBursageSeed.cs
+WhitePowderItem                        White Powder                     WhitePowder.cs
+WideHipsItem                           Wide Hips                        WideHips.cs
+WildMixItem                            Wild Mix                         WildMix.cs
+WildStewItem                           Wild Stew                        WildStew.cs
+WiltedFiddleheadsItem                  Wilted Fiddleheads               WiltedFiddleheads.cs
+WindTurbineItem                        Wind Turbine                     WindTurbine.cs
+WindmillItem                           Windmill                         Windmill.cs
+WindowShuttersCenterItem               Window Shutters Center           WindowShuttersCenter.cs
+WindowShuttersLeftItem                 Window Shutters Left             WindowShuttersLeft.cs
+WindowShuttersRightItem                Window Shutters Right            WindowShuttersRight.cs
+WolfCarcassItem                        Wolf Carcass                     WolfCarcass.cs
+WolfPeltItem                           Wolf Pelt                        WolfPelt.cs
+WoodCartItem                           Wood Cart                        WoodCart.cs
+WoodDoubleShelfItem                    Wood Double Shelf                WoodDoubleShelf.cs
+WoodPlaqueItem                         Wood Plaque                      WoodPlaque.cs
+WoodPulpItem                           Wood Pulp                        WoodPulp.cs
+WoodScrapItem                          Wood Scrap                       WoodScrap.cs
+WoodShopCartItem                       Wood Shop Cart                   WoodShopCart.cs
+WoodWhetstoneItem                      Wood Whetstones                  Whetstones.cs
+WoodWindowPlanterItem                  Wood Window Planter              WoodWindowPlanter.cs
+WoodenBargeItem                        Wooden Barge                     WoodenBarge.cs
+WoodenBarrelItem                       Wooden Barrel                    WoodenBarrel.cs
+WoodenBowItem                          Wooden Bow                       WoodenBow.cs
+WoodenCeilingLightItem                 Wooden Ceiling Light             WoodenCeilingLight.cs
+WoodenDrawBridgeItem                   Wooden Draw Bridge               WoodenDrawBridge.cs
+WoodenDumpsterItem                     Wooden Dumpster                  WoodenDumpster.cs
+WoodenElevatorItem                     Wooden Elevator                  WoodenElevator.cs
+WoodenFabricBedItem                    Wooden Fabric Bed                WoodenFabricBed.cs
+WoodenFloorLampItem                    Wooden Floor Lamp                WoodenFloorLamp.cs
+WoodenFrameLandscapeItem               Wooden Frame Landscape           WoodenFrameLandscape.cs
+WoodenFrameLargeSquareItem             Wooden Frame Large Square        WoodenFrameLargeSquare.cs
+WoodenFrameLargeTallItem               Wooden Frame Large Tall          WoodenFrameLargeTall.cs
+WoodenFrameLargeWideItem               Wooden Frame Large Wide          WoodenFrameLargeWide.cs
+WoodenFramePortraitItem                Wooden Frame Portrait            WoodenFramePortrait.cs
+WoodenFrameSquareItem                  Wooden Frame Square              WoodenFrameSquare.cs
+WoodenFrameTallItem                    Wooden Frame Tall                WoodenFrameTall.cs
+WoodenFrameWideItem                    Wooden Frame Wide                WoodenFrameWide.cs
+WoodenGearItem                         Wooden Gear                      WoodenGear.cs
+WoodenHoeItem                          Wooden Hoe                       WoodenHoe.cs
+WoodenHullPlanksItem                   Wooden Hull Planks               WoodenHullPlanks.cs
+WoodenKeelItem                         Wooden Keel                      WoodenKeel.cs
+WoodenKitchenLampItem                  Wooden Kitchen Lamp              WoodenKitchenLamp.cs
+WoodenLiquidTankItem                   Wooden Liquid Tank               WoodenLiquidTank.cs
+WoodenMoldItem                         Wooden Mold                      WoodenMold.cs
+WoodenMooragePostItem                  Wooden Moorage Post              WoodenMooragePost.cs
+WoodenOarItem                          Wooden Oar                       WoodenOar.cs
+WoodenPaintSprayerItem                 Wooden Paint Sprayer             WoodenPaintSprayer.cs
+WoodenPodiumItem                       Wooden Podium                    WoodenPodium.cs
+WoodenRudderItem                       Wooden Rudder                    WoodenRudder.cs
+WoodenShovelItem                       Wooden Shovel                    WoodenShovel.cs
+WoodenSlidingDoorItem                  Wooden Sliding Door              WoodenSlidingDoor.cs
+WoodenStrawBedItem                     Wooden Straw Bed                 WoodenStrawBed.cs
+WoodenTableLampItem                    Wooden Table Lamp                WoodenTableLamp.cs
+WoodenTransportShipItem                Wooden Transport Ship            WoodenTransportShip.cs
+WoodenWallTorchStandItem               Wooden Wall Torch Stand          WoodenWallTorchStand.cs
+WoodenWheelItem                        Wooden Wheel                     WoodenWheel.cs
+WoolCarpetItem                         Wool Carpet                      WoolCarpet.cs
+WoolCurtainsItem                       Wool Curtains                    WoolCurtains.cs
+WoolFabricItem                         Wool Fabric                      WoolFabric.cs
+WoolYarnItem                           Wool Yarn                        WoolYarn.cs
+WorkBackpackItem                       Work Backpack                    WorkBackpack.cs
+WorkBootsItem                          Work Boots                       WorkBoots.cs
+WorkbenchItem                          Workbench                        Workbench.cs
+WorldlyDonutItem                       Worldly Donut                    WorldlyDonut.cs
+YeastItem                              Yeast                            Yeast.cs
+YellowPowderItem                       Yellow Powder                    YellowPowder.cs
+ZatakuTableItem                        Zataku Table                     ZatakuTable.cs
+ZenGardenItem                          Zen Garden                       ZenGarden.cs
+ZoningOfficeItem                       Zoning Office                    ZoningOffice.cs
+affiche_pub01Item                      Large Format Panel               AdsMod_English.cs
+affiche_pub02Item                      Urban Sign                       AdsMod_English.cs
+affiche_pub04Item                      Mobile Poster                    AdsMod_English.cs

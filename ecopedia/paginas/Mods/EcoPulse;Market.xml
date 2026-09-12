@@ -1,0 +1,37 @@
+<ecopedia icon="SmithMarketItem">
+	<section type="banner" image="MarketModEcopedia" />
+  <summary>Oito bancas de mercado, uma por profissão, para comércio e estoque.</summary>
+
+  <section type="header">Market Mod</section>
+  <section>
+    O <b>Market Mod</b> acrescenta ao Eco oito bancas de mercado, uma por profissão, feitas para melhorar o comércio e o estoque de cada setor da economia. Cada mercado é um ponto de venda dedicado à sua profissão e traz elementos visuais e funcionais próprios para o seu assentamento.
+  </section>
+
+  <section type="header">As bancas</section>
+  <section>
+    <b>Oito mercados de profissão:</b>
+
+    • [CarpenterMarketItem] - Mercado do Carpinteiro: madeira e produtos de carpintaria
+    • [ChefMarketItem] - Mercado do Chef: comida e culinária, com vitrine animada
+    • [EngineerMarketItem] - Mercado do Engenheiro: máquinas e equipamentos técnicos
+    • [FarmerMarketItem] - Mercado do Fazendeiro: produtos agrícolas, com vitrine animada
+    • [HunterMarketItem] - Mercado do Caçador: suprimentos de caça e materiais de animais
+    • [MasonMarketItem] - Mercado do Pedreiro: pedra e materiais de alvenaria
+    • [SmithMarketItem] - Mercado do Ferreiro: metais e produtos de forja
+    • [TailorMarketItem] - Mercado do Alfaiate: tecidos e roupas
+
+    Todos ocupam 3 x 2 x 2 blocos, com estoque e acesso público. Os mercados de comida (Chef, Farmer, Hunter) ganham animação quando estão em operação. Como fabricar cada um: veja [Mercados].
+  </section>
+
+  <section type="header">Recursos</section>
+  <section>
+    Cada banca inclui:
+
+    • Loja pública para negociar com outros jogadores
+    • Aparece no minimapa, na categoria Economia
+    • Aparência profissional, de acordo com a especialidade
+    • Pode ser colocada dentro ou fora de casa
+
+    Os mercados de comida mostram o estado animado quando estão operando, dando retorno visual do comércio ativo.
+  </section>
+</ecopedia>

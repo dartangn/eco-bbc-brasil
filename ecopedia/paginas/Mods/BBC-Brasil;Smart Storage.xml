@@ -1,0 +1,26 @@
+<ecopedia icon="StorageChestItem">
+  <summary>O que sai da mesa de trabalho vai sozinho para o estoque que faz mais sentido, sem arrastar prioridades à mão.</summary>
+
+  <section type="header">O que faz</section>
+  <section>
+<b>Smart Storage</b> (StormVeil) reordena os estoques ligados a uma mesa de trabalho para que o item recém-fabricado caia no melhor lugar. A ordem que ele usa, segundo o autor:
+
+1. <b>Estoque especializado</b> primeiro: geladeira ou silo para comida, lixeira ou composteira para lixo, porão de pesca para peixe, ou qualquer estoque em que você tenha definido uma lista de itens permitidos.
+2. Dentro de uma categoria, estoque <b>elétrico ou com energia</b> antes do estoque simples.
+3. Se nada for especializado, o de <b>maior capacidade</b>.
+4. Material a granel escavado (terra, pedra) prefere <b>stockpile</b>; item comum prefere <b>baú</b>.
+  </section>
+
+  <section type="header">O que ele nunca faz</section>
+  <section>
+• Não mexe no que um estoque aceita, só na ordem em que os estoques são tentados.
+• Respeita dono, permissões e alcance de conexão: só reordena estoques que já estão ligados e autorizados.
+• <b>Se você reordenar à mão</b> as prioridades de estoque de uma mesa, o mod deixa aquela mesa em paz daquele momento em diante.
+  </section>
+
+  <section type="header">Veículos</section>
+  <section>
+O autor registra uma ação "Distribute" para veículos de carga, mas avisa que <b>ainda não há botão no jogo</b> para ela nesta versão.
+  </section>
+
+</ecopedia>

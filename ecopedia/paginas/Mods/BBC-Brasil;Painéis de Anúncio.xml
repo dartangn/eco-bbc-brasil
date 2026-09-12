@@ -1,0 +1,14 @@
+<ecopedia icon="affiche_pub01Item">
+  <summary>Três painéis que mostram a imagem que você quiser, pelo sistema de impressora do jogo.</summary>
+
+  <section>
+<b>AdsMod</b> (Plex_) acrescenta três painéis publicitários em que o jogador exibe qualquer imagem usando o sistema de <b>impressora</b> do jogo. Neste servidor a imagem impressa passa por aprovação de um administrador antes de aparecer.
+
+Fabricados na [BlacksmithTableItem]:
+
+• [affiche_pub04Item] - Mobile Poster. Blacksmith 1.
+• [affiche_pub02Item] - Urban Sign. Blacksmith 3.
+• [affiche_pub01Item] - Large Format Panel. Blacksmith 5.
+  </section>
+
+</ecopedia>

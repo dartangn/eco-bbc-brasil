@@ -1,0 +1,40 @@
+<ecopedia icon="Shipping_01Item">
+  <summary>Mais de 20 estoques novos: containers, paletes, big bag, estoques de madeira, estantes, rack de ferramentas e outros.</summary>
+
+  <section type="header">Na Mesa de Carpintaria (Carpentry)</section>
+  <section>
+• [PaletteItem] - Pallet: itens de construção e lingotes, 8 slots. Carpentry 1.
+• [StockageOutilsItem] - Wall Tool Rack: ferramentas em slots dedicados, 32 slots. Carpentry 1.
+• [PetitStockageWoodItem] - Small Wood Storage, 18 slots. Carpentry 1.
+• [MoyenStockageWoodItem] - Medium Wood Storage, 24 slots. Carpentry 2.
+• [GrandStockageWoodItem] - Large Wood Storage, 32 slots. Carpentry 3.
+• [DressingItem] - Dressing. Carpentry 1.
+• [SeedbarrelItem] - Seed Barrel. Carpentry 1.
+  </section>
+
+  <section type="header">Na Mesa de Maquinista (Mechanics)</section>
+  <section>
+• [Petite_Simple_EtagereItem] - Small Single Shelf, 8 slots. Mechanics 1.
+• [Petite_Double_EtagereItem] - Small Double Shelf, 16 slots. Mechanics 2.
+• [Grande_Simple_EtagereItem] - Large Single Shelf, 32 slots. Mechanics 3.
+• [Grande_Double_EtagereItem] - Large Double Shelf, 64 slots. Mechanics 4.
+• [Shipping_01Item] - Blue Container, 32 slots. Mechanics 5.
+• [Shipping_02Item] - Green Container, 64 slots. Mechanics 6.
+• [Shipping_03Item] - Red Container, 128 slots. Mechanics 7.
+• [CaisseOutilsItem] - Toolbox. Mechanics 1.
+• [SiloPetroleItem] - Oil Refinery Silo. Mechanics 1.
+• [BenneGravatItem] - Dumping Bin. Mechanics 5.
+• [Shipping_dechetItem] - Polluting Waste Container. Mechanics 5.
+
+As estantes guardam qualquer item do jogo.
+  </section>
+
+  <section type="header">Outros</section>
+  <section>
+• [BigBagItem] - Big Bag: terra, areia, pedra e material triturado, 10 slots. [TailoringTableItem], Tailoring 2.
+• [PoubelleItem] - Green Trash Bin. [WorkbenchItem], sem profissão.
+
+Os tamanhos de pilha indicados pelo autor (40, 60 ou 80 por slot) são os do mod, antes do multiplicador de pilha deste servidor.
+  </section>
+
+</ecopedia>

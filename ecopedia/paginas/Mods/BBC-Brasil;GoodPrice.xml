@@ -1,0 +1,30 @@
+<ecopedia icon="GoldBarItem">
+  <summary>Calculadora de preços dentro do jogo: custo de produção, margem sugerida e preço médio do mercado, na aba GoodPrice da loja.</summary>
+
+  <section type="header">O que é</section>
+  <section>
+<b>GoodPrice</b> (Calculator e Alert Price GP, de Orflash-EcoSim) é uma calculadora de preços integrada ao jogo. Não precisa de conta, site nem sincronização: ela lê os dados direto deste servidor.
+
+Segundo o autor, a margem de lucro é só uma <b>recomendação</b>: a calculadora mostra também o <b>preço médio</b> praticado pelos outros vendedores, e o preço final é decisão sua. A margem recomendada é dinâmica e muda com a quantidade fabricada.
+  </section>
+
+  <section type="header">O que ela leva em conta</section>
+  <section>
+Ao calcular o custo de produção, o mod considera <b>talentos</b>, <b>custo das máquinas</b> e <b>calorias</b> gastas. Você pode importar de uma vez todos os itens da sua profissão para a loja.
+
+Os administradores podem definir preço mínimo e/ou máximo, que a calculadora aplica sozinha.
+  </section>
+
+  <section type="header">Onde usar</section>
+  <section>
+Abra a sua loja, carrinho ou um dos mercados e clique na aba <b>GoodPrice</b>. Ela aparece na [StoreItem], no [WoodShopCartItem] e nos oito mercados ([CarpenterMarketItem], [MasonMarketItem], [SmithMarketItem], [EngineerMarketItem], [FarmerMarketItem], [ChefMarketItem], [HunterMarketItem], [TailorMarketItem]).
+
+A interface está disponível em inglês, francês, italiano, espanhol, alemão e russo. Não há português.
+  </section>
+
+  <section type="header">Observação</section>
+  <section>
+O selo "premium" do mod só põe uma estrela ao lado do nome e está desligado neste servidor. Todos os dados do GoodPrice ficam neste servidor.
+  </section>
+
+</ecopedia>

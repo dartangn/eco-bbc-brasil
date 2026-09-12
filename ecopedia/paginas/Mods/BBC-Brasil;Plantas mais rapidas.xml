@@ -1,0 +1,22 @@
+<ecopedia icon="CornSeedItem">
+  <summary>Todas as plantas cultivadas e silvestres amadurecem em 40% do tempo, dão o dobro de sementes e se espalham três vezes mais rápido. Capim de fora.</summary>
+
+  <section type="header">O que muda</section>
+  <section>
+As <b>53 espécies</b> de planta do jogo receberam os mesmos ajustes que as árvores já tinham:
+
+• <b>Amadurecem em 40% do tempo.</b> A maioria passou de 0,8 para <b>0,32 dia</b>; algodão, abacaxi, mirtilo, tomate, mamão e figo-da-índia, de 1,2 para <b>0,48</b>.
+• <b>Semeiam com 40% do intervalo</b> e produzem o <b>dobro de sementes</b> por vez.
+• <b>Espalham-se 3 vezes mais rápido</b> pelo terreno ao redor (0,001 para 0,003).
+
+Vale para o que se planta ([CornItem], [WheatItem], [CottonBollItem], [BeansItem], [RiceItem], [TomatoItem], [PumpkinItem], [FlaxStemItem], [BeetItem], [TaroRootItem], [SunflowerItem], [CamasBulbItem]) e também para o que se colhe no mundo: frutas, cogumelos, algas, arbustos, flores, samambaias e musgos.
+  </section>
+
+  <section type="header">O que ficou de fora, e por quê</section>
+  <section>
+• <b>Os quatro capins</b> (grama comum, capim-touceira, capim-varre-vento e barba-de-bode) continuam no padrão do jogo. São eles que invadem terreno arado, e acelerá-los daria mais trabalho de capinar a quem planta.
+• As <b>árvores</b> já tinham esses ajustes desde antes, veja [Arvores densas].
+• A <b>sequoia antiga</b> continua não-renovável, como o jogo a desenhou: se for cortada, não volta a crescer.
+  </section>
+
+</ecopedia>

@@ -1,0 +1,19 @@
+<ecopedia icon="IceCreamMachinItem">
+  <summary>A profissão IceCream: máquina de sorvete, cones, picolés e potes, a partir das frutas do jogo.</summary>
+
+  <section type="header">A profissão</section>
+  <section>
+<b>IceCream</b> é uma especialidade de Chef que custa <b>4 estrelas</b> neste servidor (veja [Custo das estrelas]). Todas as receitas de sorvete são feitas na [IceCreamMachinItem], que se fabrica na [CarpentryTableItem] com <b>Basic Engineering 3</b>.
+
+O mapa deste servidor foi gerado com o mod instalado, como o autor exige: a neve ([SnowItem]) funciona ao ser cavada.
+  </section>
+
+  <section type="header">O que se faz</section>
+  <section>
+• [IceCubeItem] - Cooking 2, na máquina de sorvete.
+• Cones de fruta (huckleberries, giant cactus fruit, papaya, pineapple) - IceCream 3; prickly pear e pumpkin - IceCream 4. Cada receita dá 2.
+• Potes de sorvete (Tropical Duo, Red Cactus, Autumn Berries, Desert Multivitamin e outros) - a partir de IceCream 5. Cada receita dá 3.
+• As receitas mais altas vão até IceCream 7.
+  </section>
+
+</ecopedia>

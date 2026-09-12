@@ -111,16 +111,66 @@ tem de ser lida antes de instalar.
 
 ---
 
-## `ecopedia/`
+## `ecopedia/` — as páginas do F1 dentro do jogo
+
+O servidor documenta a si mesmo para o jogador: 39 páginas na Ecopedia (tecla **F1**),
+explicando cada mod e cada valor de configuração, em português.
 
 | Arquivo | Para quê |
 |---|---|
-| `gerar-ecopedia-bbc.py` | gera as páginas do F1 (Ecopedia) documentando o servidor para o jogador. Valida cada link `[XItem]` contra a tabela de itens do servidor e **aborta** se um ícone repetir entre páginas |
-| `extrair-icones.py` | monta a galeria dos 1824 ícones que a tag de placa aceita, com montador de texto |
+| `gerar-ecopedia-bbc.py` | **a fonte**. Gera as 39 páginas. Valida cada link `[XItem]` contra os 1.929 itens do servidor e **aborta** se um ícone repetir entre páginas |
+| `paginas/` | as páginas geradas, em XML, prontas para instalar |
+| `instalar-ecopedia-bbc.sh` | põe as páginas em `Mods/UserCode/Ecopedia/`. Tem `--seco` e `--desfazer`, e faz backup |
+| `nomes-de-itens.txt` | tabela classe → nome de exibição dos 1.929 itens. É contra ela que os links são validados |
+| `fontes.md` | de onde veio o texto de cada página (mod.io, leia-me do autor, ou o código do servidor) |
 
-A Ecopedia tem **três níveis** e essa é a armadilha dela: capítulo → categoria → página.
-**Categoria sem nenhuma página não aparece** — foi o que fez um capítulo nosso surgir vazio
-no menu por dois dias.
+Vale no **próximo arranque** — o Eco lê a Ecopedia ao subir.
+
+### A armadilha da Ecopedia: são TRÊS níveis
+
+**capítulo → categoria → página.** E **categoria sem nenhuma página não aparece** — foi o que
+fez um capítulo nosso surgir como divisória vazia no menu por dois dias. O nome do capítulo vem
+do **nome do arquivo** `<ecopediachapter>`, não da pasta. A ordem do menu é por prioridade
+**crescente**.
+
+O gerador barra três erros que passariam para o jogo: ícone que não existe, ícone repetido entre
+páginas, e link `[XItem]` com nome errado — que viraria texto morto, sem ícone e sem link.
+
+---
+
+## `placas/` — ensinar o jogador a escrever com cor e ícone na placa
+
+A placa do Eco aceita texto rico, e quase ninguém sabe. Esta é a ferramenta que ensina:
+uma **galeria dos 1824 ícones** que a tag aceita, com um montador que escreve o comando pronto
+para colar — cor por palavra, tamanho, alinhamento e ícones com posição.
+
+| Arquivo | Para quê |
+|---|---|
+| `extrair-icones.py` | gera a galeria e o montador num único HTML |
+| `instalar-placas-web.sh` | publica no painel web do servidor, em `/placas/`. Não precisa reiniciar: é arquivo estático |
+
+Também publicada em **<https://dartangn.github.io/icones-eco-bbc/>**
+(repositório <https://github.com/dartangn/icones-eco-bbc>).
+
+**Ela mora em DOIS lugares, e publicar num não publica no outro:** o GitHub Pages e a
+cópia-mestra `/opt/eco/placas-web` do painel. Isso já custou dois dias de versão desatualizada
+no servidor enquanto o GitHub estava certo.
+
+### O que se descobriu sobre o texto da placa, testando em placa de verdade
+
+O texto da placa é **TextMeshPro** — a lista de tags que o binário do servidor conhece bate
+exatamente com a dele: `align`, `color`, `size`, `mark`, `mspace`, `cspace`, `voffset`,
+`line-height`, `nobr`, `noparse`, `font`, `style`, `pos`, `link`, `indent`, `uppercase`,
+`lowercase`. Disso saem três fatos, todos medidos:
+
+1. **O halo dourado em volta da letra não sai.** Ele vem do material do texto no cliente, e o
+   TextMeshPro simplesmente **não tem tag de contorno**. A prévia da galeria desenha o halo
+   justamente para a cor que você escolhe ser a cor que aparece na placa.
+2. **`<mark>` não funciona.** Foi colado numa placa e o jogo ignorou — nenhuma tarja apareceu.
+3. **A caixa alta depende do modelo da placa**, e `<lowercase>` não vence isso.
+
+O conselho que os testes sustentam: **cor escura e forte**. O halo é claro e quente, contorna a
+letra escura e ela salta da madeira; cor clara em madeira clara desaparece.
 
 ---
 
