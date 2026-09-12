@@ -1,0 +1,11 @@
+<ecopedia icon="PumpgasItem">
+  <summary>Uma bomba de combustível que também é loja, e um totem com texto, para montar um posto de gasolina.</summary>
+
+  <section>
+<b>PumpGasMod</b> (Plex_) traz dois objetos para quem quer ter um posto de gasolina:
+
+• [PumpgasItem] - Fuel Pump: bomba de combustível que <b>também funciona como loja</b>. [MachinistTableItem], Mechanics 1.
+• [Totem_EnglishItem] - Gas Station Totem: totem em que se escreve um texto. [WainwrightTableItem], Basic Engineering 2.
+  </section>
+
+</ecopedia>

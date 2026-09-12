@@ -1,0 +1,18 @@
+<ecopedia icon="LaboratoryItem">
+  <summary>Existe uma receita de livro para cada profissão no Laboratório. Ela não é para ser feita: serve para a tela de habilidades funcionar.</summary>
+
+  <section type="header">Por que ela existe</section>
+  <section>
+Neste servidor, a mesa de pesquisa entrega <b>pergaminhos</b> em vez de livros, veja [Pergaminhos]. Isso tem um efeito colateral no cliente do jogo: sem nenhuma receita que produza o <b>livro</b>, a tela de habilidades (tecla <b>Z</b>) não deixa clicar numa especialidade que ainda não foi descoberta, e você não consegue ver o que a profissão faz antes de gastar estrela.
+
+A solução foi devolver a existência do livro sem devolver o livro na prática.
+  </section>
+
+  <section type="header">Como ela é</section>
+  <section>
+No <b>Laboratório</b> há uma receita de livro para cada uma das 31 profissões, custando <b>10.000 pergaminhos</b> da mesma profissão. O preço é inalcançável de propósito.
+
+Ela não muda nada do seu dia a dia: a mesa de pesquisa continua dando 5 pergaminhos, e é assim que se aprende profissão. A receita do livro está ali só para a tela de habilidades voltar a abrir.
+  </section>
+
+</ecopedia>

@@ -1,0 +1,32 @@
+<ecopedia icon="ResearchTableItem">
+  <summary>Preço em estrelas de algumas profissões mudou, e começar árvore nova ou pular para profissão avançada custa mais.</summary>
+
+  <section type="header">Veja o seu preço</section>
+  <section>
+No chat:
+
+<b>/custoestrelas ver</b>
+
+Lista as árvores de profissão que você já iniciou e o custo de cada profissão para você, marcando o que difere do jogo normal.
+  </section>
+
+  <section type="header">Preços-base diferentes do jogo</section>
+  <section>
+• Farming: <b>1</b> (o jogo normal cobra 2)
+• Cooking e Baking: <b>4</b> (normal 3)
+• Advanced Cooking, Advanced Baking e Cutting Edge Cooking: <b>6</b> (normal 4, 4 e 5)
+• Advanced Mixology: <b>6</b> (normal 4)
+• IceCream: <b>4</b> (normal 3)
+
+As demais profissões custam o preço normal do jogo.
+  </section>
+
+  <section type="header">Duas regras que somam ao preço</section>
+  <section>
+• Começar uma <b>árvore de profissão nova</b> (por exemplo, quem só tem profissões de Carpenter aprende uma de Mason) custa <b>+1</b>.
+• Aprender uma profissão <b>avançada</b> fora da sua árvore custa <b>+2</b>. Avançada é a que custa 4 ou mais no jogo normal.
+
+A primeira profissão e a progressão dentro da mesma árvore pagam só o preço-base. Self Improvement não conta como árvore.
+  </section>
+
+</ecopedia>

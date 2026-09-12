@@ -1,0 +1,24 @@
+<ecopedia icon="BicycleItem">
+  <summary>Bicicleta, patinete, moto, ônibus escolar, jetski a vapor, jetski elétrico e Tesla Model 3, além dos carregadores elétricos.</summary>
+
+  <section type="header">Os veículos</section>
+  <section>
+• [ScooterItem] - Patinete. Basic Engineering 2, na [WainwrightTableItem].
+• [BicycleItem] - Bicicleta. Basic Engineering 3, na [WainwrightTableItem].
+• [MotoItem] - Moto. Mechanics 2, na [AssemblyLineItem].
+• [SteamPaddleCraftItem] - Jetski a vapor, movido a carvão. Shipwright 5, no [MediumShipyardItem].
+• [JetSkiItem] - Jetski elétrico. Shipwright 5, no [MediumShipyardItem].
+• [SchoolBusItem] - Ônibus escolar com 29 lugares, contando o motorista. Industry 2, na [RoboticAssemblyLineItem].
+• [TeslaModel3Item] - Tesla Model 3, elétrico. Electronics 2, na [RoboticAssemblyLineItem].
+
+Os veículos podem ser pintados como os do jogo.
+  </section>
+
+  <section type="header">Peças e carregadores</section>
+  <section>
+Bicicleta e moto precisam de peças novas, feitas na [BlacksmithTableItem] com <b>Blacksmith 2</b>: [IronChainItem] e [BicycleFrameItem].
+
+O Jet Ski e o Tesla Model 3 são elétricos e precisam ser recarregados no [WallChargerItem] ou no [TeslaSuperchargerItem], ambos fabricados na [ElectricMachinistTableItem] com <b>Electronics 1</b>.
+  </section>
+
+</ecopedia>

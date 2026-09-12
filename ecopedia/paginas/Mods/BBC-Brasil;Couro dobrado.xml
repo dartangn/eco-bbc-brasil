@@ -1,0 +1,21 @@
+<ecopedia icon="LeatherHideItem">
+  <summary>Cortar bicho na mesa de açougue entrega o dobro de couro; carne, lã e pele continuam iguais ao jogo normal.</summary>
+
+  <section type="header">Quanto couro cada abate dá</section>
+  <section>
+Na [ButcheryTableItem], as receitas de abate entregam <b>o dobro</b> de [LeatherHideItem] deste servidor. Os outros produtos não mudaram.
+
+• <b>Animal pequeno de couro</b> (peru, cão-da-pradaria, tartaruga): 1 carne crua e <b>2 couros</b> (o jogo normal dá 1).
+• <b>Animal médio</b> (veado, alce, jacaré, jaguar): 5 carne crua e <b>2 couros</b> (normal 1).
+• <b>Animal médio lanoso</b> (cabra da montanha, bighorn): 5 carne crua, 2 [ShornWoolItem] e <b>2 couros</b> (normal 1).
+• <b>Bisão</b>: 10 carne crua, 3 [ShornWoolItem] e <b>4 couros</b> (normal 2).
+  </section>
+
+  <section type="header">Bicho que não dá couro</section>
+  <section>
+Coiote, raposa, agouti, lontra, lebre e lobo <b>não dão couro em nenhum servidor</b>: eles dão [FurPeltItem]. Para virar couro, a pele passa pelo curtimento.
+
+O <b>curtimento não foi alterado</b>: continua 2 [FurPeltItem] para 1 [LeatherHideItem] mais 1 [TallowItem], com Açougue nível 5. Só o abate dobrou.
+  </section>
+
+</ecopedia>

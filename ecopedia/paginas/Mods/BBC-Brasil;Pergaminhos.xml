@@ -1,0 +1,12 @@
+<ecopedia icon="CarpentrySkillScroll">
+  <summary>Na mesa de pesquisa, todo livro de profissão vira 5 pergaminhos, e cada pergaminho consumido dá 5 papéis de terreno.</summary>
+
+  <section>
+• Na [ResearchTableItem], toda receita de livro de profissão produz <b>5 pergaminhos</b> em vez de um livro (mod No More Books, ajustado para 5 neste servidor).
+• Vale também para as três profissões de mod: Mixology, Advanced Mixology e IceCream (arquivo deste servidor).
+• Cada pergaminho consumido dá <b>5 papéis de terreno</b> (configuração do servidor).
+
+Livros não existem mais: o que se vende e se compra são pergaminhos.
+  </section>
+
+</ecopedia>

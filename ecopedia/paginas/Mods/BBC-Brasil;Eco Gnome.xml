@@ -1,0 +1,97 @@
+<ecopedia icon="CarpenterMarketItem">
+  <summary>Calcule seus preços no site eco-gnome.com com as receitas deste servidor e mande as ofertas para a sua loja com um botão.</summary>
+
+  <section type="header">O que o Eco Gnome faz</section>
+  <section>
+Você diz no site <b>eco-gnome.com</b> quais profissões tem e quanto paga pelos ingredientes; ele calcula quanto custa fabricar cada item e sugere o preço de venda com a sua margem. Depois, na sua loja aqui no jogo, a aba <b>Eco Gnome</b> manda essas ofertas e preços para a loja de uma vez.
+
+Ele <b>não olha o seu estoque</b>: entra na loja o que você listou no site. Nada se instala no seu PC. O servidor já está registrado no site com as receitas de todos os mods.
+  </section>
+
+  <section type="header">Passo 1 - Sua conta no site</section>
+  <section>
+1. Abra <b>https://eco-gnome.com</b> no navegador do PC. O site cria uma conta anônima sozinho, com nome parecido com USER48453148. Não há senha.
+
+2. Clique no <b>nome da conta</b>, no canto superior direito. Abre a janela <i>User settings</i>.
+
+3. Em <b>Pseudo</b>, coloque o seu nome do jogo.
+
+4. Copie o <b>Secret Id</b> com o botão ao lado dele. É esse código que liga a conta ao seu personagem.
+
+5. Clique no botão de <b>exportar</b> e guarde o arquivo. A conta vive só nesse navegador; esse arquivo é a única forma de recuperá-la.
+  </section>
+
+  <section type="header">Passo 2 - Ligar a conta ao seu personagem</section>
+  <section>
+No chat do jogo, colando o Secret Id no lugar indicado:
+
+<b>/ecognome registeruser SEU-SECRET-ID</b>
+
+Resposta esperada: <i>Success</i>. Faz uma vez só por jogador.
+  </section>
+
+  <section type="header">Passo 3 - Abrir o site já dentro do servidor</section>
+  <section>
+<b>/ecognome join</b>
+
+O navegador abre no eco-gnome.com com o servidor <b>BBC-BRASIL</b> selecionado em <i>My Servers</i>. As receitas que aparecem são as deste servidor, mods incluídos.
+
+Se aparecer <i>"Unable to find server..."</i>, avise um admin: é o registro do servidor que falta, não o seu.
+  </section>
+
+  <section type="header">Passo 4 - Suas profissões e seus custos (no site)</section>
+  <section>
+1. <b>Add your skills</b>: as profissões que você tem, com o nível.
+
+2. <b>Crafting tables</b>: as mesas que usa, com o upgrade.
+
+3. <b>Items to buy</b>: o preço pelo qual você compra cada ingrediente. O que você mesmo produz, deixe: o site usa o custo da receita.
+
+4. Em <b>Options</b>, marque <b>Hide blueprints</b>. Itens pagos do Marketplace não podem ser vendidos em loja neste servidor; essa opção os tira da lista.
+
+5. <b>Margins</b>: a margem padrão é 20%.
+
+Sem preço de ingrediente não há custo, e o item vai para a loja com um preço absurdo. Preencha antes de sincronizar.
+  </section>
+
+  <section type="header">Passo 5 - O que você vende (no site)</section>
+  <section>
+Em <b>Items to sell</b>, adicione <b>só os produtos que você realmente vende</b>. Essa lista é exatamente o que vai virar oferta na sua loja.
+
+Se deixar a lista aberta, o botão do passo 6 cria uma oferta para tudo que você consegue fabricar: centenas de itens, a maioria sem preço calculado.
+  </section>
+
+  <section type="header">Passo 6 - Mandar para a loja</section>
+  <section>
+1. Abra a sua loja, carrinho ou mercado. Ao lado das abas normais há a aba <b>Eco Gnome</b>.
+
+2. <b>Context Name</b>: deixe vazio.
+
+3. <b>Scope</b>: Sell, para mexer só nas suas vendas.
+
+4. <b>Sync Tags</b>: No.
+
+5. <b>Group By</b>: Skill separa por profissão; None põe tudo num grupo só.
+
+6. Clique em <b>Sync Offers</b>.
+
+A loja recebe as ofertas da sua lista, com os preços do site. Se aparecer <i>"Não foi possível adicionar todas as profissões: itens pagos não podem ser comprados ou vendidos..."</i>, está tudo certo: só os itens pagos ficaram de fora.
+  </section>
+
+  <section type="header">Passo 7 - Manter os preços em dia</section>
+  <section>
+• Mudou preço no site: <b>Sync Prices</b> na aba Eco Gnome, ou <b>Shift + botão direito</b> na loja. Só atualiza preços.
+
+• Mudou a lista do que vende: <b>Sync Offers</b> de novo. Acrescenta o que entrou e remove do grupo dele o que saiu.
+
+• Ofertas feitas à mão que você não quer que ele toque: ponha as letras <b>NS</b> entre colchetes no nome do grupo. Grupos com essa marca são ignorados.
+
+• <b>Sync For Sale Area</b> é outra coisa: ajusta o preço de objetos marcados como à venda perto da loja. Sem objeto assim, responde <i>"No authorized for-sale objects found"</i>. Normal.
+  </section>
+
+  <section type="header">Onde a aba aparece</section>
+  <section>
+Na [StoreItem], no [WoodShopCartItem] e nos oito mercados do servidor: [CarpenterMarketItem], [MasonMarketItem], [SmithMarketItem], [EngineerMarketItem], [FarmerMarketItem], [ChefMarketItem], [HunterMarketItem] e [TailorMarketItem]. A aba <b>GoodPrice</b> aparece nos mesmos lugares (veja [GoodPrice]).
+  </section>
+
+</ecopedia>

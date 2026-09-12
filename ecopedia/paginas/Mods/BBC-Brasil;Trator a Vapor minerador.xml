@@ -1,0 +1,8 @@
+<ecopedia icon="SteamTractorItem">
+  <summary>O Trator a Vapor pode minerar com a pá (Steam Scoop).</summary>
+
+  <section>
+<b>Early Skid</b> (Stellion): segundo o autor, o mod habilita a <b>mineração com o Trator a Vapor</b> ([SteamTractorItem]) usando o implemento de pá ([SteamTractorScoopItem]). O trator continua sendo fabricado na [AssemblyLineItem] com Mechanics 2.
+  </section>
+
+</ecopedia>

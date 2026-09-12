@@ -1,0 +1,18 @@
+<ecopedia icon="BorderlessFrameLargeWideItem">
+  <summary>Molduras 2x2, 3x2 e 2x3 para todo tipo de moldura do jogo, e seis molduras sem borda.</summary>
+
+  <section type="header">O que acrescenta</section>
+  <section>
+<b>Bigger Frames</b> (CavRn) acrescenta, para cada tipo de moldura existente no jogo, três tamanhos grandes: <b>Large Square</b> (2 x 2), <b>Large Wide</b> (3 x 2) e <b>Large Tall</b> (2 x 3). Existem para as molduras de madeira, ferro, cobre, ouro e para as versões ornamentadas.
+
+Acrescenta também seis molduras <b>sem borda</b>, da profissão Masonry: [BorderlessFrameSquareItem], [BorderlessFrameTallItem], [BorderlessFrameWideItem], [BorderlessFrameLargeSquareItem], [BorderlessFrameLargeTallItem] e [BorderlessFrameLargeWideItem].
+  </section>
+
+  <section type="header">Como fabricar</section>
+  <section>
+• Sem borda: [MasonryTableItem], <b>Masonry 4</b>.
+• Molduras de madeira grandes: <b>Carpentry 4</b> (comuns) e <b>Carpentry 5</b> (ornamentadas).
+• Molduras de metal grandes: <b>Blacksmith 4</b> (ferro, cobre e ouro) e <b>Blacksmith 6</b> (ferro e ouro ornamentados).
+  </section>
+
+</ecopedia>

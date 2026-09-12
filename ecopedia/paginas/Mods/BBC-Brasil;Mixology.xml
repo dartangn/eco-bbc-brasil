@@ -1,0 +1,37 @@
+<ecopedia icon="MixologyTableItem">
+  <summary>Duas profissões de bebidas: sucos e smoothies (Mixology) e coquetéis, cafés e chás (Advanced Mixology).</summary>
+
+  <section type="header">As duas profissões</section>
+  <section>
+<b>Mixology</b> está no mesmo patamar de Cooking e Baking e traz <b>6 sucos e 5 smoothies</b>. Ela também fabrica o <b>Tomato Sauce</b>, usado em receitas de Advanced Baking e Advanced Cooking, e torra café e seca folhas de chá para a profissão seguinte. Usa só plantações do jogo normal.
+
+<b>Advanced Mixology</b> é a continuação natural, no patamar de Advanced Cooking e Advanced Baking: <b>5 coquetéis, 4 cafés e 5 chás</b>.
+
+Segundo o autor, o mod ainda não é compatível com os jantares (Dinner Parties), porque as bebidas não têm modelo de comida no jogo. Neste servidor, Mixology custa 3 estrelas e Advanced Mixology custa 6 (veja [Custo das estrelas]).
+  </section>
+
+  <section type="header">Mesas e utensílios</section>
+  <section>
+• [MixologyTableItem] - fabricada na [BloomeryItem] com <b>Smelting 3</b>. Usa energia mecânica.
+• [AdvancedMixologyTableItem] - fabricada na [MachinistTableItem] com <b>Mechanics 5</b>.
+• [WoodenBarrelItem] - [CarpentryTableItem], Logging 2.
+• [CocktailShakerItem] - [BlastFurnaceItem], Advanced Smelting 2.
+  </section>
+
+  <section type="header">O que se faz em cada nível</section>
+  <section>
+Na [MixologyTableItem]:
+• Sucos ([AgaveJuiceItem], [HuckleberriesJuiceItem], [PapayaJuiceItem], [PineappleJuiceItem], [PricklyPearFruitJuiceItem], [TomatoJuiceItem]) - Mixology 1
+• [TomatoSauceItem] e [MixologyUpgradeItem] - Mixology 2
+• Smoothies ([DesertSmoothieItem], [FieldSmoothieItem], [ForestSmoothieItem], [ProteinSmoothieItem], [TropicalSmoothieItem]) - Mixology 3
+• [AlchoholItem] - Mixology 5
+
+Na [AdvancedMixologyTableItem]:
+• Cafés ([BlackCoffeeItem], [CappuccinoItem], [CoffeeLatteItem], [IcedCoffeeItem]) - Advanced Mixology 1
+• [EnglishBreakfastTeaItem] e [AdvancedMixologyUpgradeItem] - Advanced Mixology 2
+• [MatchaTeaLatteItem], [OrchidTeaItem], [TrilliumTeaItem] - Advanced Mixology 3
+• [BerryBubbleTeaItem] - Advanced Mixology 4
+• Coquetéis ([BloodyMarryItem], [EspressoMartiniItem], [PinaColadaItem], [PurpleRainItem], [TheGrasshopperItem]) - Advanced Mixology 5
+  </section>
+
+</ecopedia>

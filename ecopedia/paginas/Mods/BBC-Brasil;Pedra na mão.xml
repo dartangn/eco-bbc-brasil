@@ -1,0 +1,10 @@
+<ecopedia icon="IronPickaxeItem">
+  <summary>Minerar com a picareta entrega o bloco direto na mão, 4 por bloco, sem entulho no chão.</summary>
+
+  <section>
+No Eco normal, cada bloco minerado vira <b>entulho</b> no chão, que você pega depois. Neste servidor o bloco vai <b>direto para a mão</b>: 4 unidades por bloco, a mesma quantidade que o entulho daria. A economia da mineração não muda; some só o passo de catar.
+
+Se a mão estiver ocupada com outro item, ou cheia, o bloco vira entulho como no jogo normal. Vale para todas as picaretas ([StonePickaxeItem], [IronPickaxeItem], [SteelPickaxeItem], [ModernPickaxeItem]).
+  </section>
+
+</ecopedia>

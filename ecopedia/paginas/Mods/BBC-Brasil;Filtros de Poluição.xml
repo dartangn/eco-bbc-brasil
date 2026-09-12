@@ -1,0 +1,22 @@
+<ecopedia icon="BasicPollutionFilterItem">
+  <summary>Módulos que reduzem em 20, 40 ou 60 por cento a poluição de máquinas e veículos, ocupando um slot de módulo.</summary>
+
+  <section type="header">O que fazem</section>
+  <section>
+Três níveis de filtro, instalados no slot de módulo de máquinas e veículos, reduzem a emissão de CO2 deles. O autor lembra a escolha: o slot ocupado pelo filtro não recebe módulo de eficiência ou velocidade.
+
+• [BasicPollutionFilterItem] - reduz <b>20%</b>. [MachinistTableItem], Mechanics 2.
+• [AdvancedPollutionFilterItem] - reduz <b>40%</b>. [RoboticAssemblyLineItem], Mechanics 4.
+• [IndustrialPollutionFilterItem] - reduz <b>60%</b>. [ElectronicsAssemblyItem], Industry 6.
+
+Cada filtro superior usa o inferior como ingrediente. A poluição nova é a poluição-base multiplicada por (1 menos a redução), e a dica do objeto se atualiza na hora.
+  </section>
+
+  <section type="header">Onde cabem</section>
+  <section>
+Máquinas: [CombustionGeneratorItem], [IndustrialGeneratorItem], [BlastFurnaceItem], [CementKilnItem], [OilRefineryItem] e [StoveItem]. As que já têm módulos próprios (alto-forno, forno de cimento, refinaria, fogão) aceitam o filtro ao lado deles.
+
+Veículos: [ExcavatorItem], [IndustrialBargeItem], [TruckItem], [TrailerTruckItem], [SkidSteerItem], [MediumFishingTrawlerItem], [CraneItem], [SteamTruckItem], [PoweredCartItem] e [SteamTractorItem].
+  </section>
+
+</ecopedia>

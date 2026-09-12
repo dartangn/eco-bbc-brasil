@@ -1,0 +1,30 @@
+<ecopedia icon="SmithMarketItem">
+  <summary>Oito mercados ao ar livre, um por profissão, com loja pública e estoque. Fabricados na bancada com nível 2 da profissão.</summary>
+
+  <section type="header">O que são</section>
+  <section>
+O <b>MarketMod</b> (EcoPulse) acrescenta oito bancas de mercado, uma para cada profissão, feitas para ficar ao ar livre no seu terreno. Cada uma funciona como <b>loja pública</b> com estoque, aparece no minimapa na categoria Economia e pode ser colocada dentro ou fora de casa. As bancas de comida (Chef, Farmer, Hunter) ganham animação quando estão em operação.
+  </section>
+
+  <section type="header">Como fabricar</section>
+  <section>
+Todas se fabricam na [WorkbenchItem], com nível 2 da profissão correspondente:
+
+• [CarpenterMarketItem] - Logging 2
+• [MasonMarketItem] - Mining 2
+• [SmithMarketItem] - Smelting 2
+• [EngineerMarketItem] - Basic Engineering 2
+• [FarmerMarketItem] - Gathering 2
+• [ChefMarketItem] - Campfire Cooking 2
+• [HunterMarketItem] - Hunting 2
+• [TailorMarketItem] - Tailoring 2
+
+Cada mercado ocupa 3 x 2 x 2 blocos.
+  </section>
+
+  <section type="header">Abas extras</section>
+  <section>
+Neste servidor os oito mercados têm também as abas <b>Eco Gnome</b> e <b>GoodPrice</b>, como a loja normal. Veja [Eco Gnome] e [GoodPrice].
+  </section>
+
+</ecopedia>

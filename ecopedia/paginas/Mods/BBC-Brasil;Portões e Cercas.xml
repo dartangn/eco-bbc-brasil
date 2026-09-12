@@ -1,0 +1,34 @@
+<ecopedia icon="IronGrillItem">
+  <summary>Portas duplas em 8 madeiras, grades de metal animadas, duas pontes levadiças e cercas decorativas.</summary>
+
+  <section type="header">Portas duplas</section>
+  <section>
+16 portas duplas de madeira, nas 8 madeiras do jogo (Birch, Cedar, Ceiba, Fir, Oak, Palm, Redwood, Spruce), em dois estilos:
+
+• <b>Lumber Double Door</b> ([LumberDoubleDoorItem]) - nível 3 de material, fabricada na [SawmillItem].
+• <b>Hewn Double Door</b> ([HewnDoubleDoorItem]) - nível 2 de material, fabricada na [CarpentryTableItem].
+
+Ambas exigem <b>Carpentry 2</b>.
+  </section>
+
+  <section type="header">Grades de metal</section>
+  <section>
+Três portões de grade animados, em ferro, cobre e ouro ([IronGrillItem], [CopperGrillItem], [GoldGrillItem]), fabricados na [AnvilItem] com <b>Blacksmith 2</b>. Abrem e fecham com animação e som. Ocupam 5 x 4 blocos: servem para entrada de veículos e portais grandes.
+  </section>
+
+  <section type="header">Pontes levadiças</section>
+  <section>
+Fabricadas na [MasonryTableItem]:
+
+• [WoodenDrawBridgeItem] - <b>Masonry 4</b>, nível 2 de material, 5 de largura por 5 de altura.
+• [CastleDrawBridgeItem] - <b>Masonry 6</b>, nível 3 de material, 6 por 6, com arco de pedra e portas duplas acima do portão.
+
+Pilares de pedra, correntes de ferro e um tablado de madeira que sobe e desce sob comando.
+  </section>
+
+  <section type="header">Cercas decorativas</section>
+  <section>
+Blocos de cerca em ferro, cobre e ouro ([IronFenceItem], [CopperFenceItem], [GoldFenceItem]), fabricados na [AnvilItem] com <b>Smelting 1</b>. Empilháveis e giráveis, cada material tem 27 formas em 5 grupos: paredes retas, cantos de 90 graus, diagonais de 45 graus, paredes com borda e cantos com borda. Cada grupo traz variantes com barras, pontas, meias pontas, pontas baixas e pontas ascendentes.
+  </section>
+
+</ecopedia>

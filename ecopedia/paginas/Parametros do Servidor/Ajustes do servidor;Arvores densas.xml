@@ -1,0 +1,28 @@
+<ecopedia icon="CedarSeedItem" priority="-4">
+  <summary>As dez espécies de árvore nascem em grupos maiores e mais próximos, amadurecem em menos da metade do tempo e se espalham três vezes mais rápido.</summary>
+
+  <section type="header">Densidade na geração do mundo</section>
+  <section>
+Quantas árvores nascem por grupo e a distância entre grupos, padrão do jogo e aqui:
+
+• Cedar, Fir, Spruce, Oak: grupos de 1-3 para <b>2-6</b>; distância 10-20 para <b>7-13</b>.
+• Birch: 30-60 para <b>45-90</b>; distância 30-60 para <b>20-39</b>.
+• Redwood: 5-40 para <b>8-60</b>; distância 60-120 para <b>39-78</b>.
+• Ceiba: 4-16 para <b>6-24</b>; distância 5-12 para <b>3-8</b>.
+• Palm: 4-10 para <b>6-15</b>; distância 14-22 para <b>9-14</b>.
+• Joshua: 3-5 para <b>5-8</b>; distância 30-50 para <b>20-33</b>.
+• Saguaro Cactus: 3-5 para <b>5-8</b>; distância 30-60 para <b>20-39</b>.
+
+Isso vale no nascimento do mundo. O mundo atual foi gerado com estes valores.
+  </section>
+
+  <section type="header">Crescimento e recomposição</section>
+  <section>
+• <b>Maturidade</b> em 40% do tempo normal: Palm 1,8 dia (era 4,5); Cedar e Birch 2,0 (era 5); Fir e Spruce 2,2 (era 5,5); Ceiba, Redwood e Saguaro 2,4 (era 6); Oak e Joshua 2,8 (era 7).
+• <b>Intervalo entre semeaduras</b> reduzido a 40% e <b>sementes por semeadura</b> dobradas, em todas.
+• <b>Taxa de espalhamento</b> 0,0003 em todas (era 0,0001).
+
+A Old Growth Redwood (sequoia antiga) <b>não</b> foi alterada: continua não renovável, como no jogo.
+  </section>
+
+</ecopedia>

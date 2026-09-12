@@ -1,0 +1,18 @@
+<ecopedia icon="FederationFoundationItem">
+  <summary>Se você ficar sem assentamento nenhum, o servidor devolve sua cidadania da federação sozinho, em 2 segundos.</summary>
+
+  <section type="header">O problema que isto resolve</section>
+  <section>
+No Eco, a <b>cidadania direta é exclusiva</b>: quando você planta uma pedra de fundação, ela cria um assentamento e a sua cidadania direta passa para ele — você continua na federação, mas por herança, como cidadão de um assentamento-filho.
+
+Se depois você <b>recolher essa pedra</b> com o martelo, o assentamento deixa de existir e a herança morre junto: você fica <b>sem cidadania nenhuma</b>, e perde os direitos civis da federação.
+  </section>
+
+  <section type="header">O que o servidor faz</section>
+  <section>
+Dois segundos depois, o servidor confere se você ficou sem assentamento e, se ficou, <b>devolve sua cidadania direta da federação</b> automaticamente. Não precisa pedir a ninguém.
+
+Quem funda cidade e a mantém não é afetado: essa pessoa continua cidadã da federação por herança, e o servidor não mexe em nada.
+  </section>
+
+</ecopedia>

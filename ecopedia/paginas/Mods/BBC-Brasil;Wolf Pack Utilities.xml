@@ -1,0 +1,20 @@
+<ecopedia icon="SolarPanelItem">
+  <summary>Moinho avançado, painel solar, poste de transmissão mecânica e torre de água, com alumínio e silício como materiais novos.</summary>
+
+  <section type="header">Objetos</section>
+  <section>
+• [AdvancedWindmillItem] - Advanced Windmill. [MachinistTableItem], Mechanics 5.
+• [SolarPanelItem] - Solar Panel. [MachinistTableItem], Mechanics 5.
+• [MechanicalTransmissionPoleItem] - Mechanical Transmission Pole. [WainwrightTableItem], Basic Engineering 2.
+• [WaterTowerItem] - Water Tower: segundo o autor, <b>bombeia água do solo</b>. [SawmillItem], Carpentry 3. (Mod Water Tower, do mesmo autor.)
+  </section>
+
+  <section type="header">Materiais novos</section>
+  <section>
+• [AluminaItem] - [OilRefineryItem], Oil Drilling 1.
+• [AluminumBarItem] - [BlastFurnaceItem], Advanced Smelting 1.
+• [AluminumSheetItem] - [ScrewPressItem], Mechanics 1.
+• [CokeItem], [SiliconItem] e [SiliconPlateItem] - [BlastFurnaceItem], Smelting 7.
+  </section>
+
+</ecopedia>

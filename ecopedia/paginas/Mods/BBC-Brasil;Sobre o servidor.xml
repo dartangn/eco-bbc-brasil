@@ -1,0 +1,99 @@
+<ecopedia icon="PaperItem" priority="-10">
+  <summary>Manuais do servidor BBC-Brasil: o que muda em relação ao Eco normal e como usar cada mod instalado.</summary>
+
+  <section type="header">Servidor BBC-Brasil</section>
+  <section>
+Estas páginas foram escritas pela administração do servidor <b>BBC-Brasil</b> (na lista de servidores: "BBC-BRASIL 5X, PT-BR, MODS, METEORO 60 DIAS"). Elas separam três coisas: o que foi <b>parametrizado</b> (valores de configuração do jogo), os <b>mods do servidor</b> (código nosso que muda o comportamento padrão do Eco) e os <b>mods de terceiros</b> instalados. O texto vem das instruções publicadas pelo autor de cada mod e do que foi conferido no código instalado aqui: profissão, nível e mesa de cada receita foram lidos deste servidor.
+  </section>
+
+  <section type="header">Parametros do Servidor</section>
+  <section>
+No menu da esquerda, em <b>Parametros do Servidor</b>, item <b>Ajustes do servidor</b>:
+
+• <b>Configuracao do jogo</b> - Valores de configuração deste servidor: pilhas, peso, meteoro, assentamentos, minério, reinício diário.
+
+• <b>Arvores densas</b> - As dez espécies de árvore nascem em grupos maiores e mais próximos, amadurecem em menos da metade do tempo e se espalham três vezes mais rápido.
+  </section>
+
+  <section type="header">Mods do servidor BBC-Brasil</section>
+  <section>
+• <b>Tronco na mão</b> - Ao derrubar a árvore, o tronco vem direto para a mão; o que não cabe fica no chão em peças de 5; o toco some e entrega a polpa.
+
+• <b>Pedra na mão</b> - Minerar com a picareta entrega o bloco direto na mão, 4 por bloco, sem entulho no chão.
+
+• <b>Pá com E</b> - A tecla E cava, e cada pá carrega mais por slot: madeira 10, ferro 20, aço 30, moderna 50.
+
+• <b>Foice com E</b> - Foices e gadanhas colhem com a tecla E, sem clicar.
+
+• <b>Plantas mais rapidas</b> - Todas as plantas cultivadas e silvestres amadurecem em 40% do tempo, dão o dobro de sementes e se espalham três vezes mais rápido. Capim de fora.
+
+• <b>Cidadania da federacao</b> - Se você ficar sem assentamento nenhum, o servidor devolve sua cidadania da federação sozinho, em 2 segundos.
+
+• <b>Moedas para comecar</b> - Jogador novo recebe, no primeiro login, 10 de Moeda para Papel de Propriedade e 3 de Moeda para Estacas.
+
+• <b>Livro da profissao</b> - Existe uma receita de livro para cada profissão no Laboratório. Ela não é para ser feita: serve para a tela de habilidades funcionar.
+
+• <b>Custo das estrelas</b> - Preço em estrelas de algumas profissões mudou, e começar árvore nova ou pular para profissão avançada custa mais.
+
+• <b>Pergaminhos</b> - Na mesa de pesquisa, todo livro de profissão vira 5 pergaminhos, e cada pergaminho consumido dá 5 papéis de terreno.
+
+• <b>Couro dobrado</b> - Cortar bicho na mesa de açougue entrega o dobro de couro; carne, lã e pele continuam iguais ao jogo normal.
+  </section>
+
+  <section type="header">Mods de terceiros</section>
+  <section>
+• <b>Recompensa inicial</b> - No primeiro login, cada jogador recebe 500 Real e 2 estrelas de especialidade.
+
+• <b>Eco Gnome</b> - Calcule seus preços no site eco-gnome.com com as receitas deste servidor e mande as ofertas para a sua loja com um botão.
+
+• <b>GoodPrice</b> - Calculadora de preços dentro do jogo: custo de produção, margem sugerida e preço médio do mercado, na aba GoodPrice da loja.
+
+• <b>Smart Storage</b> - O que sai da mesa de trabalho vai sozinho para o estoque que faz mais sentido, sem arrastar prioridades à mão.
+
+• <b>Mercados</b> - Oito mercados ao ar livre, um por profissão, com loja pública e estoque. Fabricados na bancada com nível 2 da profissão.
+
+• <b>Portões e Cercas</b> - Portas duplas em 8 madeiras, grades de metal animadas, duas pontes levadiças e cercas decorativas.
+
+• <b>Hot Wheels</b> - Bicicleta, patinete, moto, ônibus escolar, jetski a vapor, jetski elétrico e Tesla Model 3, além dos carregadores elétricos.
+
+• <b>Molduras Grandes</b> - Molduras 2x2, 3x2 e 2x3 para todo tipo de moldura do jogo, e seis molduras sem borda.
+
+• <b>Mixology</b> - Duas profissões de bebidas: sucos e smoothies (Mixology) e coquetéis, cafés e chás (Advanced Mixology).
+
+• <b>Sorvetes</b> - A profissão IceCream: máquina de sorvete, cones, picolés e potes, a partir das frutas do jogo.
+
+• <b>StorageMore</b> - Mais de 20 estoques novos: containers, paletes, big bag, estoques de madeira, estantes, rack de ferramentas e outros.
+
+• <b>Painéis de Anúncio</b> - Três painéis que mostram a imagem que você quiser, pelo sistema de impressora do jogo.
+
+• <b>Posto de Gasolina</b> - Uma bomba de combustível que também é loja, e um totem com texto, para montar um posto de gasolina.
+
+• <b>Pedras de Afiar</b> - Repare ferramentas em qualquer lugar: botão direito com a pedra de afiar certa, sem precisar da bancada.
+
+• <b>Rejeitos</b> - Transforme rejeitos úmidos em rejeitos secos e estes em areia, argila ou terra; e escória em enxofre.
+
+• <b>Wolf Pack Utilities</b> - Moinho avançado, painel solar, poste de transmissão mecânica e torre de água, com alumínio e silício como materiais novos.
+
+• <b>Filtros de Poluição</b> - Módulos que reduzem em 20, 40 ou 60 por cento a poluição de máquinas e veículos, ocupando um slot de módulo.
+
+• <b>Formas Extras</b> - Parede diagonal a 45 graus e coluna de um quarto para os seis tipos de pedra lavrada (Ashlar).
+
+• <b>Moinhos não industriais</b> - Roda d'água e moinho de vento não transformam o ambiente externo em industrial.
+
+• <b>Trator a Vapor minerador</b> - O Trator a Vapor pode minerar com a pá (Steam Scoop).
+  </section>
+
+  <section type="header">Comandos</section>
+  <section>
+• Escreva o comando por extenso, como está na página, e cole no chat do jogo.
+
+• Quando um comando recebe mais de um valor, os valores são separados por vírgula.
+
+• Comandos que começam com <b>/ecognome</b> são do mod Eco Gnome; <b>/custoestrelas</b> é deste servidor.
+  </section>
+
+  <section type="header">Ícones e cores nas placas</section>
+  <section>
+Toda placa com texto aceita ícones do jogo, cores, tamanho e alinhamento. A galeria com todos os ícones e um montador que gera o texto pronto para colar na placa está em <b>dartangn.github.io/icones-eco-bbc</b>. Abra no navegador do PC, monte, copie e cole no texto da placa.
+  </section>
+</ecopedia>

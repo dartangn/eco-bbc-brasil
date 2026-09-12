@@ -1,0 +1,60 @@
+<ecopedia icon="StarterCampItem" priority="-5">
+  <summary>Valores de configuração deste servidor: pilhas, peso, meteoro, assentamentos, minério, reinício diário.</summary>
+
+  <section type="header">Jogo (Difficulty.eco)</section>
+  <section>
+• <b>Pilhas 5x</b> (StackSizeMultiplier 5.0): cada pilha vale cinco vezes o normal. A tora comum empilha 100 na mão.
+• <b>Peso 0,25x</b> (WeightMultiplier 0.25): todo item pesa um quarto do normal.
+• <b>Alcance de conexão 2x</b> (ConnectionRangeMultiplier 2.0): estoque alcança mesas e outros estoques ao dobro da distância.
+• <b>Exaustão desligada</b>: não há limite diário de horas de jogo.
+• <b>Meteoro em 60 dias</b> (MeteorImpactInDays 60), contados da criação do mundo.
+• <b>Animais só revidam</b> (AnimalBehavior DefensiveOnly): não atacam sem serem atacados.
+• <b>5 papéis de terreno</b> por pergaminho de profissão consumido (ClaimPapersGrantedUponSkillscrollConsumed 5).
+• Custo de XP por estrela no padrão do jogo (SkillCostMultiplier 1.0). O preço em estrelas de cada profissão é mudado por código, veja [Custo das estrelas].
+  </section>
+
+  <section type="header">Assentamentos (Settlements.eco)</section>
+  <section>
+• Influência-base da fundação: cidade 45, país 150, <b>federação 2000</b>, para uma federação cobrir o mundo inteiro de 4 km².
+• Cidadãos mínimos para fundar e para manter qualquer assentamento: <b>1</b>. Cultura mínima: <b>0</b>.
+• Cada cidadão que entra na federação gera <b>5 estacas de terreno</b> (o jogo normal gera 1,5), e cada estaca deixa reivindicar <b>20 lotes</b> (normal 5). As estacas ficam com a federação, que as distribui aos cidadãos.
+• Cidadão marcado como <b>abandonado</b> (que sumiu do jogo) gera o mesmo que um cidadão ativo, em cidade, país e federação: a federação não perde papéis nem estacas quando alguém para de jogar.
+• <b>Cidade nova nasce com influência 65</b> (o padrão do jogo é 45). Influência se comporta como raio em blocos, então 65 cobre pouco mais que o dobro da área do padrão.
+• A federação pode <b>proibir que uma cidade-filha se separe</b> dela, se a liderança desmarcar essa opção na política de imigração (é preciso uma Mesa de Imigração dentro da influência da federação).
+  </section>
+
+  <section type="header">Salas e casas (Rooms.eco)</section>
+  <section>
+• Um vão de até <b>2 blocos de largura por 1 de altura</b> (ou 2 de altura por 1 de largura) na parede <b>continua contando como sala fechada</b>, servindo de janela ou porta. É o comportamento normal do Eco, que vinha desligado nesta versão.
+• Vão maior que isso, ou buraco no teto aberto para o céu, continua invalidando a sala.
+• O restante da configuração de sala está no padrão do jogo: uma janela sem penalidade a cada 10 blocos de parede, e bônus de 20% no valor da sala com as paredes pintadas.
+  </section>
+
+  <section type="header">Itens comprados no Marketplace</section>
+  <section>
+• Item comprado com Eco Credits <b>pode ser vendido em loja de jogador</b>.
+• E <b>qualquer um pode colocá-lo no mundo</b>, mesmo sem ter comprado o blueprint.
+  </section>
+
+  <section type="header">Mundo (WorldGenerator.eco)</section>
+  <section>
+• Mapa de <b>2000 x 2000 blocos</b> (4 km²), semente 2052209397. O mesmo mapa volta a cada wipe.
+• <b>Minério</b>: cada depósito tem o dobro da chance de aparecer e veios 1,5 vez maiores que o padrão. Vale para ferro, cobre, carvão e ouro, rasos e profundos. Exemplos (chance por bloco e tamanho do veio, padrão e aqui):
+  ferro raso 0,02 e 8-15 blocos, aqui 0,04 e 12-22 · cobre 0,03 e 6-25, aqui 0,06 e 9-37 · carvão 0,0025 e 15-50, aqui 0,005 e 22-75 · ouro 0,005 e 5-25, aqui 0,01 e 7-37.
+• Densidade das árvores: mudada por código, veja [Arvores densas].
+  </section>
+
+  <section type="header">Servidor (Network.eco e outros)</section>
+  <section>
+• Servidor <b>público</b>, sem senha, vagas ilimitadas. Na lista de servidores aparece como <b>"BBC-BRASIL 5X, PT-BR, MODS, METEORO 60 DIAS"</b>.
+• Imagem impressa (impressora, painéis) passa por <b>aprovação de administrador</b> antes de aparecer.
+• Pedra de afiar faz <b>reparo completo</b> (WhetstonesPercent 100). Veja [Pedras de Afiar].
+• Recompensa de primeiro login: veja [Recompensa inicial].
+  </section>
+
+  <section type="header">Reinício diário</section>
+  <section>
+O servidor reinicia todo dia às <b>4h da manhã</b> (horário de Brasília). O mundo é salvo antes. Quem estiver conectado é desconectado e pode voltar em poucos minutos.
+  </section>
+
+</ecopedia>

@@ -1,0 +1,17 @@
+<ecopedia icon="TailingsItem">
+  <summary>Transforme rejeitos úmidos em rejeitos secos e estes em areia, argila ou terra; e escória em enxofre.</summary>
+
+  <section>
+<b>Tailings to Sand, Clay or Dirt</b> (GadgetPaPa) acrescenta receitas para se livrar dos rejeitos da mineração em vez de estocá-los:
+
+• [WetTailingsItem] vira [TailingsItem] (rejeito seco).
+• [TailingsItem] vira [SandItem], [ClayItem] ou [DirtItem].
+• [SlagItem] vira [SulfurItem].
+
+Duas mesas fazem as mesmas receitas, em escalas diferentes:
+
+• [KilnItem] - <b>Pottery 1</b>, 1 por receita.
+• [IncineratorItem] - <b>Recycling 1</b>, 8 por receita.
+  </section>
+
+</ecopedia>

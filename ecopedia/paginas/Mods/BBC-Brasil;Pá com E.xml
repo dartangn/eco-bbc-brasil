@@ -1,0 +1,11 @@
+<ecopedia icon="IronShovelItem">
+  <summary>A tecla E cava, e cada pá carrega mais por slot: madeira 10, ferro 20, aço 30, moderna 50.</summary>
+
+  <section>
+Duas mudanças na pá, feitas por arquivo deste servidor (o mod Big fast shovel do mod.io <b>não</b> está instalado):
+
+• <b>Cavar com E</b>: apontar para o bloco e apertar E cava, igual ao clique. Dá para segurar a tecla.
+• <b>Mais por slot na mão</b>: no jogo normal cada slot da mão aceita 1 (madeira), 3 (ferro), 5 (aço) ou 10 (moderna) blocos ao cavar. Aqui: [WoodenShovelItem] <b>10</b>, [IronShovelItem] <b>20</b>, [SteelShovelItem] <b>30</b>, [ModernShovelItem] <b>50</b>.
+  </section>
+
+</ecopedia>
