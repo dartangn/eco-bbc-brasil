@@ -157,7 +157,32 @@ usado pelos overrides quando ligados com `--com-diario`.
 
 ### Não instalados, mantidos como registro
 `CargaMochilas.cs` (mochilas ×5, substituído pelo `WeightMultiplier 0.25`) e
-`PonteServidor.cs` (ponte de arquivo para anúncio no jogo).
+`PonteServidor.cs` — que hoje **é** usado, e tem seção própria abaixo.
+
+### `PonteServidor.cs`
+**O que muda:** o servidor passa a executar **dentro do jogo** o que um script pede por arquivo.
+Ele vigia `/opt/eco/ponte` a cada 5 s: `limpar-entulho` → `RubbleObject.ClearAllRubble`,
+`anuncio.txt` → mensagem a todos, `alerta.txt` → caixa com OK para cada jogador online.
+
+**Por que existe:** o reinício diário precisa **limpar o entulho antes de reiniciar**, e
+`/world clearallrubble` pelo RCON responde *"requires a in-game user"*. Sem ponte, não há como um
+script pedir isso.
+
+**Como:** `IModInit` + `System.Threading.Timer`. A primeira varredura é 30 s depois do
+`Initialize()`, porque o mundo ainda está carregando. O que ele faz vai para
+`/opt/eco/ponte-vida.txt` — **é essa a prova de que ele acordou**.
+
+> **Este arquivo derrubou o servidor em 08/09/2026** e a lição vale mais que ele: usei
+> `ServerMessageToAll(..., category: NotificationCategory.Notifications, ...)`, copiado de um
+> arquivo do jogo onde compila. Aqui deu `CS0103` — 18 erros, três arranques falhos, e a unidade
+> do systemd travada por 30 minutos exigindo root. A correção é **uma linha**: a forma de **1
+> argumento**, `ServerMessageToAll(Localizer.DoStr(texto))`. *Copiar a forma de um código que
+> compila inclui conferir de qual `using` cada tipo vem — e, quando há uma forma mais simples que
+> já compila, é ela que se copia.*
+
+> **O aviso de reinício NÃO passa por aqui.** Ele vai por RCON `/manage alert`, que chega ao
+> jogador sem depender de mod nenhum. Pôr o aviso na ponte custou três dias de reinício sem aviso,
+> porque este arquivo não estava instalado e ninguém lia o que o script escrevia.
 
 ---
 

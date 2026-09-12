@@ -53,8 +53,7 @@ Vão para `Mods/UserCode/KabongBrasil/`.
 | `GnomeNosMercados.cs` | integração do Eco Gnome com os mercados |
 | `PlacasNoMenu.cs` | item no menu do painel web, via `IWebPlugin` |
 | `KabongLog.cs` | diário de diagnóstico, usado pelos overrides quando ligados com `--com-diario` |
-| `CargaMochilas.cs` | capacidade das mochilas ×5. **Não instalado** — substituído pelo `WeightMultiplier 0.25` |
-| `PonteServidor.cs` | ponte de arquivo para mandar anúncio ao jogo. **Não instalado** |
+| `PonteServidor.cs` | lê `/opt/eco/ponte` e executa no jogo o que os scripts pedem por arquivo. Hoje serve para **limpar o entulho** no reinício diário — `/world clearallrubble` pelo RCON responde *"requires a in-game user"* |
 
 ⚙ = **gerado**. Depois de atualizar o Eco, rode o gerador de novo em vez de copiar o arquivo:
 cópia velha de arquivo gerado é o defeito que degradou um mod famoso sem avisar.
@@ -82,6 +81,40 @@ produzir um override pela metade — que falharia em silêncio.
 
 Todos rodam no servidor, como o usuário dono dos arquivos, e têm `--seco` ou `--resumo` para
 mostrar o que fariam sem tocar em nada. **Rode o modo seco antes do real, sempre.**
+
+---
+
+## `operacao/` — o reinício diário
+
+O servidor reinicia todo dia às **03:55 (São Paulo)**, por timer do systemd.
+
+| Arquivo | Para quê |
+|---|---|
+| `eco-reiniciar.sh` | avisa os jogadores, limpa o entulho, salva, para, roda os pendentes de config, sobe e **lê o log do arranque** |
+| `instalar-reiniciar.sh` | põe o timer e os scripts no lugar. **Precisa de root** |
+| `instalar-ponte.py` | instala o `PonteServidor.cs` na janela do reinício, com desfazer automático |
+
+**O aviso vai por RCON `/manage alert`** — a caixa que fica na tela até o jogador clicar OK, em
+português e inglês. Isso foi medido em campo: `/manage announce` pelo RCON não serve (mesmo
+digitado no jogo ele pisca rápido demais para ler), e **a resposta do RCON é vazia nos dois casos**
+— vazio não diz se o jogador viu. Quem decide é quem está no jogo.
+
+> **Como instalar um `.cs` num reinício sem ninguém olhando.** A regra deste servidor é *nunca*
+> fazer isso: em 08/09/2026 um arquivo que não compilou causou três arranques falhos, e a unidade
+> do systemd travou por 30 minutos exigindo root — de madrugada. Quando não há como evitar, o risco
+> é **desarmado, não aceito**:
+>
+> 1. o script pendente **anota** o que instalou;
+> 2. se aquele arranque acusar `error CS` ou `Failed to start`, o `eco-reiniciar.sh` **tira o
+>    arquivo e sobe de novo sozinho** — o pior caso vira "voltou sem o mod", não "não voltou";
+> 3. e o pendente **se recusa a rodar** se o `eco-reiniciar.sh` instalado não tiver esse desfazer.
+>    A rede de segurança tem de estar no lugar antes do salto, e quem confere isso é o código.
+
+> **Toda verificação aqui olha o EFEITO, não a intenção.** O pedido de limpar entulho é um arquivo
+> que o mod consome: se ele continuar no disco, ninguém leu, e o log marca `[XX]`. Isso existe
+> porque a versão anterior conferia com `tail -1 arquivo 2>/dev/null`, que num arquivo inexistente
+> imprime linha vazia e segue — e assim o aviso de reinício passou **três dias sem chegar a
+> ninguém** sem que o log reclamasse uma vez.
 
 ---
 
