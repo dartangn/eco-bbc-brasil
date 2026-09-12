@@ -2,9 +2,9 @@
 // CidadaniaFederacao.cs  --  Servidor Kabong Brasil / BBC-Brasil
 //
 // O PROBLEMA (medido em campo por duas pessoas, 10 e 11/09/2026)
-//   O pepsy e o raul.motta puseram a pedra de fundacao de cidade no chao e, ao
-//   bater com o martelo para pega-la de volta, SAIRAM DA FEDERACAO. Nenhum dos
-//   dois fundou a cidade -- basta plantar e recolher.
+//   Dois jogadores puseram a pedra de fundacao de cidade no chao e, ao bater com o
+//   martelo para pega-la de volta, SAIRAM DA FEDERACAO. Nenhum dos dois chegou a
+//   fundar a cidade -- basta plantar e recolher.
 //
 //   Por que: a cidadania DIRETA e exclusiva (o jogo avisa: "you will lose direct
 //   citizenship of {0} and gain direct citizenship of {1}"). Plantar a pedra cria

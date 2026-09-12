@@ -17,7 +17,7 @@
 //      CORROMPEU O MUNDO em 03/09/2026 -- ele CRIA a moeda quando nao encontra
 //      pelo nome, e criou uma segunda com o mesmo nome, o que fez o servidor
 //      parar de subir ("An item with the same key has already been added. Key:
-//      raul.motta") por mais de uma hora, ate restaurarmos backup.
+//      <nome do primeiro admin>") por mais de uma hora, ate restaurarmos backup.
 //
 //   ESTE ARQUIVO NUNCA CRIA MOEDA. Se nao achar, nao faz nada e anota no diario.
 //   E a diferenca que separa dar dinheiro de derrubar o servidor.

@@ -231,8 +231,10 @@ ar faz a mudança desaparecer: a sequência é **parar → editar → subir**. O
 rodam nessa janela, fazem backup datado e conferem **relendo do disco**, devolvendo o backup se a
 releitura não bater.
 
-`ferramentas/diff-configs.py` compara cada `X.eco` com o `X.eco.template` de fábrica e lista só o
-que difere — responde "isto é padrão do jogo ou fomos nós?" sem depender de memória.
+`config/configurar.py` escreve os `.eco` a partir dos `.template` no primeiro arranque; os
+`ajustar-*.py` mudam **um assunto de cada vez** depois disso. `ferramentas/diff-configs.py` compara
+cada `X.eco` com o `X.eco.template` de fábrica e lista só o que difere — responde "isto é padrão do
+jogo ou fomos nós?" sem depender de memória.
 
 | Config | Valor | O que faz |
 |---|---|---|
@@ -262,6 +264,51 @@ que difere — responde "isto é padrão do jogo ou fomos nós?" sem depender de
 > **4.** A wiki diz que `EmptyBlocksCountAsWindows` é `true` por padrão; o **template desta versão
 > diz `false`**. A Strange Loop mudou e a wiki ficou para trás. É por isso que servidores
 > diferentes se comportam de formas diferentes com um bloco aberto na parede.
+
+### O mundo: mapa e minério — `WorldGenerator.eco`
+
+**Este arquivo é o único que exige wipe.** Ele é lido uma vez, na geração; mudá-lo depois não tem
+efeito nenhum no mundo existente. Então as duas coisas abaixo se decidem **antes** do primeiro
+arranque, ou custam um mundo novo.
+
+| | Valor |
+|---|---|
+| `WorldWidth` × `WorldLength` | **200 × 200** = 2.000 blocos de lado = **4 km²** |
+| Semente · perfil | `2052209397` · Balanced Water, baixados de <https://ecoatlas.dev> |
+| Minério | **2× a chance** de veio e **1,5× o tamanho** dele, em 36 depósitos |
+
+> **A unidade não é metro nem bloco — é DEZENA de blocos:** `área km² = (WorldWidth × 10 / 1000)²`.
+> E os valores devem ser divisíveis por 4.
+
+**`config/mais-minerio.py`** aplica o minério. **São dois botões, não um**, e isso é o miolo da
+decisão: `SpawnPercentChance` controla **quantos** veios e `BlocksCountRange` o **tamanho** de cada
+um. Multiplicar só a chance encheria o mapa de veios minúsculos; 2× e 1,5× juntos dão cerca de 3×
+de minério mantendo a sensação de procurar.
+
+Dois blocos ficam de fora, por **lista explícita e nunca por curinga**: `EmptyBlock`, que **é
+caverna** — multiplicar viraria queijo suíço — e `LimestoneBlock`, que é pedra de construção.
+
+> **O próprio gerador avisa, e o aviso é legítimo:** 14 dos 36 depósitos saem `too high`/`high`, e
+> o mundo de fábrica tinha **zero** avisos. Nada falha — a geração fica 6% mais lenta e o mundo
+> 3,6% maior — mas veio a cada 50 blocos com tamanho 112 quase se toca, e minério pode virar
+> **parede em vez de veio a procurar**. Isso só se julga cavando; se incomodar, regerar usando os
+> máximos que o próprio gerador imprime, que valem mais que palpite.
+
+### Admins e RCON
+
+`config/adicionar-admin.py` grava o `Users.eco`, que nasce **vazio**. Faz **união, nunca
+sobrescreve** — tirar o poder de alguém por engano seria silencioso — e valida o formato antes de
+gravar: Steam64 tem 17 dígitos e começa com `7656119`. Um dos números que chegou aqui era ID do
+**Discord**; o Eco teria aceitado o texto sem reclamar e a pessoa não teria poder nenhum.
+
+> O `/manage admin <id>` do chat exige que quem digita **já seja** admin. Com a lista vazia não há
+> ninguém para digitar: o primeiro entra pelo arquivo.
+
+`config/fechar-rcon.py` põe senha no RCON, que o Eco deixa **escutando em todas as interfaces com
+o campo de senha vazio** — e o plugin *inicia* assim. A senha é gerada no próprio servidor e nunca
+passa por chat nem log. Não trocamos o `RconIPAddress` para `127.0.0.1` porque `"Any"`
+provavelmente vira `IPAddress.Any` no parser e não há documentação de que ele aceite IP literal:
+se recusar, **o servidor não sobe**.
 
 ---
 

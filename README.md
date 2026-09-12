@@ -101,6 +101,10 @@ desaparecer. Estes scripts rodam **com o servidor parado**, fazem backup datado,
 | `ajustar-itens-pagos.py` | itens do Marketplace em loja de jogador |
 | `ajustar-remote-address.py` | endereço anunciado na lista pública |
 | `ajustar-settlements.py` · `ajustar-nome.py` | requisitos de assentamento · nome na lista |
+| `liberar-trava-secessao.py` | **destrava** a opção de a federação proibir que um filho se separe. Sozinho não proíbe nada: depois é preciso desmarcar a caixa na política de imigração, dentro do jogo |
+| `mais-minerio.py` | 2× a chance de veio e 1,5× o tamanho, em 36 depósitos do `WorldGenerator.eco`. **Só vale em mundo novo** |
+| `configurar.py` | escreve os `.eco` a partir dos `.template` no primeiro arranque |
+| `adicionar-admin.py` · `fechar-rcon.py` | admins no `Users.eco` (união, nunca sobrescreve) · senha no RCON, que o Eco deixa aberto |
 | `aplicar-pergaminhos.py` | **a única alteração nossa dentro de um mod de terceiro**: o No More Books entrega 5 pergaminhos por livro, não 1. É `const`, então não se alcança por `partial class` nem por reflexão. **Toda atualização do mod zera isto — reaplicar** |
 
 ---
