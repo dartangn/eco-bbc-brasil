@@ -7,6 +7,12 @@ ajustam a configuração do jogo.
 Nada aqui é segredo: não há senha, chave, nem endereço interno. Os documentos de operação
 do servidor (acesso, histórico, reconstrução) **não** estão neste repositório.
 
+> ### ⇒ **[ALTERACOES.md](ALTERACOES.md) — o que foi alterado, arquivo por arquivo**
+>
+> Para cada coisa que este servidor muda no jogo: **o que é, por que foi alterada, como foi
+> alterada** e **como refazer**, com a armadilha que cada uma carrega. Este README diz o que
+> tem no repositório; aquele diz por quê.
+
 ---
 
 ## Como o Eco carrega isto
@@ -95,6 +101,7 @@ desaparecer. Estes scripts rodam **com o servidor parado**, fazem backup datado,
 | `ajustar-itens-pagos.py` | itens do Marketplace em loja de jogador |
 | `ajustar-remote-address.py` | endereço anunciado na lista pública |
 | `ajustar-settlements.py` · `ajustar-nome.py` | requisitos de assentamento · nome na lista |
+| `aplicar-pergaminhos.py` | **a única alteração nossa dentro de um mod de terceiro**: o No More Books entrega 5 pergaminhos por livro, não 1. É `const`, então não se alcança por `partial class` nem por reflexão. **Toda atualização do mod zera isto — reaplicar** |
 
 ---
 
