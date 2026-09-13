@@ -118,7 +118,30 @@ digitado no jogo ele pisca rápido demais para ler), e **a resposta do RCON é v
 
 ---
 
-## `config/` — ajustam os `.eco` da pasta `Configs`
+## `icones-mixologia/` — recorte de fundo em ícone de mod
+
+Os ícones de vários mods vêm em **DXT1**, formato **sem canal alfa**, com o fundo pintado na arte.
+Na placa eles saem com um quadrado, e `type="nobg"` não tem o que respeitar. Medido em campo em
+12/09/2026; não é defeito de um mod só — há 64 ícones do jogo base no mesmo estado.
+
+Estes scripts abrem o AssetBundle com **UnityPy** (sem Unity), recortam o fundo e regravam em DXT5.
+
+| Arquivo | Para quê |
+|---|---|
+| `exportar.py` · `inspecionar.py` · `mapear.py` | abrem o bundle e despejam as texturas |
+| `recortar.py` + `furos.py` | tiram o fundo, inclusive o **cercado pelo desenho** (o vão da alça da caneca) |
+| `regravar.py` | devolve as imagens ao bundle em DXT5 |
+| `mod-bbc.py` | gera um mod **nosso**, com os prefabs renomeados para `<Nome>BBC` |
+| `casar.py` · `previa-galeria.py` | ligam ícone nomeado ↔ textura, e geram a prévia da galeria |
+| `instalar-*.sh` · `instalar-icones-bbc.py` | instalam no servidor, com backup e desfazer |
+
+> **Os `.unity3d` e os PNG não estão aqui, de propósito** — é arte do autor do mod, modificada, e
+> este repositório é público. Os scripts refazem tudo a partir do arquivo que já está no servidor de
+> quem instalou o mod.
+
+---
+
+## `config/` — ajustam os `.eco` da pasta `Configs`## `config/` — ajustam os `.eco` da pasta `Configs`
 
 O Eco **regrava os `Configs` ao desligar**, então editar com o servidor no ar faz a mudança
 desaparecer. Estes scripts rodam **com o servidor parado**, fazem backup datado, e conferem

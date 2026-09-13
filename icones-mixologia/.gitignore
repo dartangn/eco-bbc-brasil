@@ -1,0 +1,9 @@
+# Os pacotes .unity3d e os PNG despejados NAO entram aqui: sao arte do autor do mod
+# (modificada), e este repositorio e publico. Os scripts reproduzem tudo a partir do
+# arquivo que ja esta no servidor de quem instalou a Mixologia.
+*.unity3d
+*.unity3d.novo
+originais/
+recortados/
+png-bbc/
+*.tar
