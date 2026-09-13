@@ -184,6 +184,33 @@ script pedir isso.
 > jogador sem depender de mod nenhum. Pôr o aviso na ponte custou três dias de reinício sem aviso,
 > porque este arquivo não estava instalado e ninguém lia o que o script escrevia.
 
+### Ícones de mod sem canal alfa — `icones-mixologia/`
+
+**O que muda:** as texturas de ícone do mod passam de **DXT1** (sem alfa) para **DXT5** (com alfa),
+com o fundo recortado. Opcionalmente gera um **mod próprio** com os mesmos ícones sob nomes
+`<Nome>BBC`, que sobrevive à atualização do mod original.
+
+**Por que:** na placa do jogo, `<icon name="X" type="nobg">` só tira o fundo se a arte **tiver**
+recorte. DXT1 não tem canal alfa, então não há transparência para respeitar e o ícone sai com um
+quadrado. Medido em campo em 12/09/2026, com uma placa de 8 linhas.
+
+**Como:** UnityPy abre e regrava o AssetBundle **sem o Unity**. O recorte é crescimento de região a
+partir da borda, comparando cada pixel com o **vizinho já aceito** — é isso que acompanha um fundo em
+degradê sem vazar para dentro do desenho — mais uma passada que remove o fundo **cercado pelo
+desenho**, ajustando um plano por canal para prever a cor do degradê em cada posição.
+
+**Armadilhas que as travas já pegaram:**
+
+- o **atlas de fonte** (`LiberationSans SDF Atlas`) viraria 100% transparente e quebraria o texto do
+  mod — a trava de "removeu mais de 90%" pegou;
+- recortar o ícone de **32×32** come o desenho (um copo perdeu metade). A prévia passou a sair da
+  redução do recorte de **512×512**;
+- **`overlayimg` e `iconcolor` usam aspas simples**; `name` e `type`, duplas. É assim no binário.
+
+> **Nome do ícone:** o arquivo nem sempre é a classe. Profissão no GoodPrice é `TailoringSkillItem`,
+> mas a classe do jogo é `TailoringSkill` — **o `Item` no fim não existe**. O gerador da galeria
+> confere cada nome contra as classes declaradas no servidor.
+
 ---
 
 ## 3. Overrides gerados

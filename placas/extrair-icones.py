@@ -26,8 +26,84 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 PNG_DIR = os.path.join(AQUI, "png")
 nomes = sorted(f[:-4] for f in os.listdir(PNG_DIR) if f.endswith(".png"))
 
-cards = "\n".join('<figure data-n="%s"><img src="png/%s.png" loading="lazy" alt=""><figcaption>%s</figcaption></figure>'
-                  % (html.escape(b.lower()), html.escape(b), html.escape(b)) for b in nomes)
+# Icones de BORDA SOLIDA: type="nobg" NAO tem efeito neles, porque a arte nao tem
+# recorte -- o quadrado inteiro e opaco. Lista produzida por classificar-alfa.py e
+# CONFIRMADA em campo em 12/09/2026 (a previsao acertou 5 de 5 numa placa de teste).
+SOLIDOS = set()
+_lst = os.path.join(AQUI, "solidos.txt")
+if os.path.exists(_lst):
+    SOLIDOS = {l.strip() for l in open(_lst, encoding="utf-8") if l.strip()}
+
+# Categoria de cada icone, de categorizar.py (tags do item -> classe-mae -> sufixo).
+# Icones do NOSSO mod (bundle com os prefabs renomeados para <Nome>BBC, com alfa).
+# So valem se IconesMixologiaBBC.unity3d estiver instalado no servidor.
+# Os icones da Mixologia saem SEMPRE com o nome do nosso mod. Nao ha caixa na
+# interface: decisao do Raul em 12/09/2026 -- "vamos colocar so os icones bbc que
+# criamos, substituindo os de mesmo nome".
+#
+# SE O TESTE DE 13/09 FALHAR (o cliente nao achar prefab de bundle de outro mod),
+# ponha USAR_BBC = False aqui e rode este script de novo: as placas voltam a pedir
+# os nomes originais. E uma linha, de proposito -- com a decisao num lugar so, em
+# vez de espalhada pelo codigo.
+USAR_BBC = True
+
+# Nome que a tag <icon name="..."> aceita. O arquivo vem do GoodPrice e nem sempre
+# bate com a classe do jogo: profissao la e "TailoringSkillItem", no jogo e
+# "TailoringSkill" -- o Item no fim NAO EXISTE. Ver nomes-reais.py.
+REAL = {}
+_re = os.path.join(AQUI, "nomes-reais.txt")
+if os.path.exists(_re):
+    for _l in open(_re, encoding="utf-8"):
+        _q = _l.rstrip().split("|")
+        if len(_q) == 2: REAL[_q[0]] = _q[1]
+
+# Nomes que nao correspondem a classe nenhuma do jogo: a galeria AVISA, nao esconde.
+DUVIDOSO = set()
+_dv = os.path.join(AQUI, "duvidosos.txt")
+if os.path.exists(_dv):
+    DUVIDOSO = {l.strip() for l in open(_dv, encoding="utf-8") if l.strip()}
+
+BBC = {}
+_bbc = os.path.join(AQUI, "nomes-bbc.txt")
+if os.path.exists(_bbc):
+    for _l in open(_bbc, encoding="utf-8"):
+        _q = _l.rstrip().split("|")
+        if len(_q) == 2: BBC[_q[0]] = _q[1]
+if not USAR_BBC: BBC = {}
+
+CAT = {}
+_cat = os.path.join(AQUI, "categorias.txt")
+if os.path.exists(_cat):
+    for _l in open(_cat, encoding="utf-8"):
+        _p = _l.rstrip().split("|")
+        if len(_p) == 2: CAT[_p[0]] = _p[1]
+
+cards = "\n".join('<figure data-n="%s" data-solido="%d" data-cat="%s" data-bbc="%s" data-real="%s"><img src="png/%s.png" loading="lazy" alt="">%s%s%s<figcaption>%s</figcaption></figure>'
+                  % (html.escape(b.lower()), 1 if b in SOLIDOS else 0,
+                     html.escape(CAT.get(b, "Diversos")), html.escape(BBC.get(b, "")),
+                     html.escape(REAL.get(b, "")), html.escape(b),
+                     '<b class="fundo" title="sem recorte: sai com quadrado na placa, mesmo com nobg">fundo</b>' if (b in SOLIDOS and b not in BBC) else '',
+                     '<b class="bbc" title="temos versao recortada no nosso mod">BBC</b>' if b in BBC else '',
+                     '<b class="duvida" title="este nome nao corresponde a nenhuma classe do jogo -- pode nao aparecer na placa">?</b>' if b in DUVIDOSO else '',
+                     html.escape(b)) for b in nomes)
+
+# cartoes da vista por categoria: icone representativo + nome + contagem
+_porcat = {}
+for _b in nomes: _porcat.setdefault(CAT.get(_b, "Diversos"), []).append(_b)
+_ordem = sorted(_porcat.items(), key=lambda kv: (-len(kv[1]), kv[0]))
+_REP = {}
+_rp = os.path.join(AQUI, "representantes.txt")
+if os.path.exists(_rp):
+    for _l in open(_rp, encoding="utf-8"):
+        _q = _l.rstrip().split("|")
+        if len(_q) == 2: _REP[_q[0]] = _q[1]
+def _rep(c, v):
+    r = _REP.get(c)
+    return r if (r and r in nomes) else sorted(v)[len(v)//2]
+catcards = chr(10).join(
+    '<button class="catcard" data-cat="%s"><img src="png/%s.png" loading="lazy" alt=""><span class="cnome">%s</span><span class="cqtd">%d</span></button>'
+    % (html.escape(c), html.escape(_rep(c, v)), html.escape(c), len(v))
+    for c, v in _ordem)
 
 pagina = """<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Ícones do Eco para placas · BBC-Brasil</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -58,7 +134,24 @@ textarea{min-height:80px;resize:vertical}
 .icone-sel{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--escuro);border:1px solid var(--borda);border-radius:6px;padding:8px 12px;min-height:50px;font-size:15px}
 .icone-sel img{width:40px;height:40px;background:#c9a56b;border-radius:6px;padding:3px;box-sizing:content-box}
 .icone-sel small{opacity:.7}
-.preview{background:var(--placa);border:6px solid #4a3220;border-radius:8px;padding:22px;min-height:110px;font-size:26px;line-height:1.35;color:#3b2a1a;font-family:Georgia,serif;word-break:break-word;box-shadow:inset 0 0 30px rgba(0,0,0,.25)}
+/* A previa imita a PLACA DO JOGO: tabuas horizontais em madeira quente, moldura
+   escura e sombra interna. Nao e enfeite -- a decisao que a previa existe para
+   ajudar e a COR do texto sobre a madeira, e julgar isso sobre um retangulo liso
+   engana. Cores tiradas dos prints de campo de 09 e 12/09/2026. */
+.preview{
+  background:
+    repeating-linear-gradient(180deg,
+      rgba(0,0,0,.13) 0px, rgba(0,0,0,.13) 1px,
+      rgba(255,255,255,.045) 2px, rgba(255,255,255,.045) 4px,
+      rgba(0,0,0,0) 5px, rgba(0,0,0,0) 38px,
+      rgba(0,0,0,.16) 39px, rgba(0,0,0,.16) 40px),
+    linear-gradient(180deg,#8a6038,#7a5233 55%,#6d4829);
+  border:7px solid #5a3c22; border-radius:6px; padding:24px 22px; min-height:120px;
+  font-size:26px; line-height:1.4; color:#3b2a1a;
+  font-family:"Trebuchet MS","Segoe UI",Verdana,sans-serif; font-weight:600;
+  letter-spacing:.01em; word-break:break-word;
+  box-shadow:inset 0 0 34px rgba(0,0,0,.30), inset 0 2px 0 rgba(255,255,255,.06);}
+.previa-nota{font-size:12px;opacity:.7;margin-top:7px;line-height:1.45}
 .preview img{height:1.2em;vertical-align:-0.25em;margin-right:.15em;border-radius:4px}
 .preview img.bg{background:#c9a56b;padding:2px;box-sizing:content-box}
 /* HALO DOURADO -- a placa do jogo desenha um halo quente em volta de cada letra. Ele vem do material
@@ -85,6 +178,26 @@ figure:hover{background:#4a382a}
 figure img{width:64px;height:64px;background:#c9a56b;border-radius:6px;padding:4px;box-sizing:content-box}
 figcaption{font-size:15.5px;margin-top:8px;line-height:1.3;overflow-wrap:anywhere;color:var(--texto)}
 figure.copiado{outline:2px solid var(--ouro)}
+#cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px;padding:22px}
+.catcard{display:flex;align-items:center;gap:12px;background:var(--painel);border:1px solid #5a4430;
+  border-radius:10px;padding:12px 14px;cursor:pointer;text-align:left;color:inherit;font:inherit}
+.catcard:hover{background:#4a382a;border-color:var(--ouro)}
+.catcard img{width:44px;height:44px;background:#c9a56b;border-radius:6px;padding:3px;flex:none}
+.catcard .cnome{flex:1;font-weight:700;font-size:14px}
+.catcard .cqtd{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+#volta{display:none;align-items:center;gap:10px;padding:14px 22px 0}
+#volta button{padding:5px 12px}
+#volta b{font-size:15px}
+figure{position:relative}
+figure .fundo{position:absolute;top:6px;right:6px;background:#8a2f2f;color:#ffe9e9;font-size:10px;
+  font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:1px 5px;border-radius:3px}
+figure[data-solido="1"] img{outline:2px dashed #8a2f2f;outline-offset:-2px}
+figure .bbc{position:absolute;top:6px;left:6px;background:#2f6b4f;color:#e7f0ea;font-size:10px;
+  font-weight:700;letter-spacing:.04em;padding:1px 5px;border-radius:3px}
+/* com os icones BBC ligados, o aviso de "sai com fundo" nao vale: a nossa versao tem alfa */
+figure[data-bbc]:not([data-bbc=""]) img{outline:none}
+figure .duvida{position:absolute;bottom:34px;right:6px;background:#7a5a12;color:#ffeec2;font-size:11px;
+  font-weight:700;padding:0 6px;border-radius:3px}
 footer{padding:16px 22px;font-size:14.5px;opacity:.8}
 </style></head><body>
 <div class="creditos"><b>Ícones do jogo Eco, © Strange Loop Games.</b> Os ícones dos mods são dos seus autores no mod.io: Market Mod e Gates (bushusuper / EcoPulse), Hot Wheels (zangdar1111 / CavRn), IceCream (Orflash-EcoSim, arte de PookieNoodlin), Mixology 14.0.3 (HolyTiti), StorageMore (Plex_). Imagens extraídas do mod Calculator &amp; Alert Price GP, o GoodPrice (Orflash-EcoSim). Galeria sem fins comerciais, para os jogadores do servidor BBC-Brasil usarem nas placas do jogo.</div>
@@ -133,6 +246,9 @@ footer{padding:16px 22px;font-size:14.5px;opacity:.8}
   <div class="campo">
     <label>Como deve ficar (aproximado)</label>
     <div class="preview" id="preview"></div>
+    <div class="previa-nota">Aproximação: a madeira, o halo e o tamanho vieram dos prints de campo.
+      A <b>fonte</b> é a do navegador, não a do jogo, e a força do halo <b>muda com a hora do dia</b>.
+      O que a prévia acerta é <b>cor sobre a madeira</b> e <b>qual ícone sai com quadrado</b>.</div>
     <label>Comando para colar na placa</label>
     <div class="saida"><textarea id="cmd" readonly></textarea><button id="copiar">Copiar comando</button></div>
     <div id="ok"></div>
@@ -141,9 +257,22 @@ footer{padding:16px 22px;font-size:14.5px;opacity:.8}
 </section>
 
 <header><h1>BBC-Brasil · Ícones para placa (__N__)</h1><input id="f" placeholder="filtrar pelo nome (ex.: Store, Market, Sign, Log, Bar)..." autofocus>
-<span id="n"></span><code>clique no ícone = escolhe para o montador e copia &lt;icon name="Nome" type=""&gt;&lt;/icon&gt;</code></header>
+<span id="n"></span><label style="font-size:13px"><input type="checkbox" id="porCat" checked> por categoria</label>
+<code>clique no ícone = escolhe para o montador e copia a tag</code></header>
+<div id="volta"><button class="sec" id="btVolta">&#8592; todas as categorias</button><b id="catAtual"></b></div>
+<div id="cats">__CATCARDS__</div>
 <main id="g">__CARDS__</main>
-<footer>Tags do próprio jogo: &lt;align&gt;, &lt;color&gt;, &lt;size&gt;, &lt;b&gt; e &lt;icon&gt; (com fundo ou <code>type="nobg"</code>). O ícone funciona em qualquer placa com texto, inclusive em veículos.</footer>
+<footer>Tags do próprio jogo: &lt;align&gt;, &lt;color&gt;, &lt;size&gt;, &lt;b&gt; e &lt;icon&gt; (com fundo ou <code>type="nobg"</code>). O ícone funciona em qualquer placa com texto, inclusive em veículos.<br>
+Os <b style="background:#8a2f2f;color:#ffe9e9;padding:1px 5px;border-radius:3px;font-size:10px">FUNDO</b> são __S__ ícones cuja arte não tem recorte: saem com quadrado na placa <b>mesmo com <code>type="nobg"</code></b> — medido em campo em 12/09/2026. A saída não é escondê-los, é <b>corrigi-los</b>: os que já têm versão nossa aparecem com a etiqueta BBC. <b>64 deles são do jogo base</b> (lixo, sucata, filtros, upgrades) e 123 de mods — então não é
+problema de um mod só. Os que temos versão recortada aparecem com a etiqueta
+<b style="background:#2f6b4f;color:#e7f0ea;padding:1px 5px;border-radius:3px;font-size:10px">BBC</b>:
+com a caixa <b>ícones BBC</b> ligada, a placa sai com o nome do nosso mod.<br>
+O <b style="background:#7a5a12;color:#ffeec2;padding:0 6px;border-radius:3px;font-size:11px">?</b> marca
+__D__ nomes que <b>não correspondem a nenhuma classe do jogo</b> (quase todos <code>*Group</code>, que são
+agrupamentos do GoodPrice): podem não aparecer na placa. E __R__ ícones de profissão saíam com um
+<code>Item</code> no fim que não existe — agora saem certos (<code>TailoringSkill</code>, não
+<code>TailoringSkillItem</code>).<br>
+Também do binário, ainda pouco usados: <code>iconcolor='RRGGBBAA'</code> (tinge o ícone, com canal alfa) e <code>overlayimg='X' overlaycolor='RRGGBBAA'</code>. Aspas <b>simples</b> nesses dois.</footer>
 <script>
 const PALETA=[["#FFFFFF","branco"],["#000000","preto"],["#FFDF00","amarelo"],["#009C3B","verde"],["#00BFFF","azul claro"],["#1E3A8A","azul escuro"],["#FFA500","laranja"],["#E53935","vermelho"],["#FF69B4","rosa"],["#8E44AD","roxo"],["#8B4513","marrom"],["#BDBDBD","cinza"],["#D4AF37","dourado"],["#00E5A0","verde água"],["#D98C00","âmbar: o mais perto de liso"]];
 const $=id=>document.getElementById(id);
@@ -166,9 +295,9 @@ function monta(){
   const linhas=$('txt').value.split('\\n'); const nobg=$('nobg').checked?' type="nobg"':' type=""';
   const tam=$('tam').value, ali=$('alinha').value;
   const neg=$('negrito').checked, ita=$('italico').checked, sub=$('sublinhado').checked;
-  const vazio=n=>`<icon name="${n}"${nobg}></icon>`;
+  const vazio=n=>`<icon name="${nomePara(n)}"${nobg}></icon>`;
   // icones ANTES: o ultimo deles abre a tag e o texto vai dentro (forma provada em placa); os outros ficam vazios
-  const antes=(lista,t)=>lista.length?lista.slice(0,-1).map(vazio).join('')+`<icon name="${lista[lista.length-1]}"${nobg}>${t}</icon>`:t;
+  const antes=(lista,t)=>lista.length?lista.slice(0,-1).map(vazio).join('')+`<icon name="${nomePara(lista[lista.length-1])}"${nobg}>${t}</icon>`:t;
   const L=linhas.map((l,i)=>pinta(l,i));
   const porLinha=L.map((t,i)=>antes(icones.filter(o=>o.pos==='antes'&&o.linha===i+1).map(o=>o.n),t)+icones.filter(o=>o.pos==='depois'&&o.linha===i+1).map(o=>vazio(o.n)).join(''));
   const abaixo=icones.filter(o=>o.pos==='abaixo').map(o=>vazio(o.n)).join('');
@@ -185,7 +314,10 @@ function monta(){
   $('cmd').value=corpo;
   // preview
   const cls=$('nobg').checked?'':'bg';
-  const imgs=(lista)=>lista.map(n=>`<img src="png/${n}.png" class="${cls}" alt="">`).join('');
+  // Com "icones BBC" ligado, a previa desenha a versao RECORTADA -- senao ela mostraria
+  // o quadrado que o nosso mod justamente tira, e mentiria sobre o resultado na placa.
+  const src=n=>BBC[n] ? `png-bbc/${n}.png` : `png/${n}.png`;
+  const imgs=(lista)=>lista.map(n=>`<img src="${src(n)}" class="${BBC[n]?'':cls}" alt="">`).join('');
   const H=linhas.map((l,i)=>pintaHtml(l,i));
   const pvLinhas=H.map((t,i)=>imgs(icones.filter(o=>o.pos==='antes'&&o.linha===i+1).map(o=>o.n))+t+imgs(icones.filter(o=>o.pos==='depois'&&o.linha===i+1).map(o=>o.n)));
   const pvAbaixo=imgs(icones.filter(o=>o.pos==='abaixo').map(o=>o.n));
@@ -238,12 +370,39 @@ function mostraIcones(){const s=$('iconesel'); if(!icones.length){s.innerHTML='<
 $('limpar').onclick=()=>{$('txt').value='';icones=[];coresPalavra={};palavraSel=null;palavras();mostraIcones();monta();};
 function escolhe(nome){icones.push({n:nome,pos:'antes',linha:1});mostraIcones();monta();}
 const g=$('g'), f=$('f'), n=$('n'); const figs=[...g.children];
-function filtra(){const q=f.value.toLowerCase().trim(); let c=0; for(const el of figs){const ok=!q||el.dataset.n.includes(q); el.style.display=ok?'':'none'; if(ok)c++;} n.textContent=c+' de '+figs.length;}
-f.oninput=filtra; filtra(); marca(); monta();
+const BBC=__BBCJSON__;
+let catAberta=null;
+// Nome que vai para a placa: o do nosso mod quando existir e a caixa estiver ligada.
+// Ordem: icone do nosso mod > nome corrigido (sem o 'Item' que nao existe) > o do arquivo.
+function nomeReal(fig){ return fig.dataset.bbc || fig.dataset.real || fig.querySelector('figcaption').textContent; }
+function nomePara(n){ const fig=figs.find(x=>x.querySelector('figcaption').textContent===n); return fig?nomeReal(fig):n; }
+function filtra(){const q=f.value.toLowerCase().trim();
+  const modo=$('porCat').checked; const cats=$('cats'), volta=$('volta');
+  // busca por texto sempre vence: mostra a grade inteira
+  const vendoCats = modo && !q && !catAberta;
+  cats.style.display = vendoCats ? 'grid' : 'none';
+  g.style.display    = vendoCats ? 'none' : 'grid';
+  volta.style.display= (modo && !q && catAberta) ? 'flex' : 'none';
+  $('catAtual').textContent = catAberta || '';
+  if(vendoCats){ n.textContent = cats.children.length+' categorias'; return; }
+  let c=0;
+  for(const el of figs){
+    const ok=(!q||el.dataset.n.includes(q))
+           &&(!modo||q||!catAberta||el.dataset.cat===catAberta);
+    el.style.display=ok?'':'none'; if(ok)c++;}
+  n.textContent=c+' de '+figs.length;}
+$('cats').onclick=e=>{const b=e.target.closest('.catcard'); if(!b)return;
+  catAberta=b.dataset.cat; filtra(); window.scrollTo({top:document.querySelector('header').offsetTop,behavior:'smooth'});};
+$('btVolta').onclick=()=>{catAberta=null; filtra();};
+$('porCat').onchange=()=>{catAberta=null; filtra();};
+f.oninput=filtra; filtra(); trocaImagens(); marca(); monta();
+function trocaImagens(){
+  for(const el of figs){ const n=el.querySelector('figcaption').textContent;
+    if(BBC[n]) el.querySelector('img').src='png-bbc/'+n+'.png'; } }
 g.onclick=e=>{const fig=e.target.closest('figure'); if(!fig)return; const nome=fig.querySelector('figcaption').textContent;
-  const tag='<icon name="'+nome+'" type=""></icon>'; copia(tag,'ícone copiado: '+tag);
+  const real=nomeReal(fig); const tag='<icon name="'+real+'"'+($('nobg').checked?' type="nobg"':' type=""')+'></icon>'; copia(tag,'ícone copiado: '+tag);
   figs.forEach(x=>x.classList.remove('copiado')); fig.classList.add('copiado'); n.textContent='copiado: '+tag; escolhe(nome); window.scrollTo({top:0,behavior:'smooth'});};
-</script></body></html>""".replace("__N__", str(len(nomes))).replace("__CARDS__", cards)
+</script></body></html>""".replace("__N__", str(len(nomes))).replace("__S__", str(len(SOLIDOS))).replace("__CATCARDS__", catcards).replace("__D__", str(len(DUVIDOSO))).replace("__R__", str(len(REAL))).replace("__BBCJSON__", __import__("json").dumps(BBC, ensure_ascii=False)).replace("__CARDS__", cards)
 with open(os.path.join(AQUI, "icones.html"), "w", encoding="utf-8") as fh:
     fh.write(pagina)
 print("icones.html com", len(nomes), "icones + montador")
