@@ -71,6 +71,15 @@ if os.path.exists(_bbc):
         if len(_q) == 2: BBC[_q[0]] = _q[1]
 if not USAR_BBC: BBC = {}
 
+# Rotulo em ingles das categorias. A CHAVE continua sendo o nome em portugues --
+# e ele que esta no data-cat de cada icone. So o rotulo troca de idioma.
+CAT_EN = {}
+_ce = os.path.join(AQUI, "categorias-en.txt")
+if os.path.exists(_ce):
+    for _l in open(_ce, encoding="utf-8"):
+        _q = _l.rstrip().split("|")
+        if len(_q) == 2: CAT_EN[_q[0]] = _q[1]
+
 CAT = {}
 _cat = os.path.join(AQUI, "categorias.txt")
 if os.path.exists(_cat):
@@ -101,8 +110,9 @@ def _rep(c, v):
     r = _REP.get(c)
     return r if (r and r in nomes) else sorted(v)[len(v)//2]
 catcards = chr(10).join(
-    '<button class="catcard" data-cat="%s"><img src="png/%s.png" loading="lazy" alt=""><span class="cnome">%s</span><span class="cqtd">%d</span></button>'
-    % (html.escape(c), html.escape(_rep(c, v)), html.escape(c), len(v))
+    '<button class="catcard" data-cat="%s"><img src="png/%s.png" loading="lazy" alt=""><span class="cnome"><span class="pt">%s</span><span class="en">%s</span></span><span class="cqtd">%d</span></button>'
+    % (html.escape(c), html.escape(_rep(c, v)), html.escape(c),
+       html.escape(CAT_EN.get(c, c)), len(v))
     for c, v in _ordem)
 
 pagina = """<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Ícones do Eco para placas · BBC-Brasil</title>
@@ -116,7 +126,7 @@ body{margin:0;font-family:"Segoe UI",Arial,sans-serif;background:var(--fundo);co
 /* montador */
 .montador{background:var(--painel);border-bottom:1px solid var(--borda);padding:18px 22px;display:grid;grid-template-columns:1fr 1fr;gap:16px 32px}
 @media (max-width:900px){.montador{grid-template-columns:1fr}}
-.montador h2{grid-column:1/-1;margin:0;font-size:19px;color:var(--ouro);letter-spacing:.06em;text-transform:uppercase}
+.montador h2{grid-column:1/-1;margin:0;font-size:19px;color:var(--ouro);letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;gap:12px}
 .campo{display:flex;flex-direction:column;gap:8px;font-size:16px}
 .campo label{opacity:.85}
 textarea,input[type=text],select{background:var(--escuro);color:#f3e6c9;border:1px solid var(--borda);border-radius:6px;padding:10px 12px;font-size:16px;font-family:inherit}
@@ -203,10 +213,24 @@ footer{padding:16px 22px;font-size:14.5px;opacity:.8}
    um arquivo so nunca fica com metade traduzida, e a bandeira troca na hora. */
 body:not(.en) .en{display:none}
 body.en .pt{display:none}
-#lingua{display:flex;gap:4px;margin-left:auto}
-#lingua button{font-size:19px;line-height:1;padding:3px 8px;background:var(--escuro);
-  border:2px solid transparent;border-radius:6px;cursor:pointer}
-#lingua button.on{border-color:var(--ouro);background:var(--painel)}
+/* BANDEIRAS EM SVG, nao emoji. O Windows nao desenha emoji de bandeira (os pares de
+   indicador regional): 🇧🇷 saia como dois retangulos vazios no navegador do Raul.
+   SVG embutido sempre desenha, em qualquer sistema, e fica nitido em qualquer tamanho.
+   A sigla vai POR CIMA da bandeira, com sombra, porque bandeira pequena sozinha nao
+   diz qual idioma e -- a palavra diz. */
+#lingua{display:flex;gap:6px;margin-left:auto}
+#lingua button{position:relative;width:66px;height:34px;padding:0;cursor:pointer;
+  border:2px solid #00000055;border-radius:5px;overflow:hidden;
+  background-size:cover;background-position:center;
+  font:700 12px/1 var(--fonte,"Segoe UI"),Arial,sans-serif;letter-spacing:.04em;
+  color:#fff;text-shadow:0 1px 2px #000,0 0 3px #000;filter:saturate(.75) brightness(.8)}
+#lingua button:hover{filter:none}
+#lingua button.on{border-color:var(--ouro);filter:none;box-shadow:0 0 0 1px #00000066}
+#lingua button span{position:relative;z-index:1}
+#lingua button::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.28)}
+#lingua button span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2}
+#lpt{background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 98"><rect width="140" height="98" fill="%23009C3B"/><path d="M70 9 131 49 70 89 9 49Z" fill="%23FFDF00"/><circle cx="70" cy="49" r="22" fill="%23002776"/></svg>')}
+#len{background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30"><rect width="60" height="30" fill="%23012169"/><path d="M0 0 60 30M60 0 0 30" stroke="%23fff" stroke-width="6"/><path d="M0 0 60 30M60 0 0 30" stroke="%23C8102E" stroke-width="4"/><path d="M30 0V30M0 15H60" stroke="%23fff" stroke-width="10"/><path d="M30 0V30M0 15H60" stroke="%23C8102E" stroke-width="6"/></svg>')}
 </style></head><body>
 <div class="creditos"><span class="pt"><b>Ícones do jogo Eco, © Strange Loop Games.</b> Os ícones dos mods são dos seus autores no mod.io: Market Mod e Gates (bushusuper / EcoPulse), Hot Wheels (zangdar1111 / CavRn), IceCream (Orflash-EcoSim, arte de PookieNoodlin), Mixology 14.0.3 (HolyTiti), StorageMore (Plex_). Imagens extraídas do mod Calculator &amp; Alert Price GP, o GoodPrice (Orflash-EcoSim). Galeria sem fins comerciais, para os jogadores do servidor BBC-Brasil usarem nas placas do jogo.</span>
 <span class="en"><b>Eco game icons, © Strange Loop Games.</b> Mod icons belong to their authors on mod.io:
@@ -216,7 +240,7 @@ Calculator &amp; Alert Price GP, aka GoodPrice (Orflash-EcoSim). A non-commercia
 of the BBC-Brasil server to use on in-game signs.</span></div>
 
 <section class="montador">
-  <h2><span class="pt">Montar texto da placa</span><span class="en">Build your sign text</span></h2>
+  <h2><span class="pt">Montar texto da placa</span><span class="en">Build your sign text</span><div id="lingua"><button id="lpt" class="on" title="Português do Brasil"><span>PT-BR</span></button><button id="len" title="English"><span>EN</span></button></div></h2>
   <div class="campo">
     <label for="txt"><span class="pt">1. O que escrever (uma linha por linha da placa; pode deixar vazio para só o ícone)</span><span class="en">1. What to write (one line per sign line; leave empty for icons only)</span></label>
     <textarea id="txt" placeholder="Ex.: Carpintaria&#10;Lenhador"></textarea>
@@ -291,7 +315,7 @@ of the BBC-Brasil server to use on in-game signs.</span></div>
 <header><h1>BBC-Brasil · <span class="pt">Ícones para placa</span><span class="en">Sign icons</span> (__N__)</h1><input id="f" placeholder="filtrar pelo nome (ex.: Store, Market, Sign, Log, Bar)..." autofocus>
 <span id="n"></span><label style="font-size:13px"><input type="checkbox" id="porCat" checked> <span class="pt">por categoria</span><span class="en">by category</span></label>
 <code><span class="pt">clique no ícone = escolhe para o montador e copia a tag</span><span class="en">click an icon = adds it to the builder and copies the tag</span></code>
-<div id="lingua"><button id="lpt" class="on" title="Português">🇧🇷</button><button id="len" title="English">🇺🇸</button></div></header>
+</header>
 <div id="volta"><button class="sec" id="btVolta">&#8592; <span class="pt">todas as categorias</span><span class="en">all categories</span></button><b id="catAtual"></b></div>
 <div id="cats">__CATCARDS__</div>
 <main id="g">__CARDS__</main>
@@ -424,6 +448,7 @@ const BBC=__BBCJSON__;
 // e o CSS esconde um. Aqui ficam so os que sao ATRIBUTO, que o CSS nao alcanca.
 // Por que dois idiomas no mesmo arquivo, e nao um arquivo por lingua: arquivo separado
 // envelhece pela metade -- um dos dois acaba desatualizado sem ninguem notar.
+const CATEN = __CATENJSON__;
 const ATTR = {
   txt: ["Ex.: Carpintaria\\nLenhador", "e.g. Carpentry\\nLumberjack"],
   f:   ["filtrar pelo nome (ex.: Store, Market, Sign, Log, Bar)...",
@@ -442,6 +467,7 @@ function lingua(x){
   document.documentElement.lang = en ? "en" : "pt-BR";
   try { localStorage.setItem("bbc-lingua", x); } catch(e){}
   if (typeof mostraIcones === "function") mostraIcones();
+  if (typeof filtra === "function") filtra();
 }
 let catAberta=null;
 // Nome que vai para a placa: o do nosso mod quando existir e a caixa estiver ligada.
@@ -455,14 +481,17 @@ function filtra(){const q=f.value.toLowerCase().trim();
   cats.style.display = vendoCats ? 'grid' : 'none';
   g.style.display    = vendoCats ? 'none' : 'grid';
   volta.style.display= (modo && !q && catAberta) ? 'flex' : 'none';
-  $('catAtual').textContent = catAberta || '';
-  if(vendoCats){ n.textContent = cats.children.length+' categorias'; return; }
+  $('catAtual').textContent = catAberta
+      ? (document.body.classList.contains('en') ? (CATEN[catAberta] || catAberta) : catAberta)
+      : '';
+  if(vendoCats){ n.textContent = cats.children.length
+      + (document.body.classList.contains('en') ? ' categories' : ' categorias'); return; }
   let c=0;
   for(const el of figs){
     const ok=(!q||el.dataset.n.includes(q))
            &&(!modo||q||!catAberta||el.dataset.cat===catAberta);
     el.style.display=ok?'':'none'; if(ok)c++;}
-  n.textContent=c+' de '+figs.length;}
+  n.textContent=c+(document.body.classList.contains('en')?' of ':' de ')+figs.length;}
 $('cats').onclick=e=>{const b=e.target.closest('.catcard'); if(!b)return;
   catAberta=b.dataset.cat; filtra(); window.scrollTo({top:document.querySelector('header').offsetTop,behavior:'smooth'});};
 $('btVolta').onclick=()=>{catAberta=null; filtra();};
@@ -480,7 +509,7 @@ function trocaImagens(){
 g.onclick=e=>{const fig=e.target.closest('figure'); if(!fig)return; const nome=fig.querySelector('figcaption').textContent;
   const real=nomeReal(fig); const tag='<icon name="'+real+'"'+($('nobg').checked?' type="nobg"':' type=""')+'></icon>'; copia(tag,'ícone copiado: '+tag);
   figs.forEach(x=>x.classList.remove('copiado')); fig.classList.add('copiado'); n.textContent='copiado: '+tag; escolhe(nome); window.scrollTo({top:0,behavior:'smooth'});};
-</script></body></html>""".replace("__N__", str(len(nomes))).replace("__S__", str(len(SOLIDOS))).replace("__CATCARDS__", catcards).replace("__D__", str(len(DUVIDOSO))).replace("__R__", str(len(REAL))).replace("__BBCJSON__", __import__("json").dumps(BBC, ensure_ascii=False)).replace("__CARDS__", cards)
+</script></body></html>""".replace("__N__", str(len(nomes))).replace("__S__", str(len(SOLIDOS))).replace("__CATCARDS__", catcards).replace("__CATENJSON__", __import__("json").dumps(CAT_EN, ensure_ascii=False)).replace("__D__", str(len(DUVIDOSO))).replace("__R__", str(len(REAL))).replace("__BBCJSON__", __import__("json").dumps(BBC, ensure_ascii=False)).replace("__CARDS__", cards)
 with open(os.path.join(AQUI, "icones.html"), "w", encoding="utf-8") as fh:
     fh.write(pagina)
 print("icones.html com", len(nomes), "icones + montador")
