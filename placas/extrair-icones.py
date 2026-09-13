@@ -199,33 +199,46 @@ figure[data-bbc]:not([data-bbc=""]) img{outline:none}
 figure .duvida{position:absolute;bottom:34px;right:6px;background:#7a5a12;color:#ffeec2;font-size:11px;
   font-weight:700;padding:0 6px;border-radius:3px}
 footer{padding:16px 22px;font-size:14.5px;opacity:.8}
+/* DOIS IDIOMAS DENTRO DA PAGINA. Nao ha traducao por arquivo separado de proposito:
+   um arquivo so nunca fica com metade traduzida, e a bandeira troca na hora. */
+body:not(.en) .en{display:none}
+body.en .pt{display:none}
+#lingua{display:flex;gap:4px;margin-left:auto}
+#lingua button{font-size:19px;line-height:1;padding:3px 8px;background:var(--escuro);
+  border:2px solid transparent;border-radius:6px;cursor:pointer}
+#lingua button.on{border-color:var(--ouro);background:var(--painel)}
 </style></head><body>
-<div class="creditos"><b>Ícones do jogo Eco, © Strange Loop Games.</b> Os ícones dos mods são dos seus autores no mod.io: Market Mod e Gates (bushusuper / EcoPulse), Hot Wheels (zangdar1111 / CavRn), IceCream (Orflash-EcoSim, arte de PookieNoodlin), Mixology 14.0.3 (HolyTiti), StorageMore (Plex_). Imagens extraídas do mod Calculator &amp; Alert Price GP, o GoodPrice (Orflash-EcoSim). Galeria sem fins comerciais, para os jogadores do servidor BBC-Brasil usarem nas placas do jogo.</div>
+<div class="creditos"><span class="pt"><b>Ícones do jogo Eco, © Strange Loop Games.</b> Os ícones dos mods são dos seus autores no mod.io: Market Mod e Gates (bushusuper / EcoPulse), Hot Wheels (zangdar1111 / CavRn), IceCream (Orflash-EcoSim, arte de PookieNoodlin), Mixology 14.0.3 (HolyTiti), StorageMore (Plex_). Imagens extraídas do mod Calculator &amp; Alert Price GP, o GoodPrice (Orflash-EcoSim). Galeria sem fins comerciais, para os jogadores do servidor BBC-Brasil usarem nas placas do jogo.</span>
+<span class="en"><b>Eco game icons, © Strange Loop Games.</b> Mod icons belong to their authors on mod.io:
+Market Mod and Gates (bushusuper / EcoPulse), Hot Wheels (zangdar1111 / CavRn), IceCream (Orflash-EcoSim,
+art by PookieNoodlin), Mixology 14.0.3 (HolyTiti), StorageMore (Plex_). Images extracted from the mod
+Calculator &amp; Alert Price GP, aka GoodPrice (Orflash-EcoSim). A non-commercial gallery, for the players
+of the BBC-Brasil server to use on in-game signs.</span></div>
 
 <section class="montador">
-  <h2>Montar texto da placa</h2>
+  <h2><span class="pt">Montar texto da placa</span><span class="en">Build your sign text</span></h2>
   <div class="campo">
-    <label for="txt">1. O que escrever (uma linha por linha da placa; pode deixar vazio para só o ícone)</label>
+    <label for="txt"><span class="pt">1. O que escrever (uma linha por linha da placa; pode deixar vazio para só o ícone)</span><span class="en">1. What to write (one line per sign line; leave empty for icons only)</span></label>
     <textarea id="txt" placeholder="Ex.: Carpintaria&#10;Lenhador"></textarea>
-    <label>2. Cor do texto</label>
+    <label><span class="pt">2. Cor do texto</span><span class="en">2. Text colour</span></label>
     <div class="paleta" id="paleta"></div>
-    <div class="linha"><label>Outra cor: <input type="color" id="corlivre" value="#FFFFFF"></label><span id="corhex" style="font-family:Consolas,monospace;font-size:12.5px">#FFFFFF</span></div>
-    <div class="linha"><label><input type="checkbox" id="porpalavra"> pintar palavra por palavra</label> <small id="dicapalavra" style="opacity:.7;display:none">clique numa palavra abaixo e depois numa cor da paleta; repita para cada palavra</small></div>
+    <div class="linha"><label><span class="pt">Outra cor:</span><span class="en">Other colour:</span> <input type="color" id="corlivre" value="#FFFFFF"></label><span id="corhex" style="font-family:Consolas,monospace;font-size:12.5px">#FFFFFF</span></div>
+    <div class="linha"><label><input type="checkbox" id="porpalavra"> <span class="pt">pintar palavra por palavra</span><span class="en">colour word by word</span></label> <small id="dicapalavra" style="opacity:.7;display:none"><span class="pt">clique numa palavra abaixo e depois numa cor da paleta; repita para cada palavra</span><span class="en">click a word below, then a colour; repeat for each word</span></small></div>
     <div id="palavras" class="linha" style="display:none"></div>
-    <label>3. Ícones: clique nos ícones da galeria abaixo (pode escolher vários). Em cada um, escolha onde ele fica: antes do texto, depois do texto, ou numa linha só de ícones embaixo; e em qual linha.</label>
-    <div class="icone-sel" id="iconesel"><small>nenhum ícone escolhido (o texto sai sem ícone)</small></div>
+    <label><span class="pt">3. Ícones: clique nos ícones da galeria abaixo (pode escolher vários). Em cada um, escolha onde ele fica: antes do texto, depois do texto, ou numa linha só de ícones embaixo; e em qual linha.</span><span class="en">3. Icons: click icons in the gallery below (as many as you like). For each one choose where it goes: before the text, after it, or on a row of icons underneath; and on which line.</span></label>
+    <div class="icone-sel" id="iconesel"><small><span class="pt">nenhum ícone escolhido (o texto sai sem ícone)</span><span class="en">no icon chosen (the text comes out without icons)</span></small></div>
     <div class="linha">
-      <label>Alinhar <select id="alinha"><option value="center">centro</option><option value="left">esquerda</option><option value="right">direita</option></select></label>
-      <label>Tamanho <select id="tam"><option value="">normal</option><option value="80">80%</option><option value="125">125%</option><option value="150">150%</option><option value="200">200%</option><option value="300">300%</option></select></label>
-      <label><input type="checkbox" id="nobg"> ícone sem fundo</label>
-      <label><input type="checkbox" id="negrito"> negrito</label>
-      <label><input type="checkbox" id="italico"> itálico</label>
-      <label><input type="checkbox" id="sublinhado"> sublinhado</label>
+      <label><span class="pt">Alinhar</span><span class="en">Align</span> <select id="alinha"><option value="center">centro</option><option value="left">esquerda</option><option value="right">direita</option></select></label>
+      <label><span class="pt">Tamanho</span><span class="en">Size</span> <select id="tam"><option value="">normal</option><option value="80">80%</option><option value="125">125%</option><option value="150">150%</option><option value="200">200%</option><option value="300">300%</option></select></label>
+      <label><input type="checkbox" id="nobg"> <span class="pt">ícone sem fundo</span><span class="en">icon without background</span></label>
+      <label><input type="checkbox" id="negrito"> <span class="pt">negrito</span><span class="en">bold</span></label>
+      <label><input type="checkbox" id="italico"> <span class="pt">itálico</span><span class="en">italic</span></label>
+      <label><input type="checkbox" id="sublinhado"> <span class="pt">sublinhado</span><span class="en">underline</span></label>
     </div>
     <div class="linha" style="border-top:1px solid var(--borda);padding-top:10px">
-      <label><input type="checkbox" id="halo" checked> prévia com o halo dourado da placa</label>
+      <label><input type="checkbox" id="halo" checked> <span class="pt">prévia com o halo dourado da placa</span><span class="en">preview with the sign's golden halo</span></label>
       <small style="opacity:.85;flex-basis:100%">
-      <b>Três coisas da placa que o comando NÃO controla</b> — todas testadas em placa de verdade em
+<span class="pt">      <b>Três coisas da placa que o comando NÃO controla</b> — todas testadas em placa de verdade em
       10/09/2026, não são suposição:
       <br>1. <b>O halo dourado em volta de cada letra não sai.</b> Ele vem do material do texto dentro do
       jogo, e não existe tag de contorno para ligar, desligar ou pintar — o texto da placa é
@@ -240,29 +253,49 @@ footer{padding:16px 22px;font-size:14.5px;opacity:.8}
       vinho). O halo é claro e quente, então ele contorna a letra escura e ela salta da madeira — é a
       combinação que ficou melhor em todos os testes. Cor clara na madeira clara some.
       A força do halo <b>muda com a hora do dia</b> no jogo, então não existe cor que o esconda por
-      completo; a <b>âmbar</b> no fim da paleta é a que mais se aproxima de deixar a palavra lisa.</small>
+      completo; a <b>âmbar</b> no fim da paleta é a que mais se aproxima de deixar a palavra lisa.</span><span class="en"><b>Three things about the sign the command does NOT control</b> — all tested on a
+      real sign on 10/09/2026, not guesswork:
+      <br>1. <b>The golden halo around each letter cannot be removed.</b> It comes from the text material
+      inside the game, and there is no outline tag to turn it on, off or recolour — the sign text is
+      TextMeshPro, which has no such tag. The preview above draws the halo precisely so that the colour you
+      pick here is the colour you will see on the sign.
+      <br>2. <b>There is no highlight behind the letter.</b> <code>&lt;mark&gt;</code> was pasted on a real
+      sign and the sign ignored it: no band appeared. That is why the option is gone from here.
+      <br>3. <b>Uppercase:</b> the large wooden sign writes everything in capitals, and
+      <code>&lt;lowercase&gt;</code> does not beat it. The small sign writes mixed case —
+      <b>it depends on the sign model</b>.
+      <br><b>So what can you do:</b> use a <b>dark, strong colour</b> (black, green, dark blue, wine).
+      The halo is light and warm, so it outlines a dark letter and the letter pops off the wood — that was
+      the best combination in every test. A light colour on light wood disappears. The halo's strength
+      <b>changes with the time of day</b> in game, so no colour hides it completely; the <b>amber</b> at
+      the end of the palette comes closest to leaving the word flat.</span></small>
     </div>
   </div>
   <div class="campo">
-    <label>Como deve ficar (aproximado)</label>
+    <label><span class="pt">Como deve ficar (aproximado)</span><span class="en">How it should look (approximate)</span></label>
     <div class="preview" id="preview"></div>
-    <div class="previa-nota">Aproximação: a madeira, o halo e o tamanho vieram dos prints de campo.
-      A <b>fonte</b> é a do navegador, não a do jogo, e a força do halo <b>muda com a hora do dia</b>.
-      O que a prévia acerta é <b>cor sobre a madeira</b> e <b>qual ícone sai com quadrado</b>.</div>
-    <label>Comando para colar na placa</label>
-    <div class="saida"><textarea id="cmd" readonly></textarea><button id="copiar">Copiar comando</button></div>
+    <div class="previa-nota"><span class="pt">Aproximação: a madeira, o halo e o tamanho vieram dos prints
+      de campo. A <b>fonte</b> é a do navegador, não a do jogo, e a força do halo <b>muda com a hora do
+      dia</b>. O que a prévia acerta é <b>cor sobre a madeira</b> e <b>qual ícone sai com quadrado</b>.</span>
+      <span class="en">Approximate: the wood, the halo and the size came from in-game screenshots. The
+      <b>font</b> is the browser's, not the game's, and the halo's strength <b>changes with the time of
+      day</b>. What the preview gets right is <b>colour on wood</b> and <b>which icon comes out with a
+      square</b>.</span></div>
+    <label><span class="pt">Comando para colar na placa</span><span class="en">Command to paste into the sign</span></label>
+    <div class="saida"><textarea id="cmd" readonly></textarea><button id="copiar"><span class="pt">Copiar comando</span><span class="en">Copy command</span></button></div>
     <div id="ok"></div>
-    <button class="sec" id="limpar" style="align-self:flex-start">Limpar</button>
+    <button class="sec" id="limpar" style="align-self:flex-start"><span class="pt">Limpar</span><span class="en">Clear</span></button>
   </div>
 </section>
 
-<header><h1>BBC-Brasil · Ícones para placa (__N__)</h1><input id="f" placeholder="filtrar pelo nome (ex.: Store, Market, Sign, Log, Bar)..." autofocus>
-<span id="n"></span><label style="font-size:13px"><input type="checkbox" id="porCat" checked> por categoria</label>
-<code>clique no ícone = escolhe para o montador e copia a tag</code></header>
-<div id="volta"><button class="sec" id="btVolta">&#8592; todas as categorias</button><b id="catAtual"></b></div>
+<header><h1>BBC-Brasil · <span class="pt">Ícones para placa</span><span class="en">Sign icons</span> (__N__)</h1><input id="f" placeholder="filtrar pelo nome (ex.: Store, Market, Sign, Log, Bar)..." autofocus>
+<span id="n"></span><label style="font-size:13px"><input type="checkbox" id="porCat" checked> <span class="pt">por categoria</span><span class="en">by category</span></label>
+<code><span class="pt">clique no ícone = escolhe para o montador e copia a tag</span><span class="en">click an icon = adds it to the builder and copies the tag</span></code>
+<div id="lingua"><button id="lpt" class="on" title="Português">🇧🇷</button><button id="len" title="English">🇺🇸</button></div></header>
+<div id="volta"><button class="sec" id="btVolta">&#8592; <span class="pt">todas as categorias</span><span class="en">all categories</span></button><b id="catAtual"></b></div>
 <div id="cats">__CATCARDS__</div>
 <main id="g">__CARDS__</main>
-<footer>Tags do próprio jogo: &lt;align&gt;, &lt;color&gt;, &lt;size&gt;, &lt;b&gt; e &lt;icon&gt; (com fundo ou <code>type="nobg"</code>). O ícone funciona em qualquer placa com texto, inclusive em veículos.<br>
+<footer><span class="pt">Tags do próprio jogo: &lt;align&gt;, &lt;color&gt;, &lt;size&gt;, &lt;b&gt; e &lt;icon&gt; (com fundo ou <code>type="nobg"</code>). O ícone funciona em qualquer placa com texto, inclusive em veículos.<br>
 Os <b style="background:#8a2f2f;color:#ffe9e9;padding:1px 5px;border-radius:3px;font-size:10px">FUNDO</b> são __S__ ícones cuja arte não tem recorte: saem com quadrado na placa <b>mesmo com <code>type="nobg"</code></b> — medido em campo em 12/09/2026. A saída não é escondê-los, é <b>corrigi-los</b>: os que já têm versão nossa aparecem com a etiqueta BBC. <b>64 deles são do jogo base</b> (lixo, sucata, filtros, upgrades) e 123 de mods — então não é
 problema de um mod só. Os que temos versão recortada aparecem com a etiqueta
 <b style="background:#2f6b4f;color:#e7f0ea;padding:1px 5px;border-radius:3px;font-size:10px">BBC</b>:
@@ -272,7 +305,23 @@ __D__ nomes que <b>não correspondem a nenhuma classe do jogo</b> (quase todos <
 agrupamentos do GoodPrice): podem não aparecer na placa. E __R__ ícones de profissão saíam com um
 <code>Item</code> no fim que não existe — agora saem certos (<code>TailoringSkill</code>, não
 <code>TailoringSkillItem</code>).<br>
-Também do binário, ainda pouco usados: <code>iconcolor='RRGGBBAA'</code> (tinge o ícone, com canal alfa) e <code>overlayimg='X' overlaycolor='RRGGBBAA'</code>. Aspas <b>simples</b> nesses dois.</footer>
+Também do binário, ainda pouco usados: <code>iconcolor='RRGGBBAA'</code> (tinge o ícone, com canal alfa) e <code>overlayimg='X' overlaycolor='RRGGBBAA'</code>. Aspas <b>simples</b> nesses dois.</span>
+<span class="en">Tags from the game itself: &lt;align&gt;, &lt;color&gt;, &lt;size&gt;, &lt;b&gt; and &lt;icon&gt;
+(with background or <code>type="nobg"</code>). Icons work on any sign with text, vehicles included.<br>
+The <b style="background:#8a2f2f;color:#ffe9e9;padding:1px 5px;border-radius:3px;font-size:10px">FUNDO</b>
+badge marks __S__ icons whose artwork has no cut-out: they come out with a square on the sign
+<b>even with <code>type="nobg"</code></b> — measured in game on 12/09/2026. <b>64 of them are from the
+base game</b> (garbage, scrap, filters, upgrades) and 123 from mods, so it is not one mod's fault.
+Icons we have re-cut show the
+<b style="background:#2f6b4f;color:#e7f0ea;padding:1px 5px;border-radius:3px;font-size:10px">BBC</b>
+badge: the sign command then uses our mod's name.<br>
+The <b style="background:#7a5a12;color:#ffeec2;padding:0 6px;border-radius:3px;font-size:11px">?</b>
+badge marks __D__ names that <b>match no class in the game</b> (nearly all <code>*Group</code>, which are
+GoodPrice groupings): they may not show up. And __R__ profession icons used to come out with an
+<code>Item</code> suffix that does not exist — they are correct now (<code>TailoringSkill</code>, not
+<code>TailoringSkillItem</code>).<br>
+Also from the binary, still little used: <code>iconcolor='RRGGBBAA'</code> (tints the icon, with an alpha
+channel) and <code>overlayimg='X' overlaycolor='RRGGBBAA'</code>. <b>Single</b> quotes on those two.</span></footer>
 <script>
 const PALETA=[["#FFFFFF","branco"],["#000000","preto"],["#FFDF00","amarelo"],["#009C3B","verde"],["#00BFFF","azul claro"],["#1E3A8A","azul escuro"],["#FFA500","laranja"],["#E53935","vermelho"],["#FF69B4","rosa"],["#8E44AD","roxo"],["#8B4513","marrom"],["#BDBDBD","cinza"],["#D4AF37","dourado"],["#00E5A0","verde água"],["#D98C00","âmbar: o mais perto de liso"]];
 const $=id=>document.getElementById(id);
@@ -355,7 +404,7 @@ function copia(t,msg){
   else { const c=$('cmd'); if(c){ c.focus(); c.select(); } aviso('nao consegui copiar sozinho; o texto esta selecionado, aperte Ctrl+C'); }
 }
 $('copiar').onclick=()=>copia($('cmd').value,'comando copiado; cole no texto da placa (tecla E na placa).');
-function mostraIcones(){const s=$('iconesel'); if(!icones.length){s.innerHTML='<small>nenhum ícone escolhido (o texto sai sem ícone)</small>';return;}
+function mostraIcones(){const s=$('iconesel'); if(!icones.length){s.innerHTML='<small>'+(document.body.classList.contains('en')?'no icon chosen (the text comes out without icons)':'nenhum ícone escolhido (o texto sai sem ícone)')+'</small>';return;}
   const nl=Math.max(1,$('txt').value.split('\\n').length); icones.forEach(o=>{if(o.linha>nl)o.linha=nl;});
   const optL=(o)=>Array.from({length:nl},(_,k)=>`<option value="${k+1}"${o.linha===k+1?' selected':''}>linha ${k+1}</option>`).join('');
   s.innerHTML=icones.map((o,i)=>`<span style="display:inline-flex;align-items:center;gap:6px;background:#3a2c20;border:1px solid #6b4c2a;border-radius:6px;padding:3px 6px"><img src="png/${o.n}.png" alt=""><span>${o.n}</span>
@@ -371,6 +420,29 @@ $('limpar').onclick=()=>{$('txt').value='';icones=[];coresPalavra={};palavraSel=
 function escolhe(nome){icones.push({n:nome,pos:'antes',linha:1});mostraIcones();monta();}
 const g=$('g'), f=$('f'), n=$('n'); const figs=[...g.children];
 const BBC=__BBCJSON__;
+// IDIOMA. Os textos visiveis existem nos DOIS idiomas dentro da pagina (classes .pt/.en),
+// e o CSS esconde um. Aqui ficam so os que sao ATRIBUTO, que o CSS nao alcanca.
+// Por que dois idiomas no mesmo arquivo, e nao um arquivo por lingua: arquivo separado
+// envelhece pela metade -- um dos dois acaba desatualizado sem ninguem notar.
+const ATTR = {
+  txt: ["Ex.: Carpintaria\\nLenhador", "e.g. Carpentry\\nLumberjack"],
+  f:   ["filtrar pelo nome (ex.: Store, Market, Sign, Log, Bar)...",
+        "filter by name (e.g. Store, Market, Sign, Log, Bar)..."]
+};
+const OPC = { alinha: [["centro","esquerda","direita"], ["center","left","right"]] };
+function lingua(x){
+  const en = (x === "en");
+  document.body.classList.toggle("en", en);
+  const i = en ? 1 : 0;
+  for (const id in ATTR){ const el = document.getElementById(id); if (el) el.placeholder = ATTR[id][i]; }
+  for (const id in OPC){ const el = document.getElementById(id); if (!el) continue;
+    OPC[id][i].forEach((txt,k) => { if (el.options[k]) el.options[k].textContent = txt; }); }
+  document.getElementById("lpt").classList.toggle("on", !en);
+  document.getElementById("len").classList.toggle("on", en);
+  document.documentElement.lang = en ? "en" : "pt-BR";
+  try { localStorage.setItem("bbc-lingua", x); } catch(e){}
+  if (typeof mostraIcones === "function") mostraIcones();
+}
 let catAberta=null;
 // Nome que vai para a placa: o do nosso mod quando existir e a caixa estiver ligada.
 // Ordem: icone do nosso mod > nome corrigido (sem o 'Item' que nao existe) > o do arquivo.
@@ -395,6 +467,12 @@ $('cats').onclick=e=>{const b=e.target.closest('.catcard'); if(!b)return;
   catAberta=b.dataset.cat; filtra(); window.scrollTo({top:document.querySelector('header').offsetTop,behavior:'smooth'});};
 $('btVolta').onclick=()=>{catAberta=null; filtra();};
 $('porCat').onchange=()=>{catAberta=null; filtra();};
+document.getElementById("lpt").onclick = () => lingua("pt");
+document.getElementById("len").onclick = () => lingua("en");
+let _lg = "pt";
+try { _lg = localStorage.getItem("bbc-lingua")
+      || ((navigator.language||"").toLowerCase().startsWith("pt") ? "pt" : "en"); } catch(e){}
+lingua(_lg);
 f.oninput=filtra; filtra(); trocaImagens(); marca(); monta();
 function trocaImagens(){
   for(const el of figs){ const n=el.querySelector('figcaption').textContent;
