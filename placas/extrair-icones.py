@@ -13,8 +13,24 @@ PowerShell com reflexão, que lê o nome exato de cada recurso (casar por ordem 
         $s = $asm.GetManifestResourceStream($r); $b = New-Object byte[] $s.Length; [void]$s.Read($b,0,$b.Length); $s.Close()
         [System.IO.File]::WriteAllBytes("$dir\\png\\$($Matches[1]).png", $b) } }
 
-Este script só monta icones.html a partir da pasta png/ (1824 ícones em 09/09/2026: 1689 do jogo + 135 dos mods
-MarketMod, Gates, HotWheels, IceCream, Mixology, StorageMore). Sem ícone de skill (a tag aceita CarpentrySkill mesmo assim).
+Este script monta icones.html a partir de DUAS pastas de arte, e a segunda existe porque a
+primeira não bastava (medido em 21/09/2026, depois de a netcrazy gerar uma placa que saiu com
+engrenagem):
+
+  png/      1824 PNG que o GoodPrice embute -- NÃO é a fonte que o cliente usa para desenhar
+  png-mod/   219 PNG extraídos dos bundles dos próprios mods (extrair-icones-de-mod.py)
+
+Cruzando os nomes emitidos contra o que o CLIENTE realmente tem (gerar-procedencia.py):
+
+  1581  JOGO   -- existe no atlas de ícones do cliente
+   219  MOD    -- existe em bundle de mod instalado, e leva etiqueta MOD na galeria
+   108  ÓRFÃO  -- NINGUÉM entrega; copiar a tag dá ENGRENAGEM na placa. 94 terminam em
+                 `Group` e são agrupamentos internos do GoodPrice, não classes do jogo.
+                 Ficam apagados, com `!` vermelho, e "sai engrenagem" no montador.
+
+A galeria antiga oferecia os 108 que não funcionam e escondia 84 que funcionam -- entre eles o
+`IceCreamSkill`, que foi exatamente o caso relatado. Ícone de profissão existe: a tag aceita
+`CarpentrySkill` (sem o sufixo `Item`), e os 34 nomes com esse defeito saem corrigidos.
 
 Tags usadas no montador, todas do próprio jogo (strings do binário; icon e nobg confirmados na wiki oficial Printing_Press):
   <align="center">…</align>  <color=#RRGGBB>…</color>  <size=NN%>…</size>  <icon name="X" type="">texto</icon>  type="nobg"
@@ -24,7 +40,24 @@ import os, html
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 PNG_DIR = os.path.join(AQUI, "png")
+
+# DUAS pastas de arte, e a segunda existe porque a primeira nao basta:
+#
+#   png/      -- os 1824 PNG que o GoodPrice embute
+#   png-mod/  -- os 219 que os MODS INSTALADOS entregam de verdade, lidos do
+#                .unity3d de cada um por extrair-icones-de-mod.py
+#
+# O GoodPrice nao e a fonte que o cliente usa, e as listas nao batem: faltavam 84
+# icones de mod nesta galeria, entre eles o da PROFISSAO ICECREAM -- que foi o que a
+# netcrazy tentou pegar em 21/09 e saiu engrenagem na placa.
+PNGMOD_DIR = os.path.join(AQUI, "png-mod")
+_so_mod = set()
 nomes = sorted(f[:-4] for f in os.listdir(PNG_DIR) if f.endswith(".png"))
+if os.path.isdir(PNGMOD_DIR):
+    _tem = set(nomes)
+    _so_mod = {f[:-4] for f in os.listdir(PNGMOD_DIR)
+               if f.endswith(".png") and not f.startswith("_") and f[:-4] not in _tem}
+    nomes = sorted(_tem | _so_mod)
 
 # Icones de BORDA SOLIDA: type="nobg" NAO tem efeito neles, porque a arte nao tem
 # recorte -- o quadrado inteiro e opaco. Lista produzida por classificar-alfa.py e
@@ -35,17 +68,27 @@ if os.path.exists(_lst):
     SOLIDOS = {l.strip() for l in open(_lst, encoding="utf-8") if l.strip()}
 
 # Categoria de cada icone, de categorizar.py (tags do item -> classe-mae -> sufixo).
-# Icones do NOSSO mod (bundle com os prefabs renomeados para <Nome>BBC, com alfa).
-# So valem se IconesMixologiaBBC.unity3d estiver instalado no servidor.
-# Os icones da Mixologia saem SEMPRE com o nome do nosso mod. Nao ha caixa na
-# interface: decisao do Raul em 12/09/2026 -- "vamos colocar so os icones bbc que
-# criamos, substituindo os de mesmo nome".
 #
-# SE O TESTE DE 13/09 FALHAR (o cliente nao achar prefab de bundle de outro mod),
-# ponha USAR_BBC = False aqui e rode este script de novo: as placas voltam a pedir
-# os nomes originais. E uma linha, de proposito -- com a decisao num lugar so, em
-# vez de espalhada pelo codigo.
-USAR_BBC = True
+# ================== NAO RELIGUE ISTO. O TESTE FALHOU. ==================
+# A ideia era publicar os icones sob nomes proprios (<Nome>BBC) num bundle separado,
+# para nao depender de substituir o arquivo do autor. REFUTADO EM CAMPO em 14/09/2026,
+# com controle:
+#
+#     <icon name="AgaveJuiceItem">          icone do autor (com o fundo)
+#     <icon name="AgaveJuiceItemBBC">       engrenagem branca = "nao achei"
+#     <icon name="ZzTesteNaoExisteItem">    engrenagem branca IDENTICA
+#
+# O bundle CHEGOU ao cliente (5.247.791 bytes conferidos no PC do Raul). Os 71 prefabs
+# renomeados estavam la, corretos, e foram ignorados: o cliente resolve a tag de icone
+# pela CLASSE REGISTRADA NO SERVIDOR, e "AgaveJuiceItemBBC" nao e classe de nada.
+#
+# E o custo nao foi so nao funcionar: em 15/09 a Kris montou a placa DRINKS copiando
+# desta galeria, e os 8 icones sairam em branco. A galeria emitia nome invalido.
+#
+# O caminho que FUNCIONA e substituir o MixologyMod.unity3d do autor por um regravado
+# com as texturas em DXT5 (ver mixologia-icones/regravar-original.py) -- ai os nomes
+# continuam sendo os do autor, que sao classes de verdade.
+USAR_BBC = False
 
 # Nome que a tag <icon name="..."> aceita. O arquivo vem do GoodPrice e nem sempre
 # bate com a classe do jogo: profissao la e "TailoringSkillItem", no jogo e
@@ -81,20 +124,89 @@ if os.path.exists(_ce):
         if len(_q) == 2: CAT_EN[_q[0]] = _q[1]
 
 CAT = {}
-_cat = os.path.join(AQUI, "categorias.txt")
-if os.path.exists(_cat):
+# categorias.txt vem do categorizar.py, que classifica pelo que o objeto FAZ (os
+# [RequireComponent] coletados do servidor) -- o criterio certo. categorias-mod.txt
+# cobre so os icones que vieram dos bundles de mod, por nome, e NAO sobrescreve o
+# primeiro: a ordem de leitura e que garante a precedencia.
+for _cat in (os.path.join(AQUI, "categorias.txt"), os.path.join(AQUI, "categorias-mod.txt")):
+    if not os.path.exists(_cat):
+        continue
     for _l in open(_cat, encoding="utf-8"):
         _p = _l.rstrip().split("|")
-        if len(_p) == 2: CAT[_p[0]] = _p[1]
+        if len(_p) == 2 and _p[0] not in CAT: CAT[_p[0]] = _p[1]
 
-cards = "\n".join('<figure data-n="%s" data-solido="%d" data-cat="%s" data-bbc="%s" data-real="%s"><img src="png/%s.png" loading="lazy" alt="">%s%s%s<figcaption>%s</figcaption></figure>'
-                  % (html.escape(b.lower()), 1 if b in SOLIDOS else 0,
-                     html.escape(CAT.get(b, "Diversos")), html.escape(BBC.get(b, "")),
-                     html.escape(REAL.get(b, "")), html.escape(b),
-                     '<b class="fundo" title="sem recorte: sai com quadrado na placa, mesmo com nobg">fundo</b>' if (b in SOLIDOS and b not in BBC) else '',
-                     '<b class="bbc" title="temos versao recortada no nosso mod">BBC</b>' if b in BBC else '',
-                     '<b class="duvida" title="este nome nao corresponde a nenhuma classe do jogo -- pode nao aparecer na placa">?</b>' if b in DUVIDOSO else '',
-                     html.escape(b)) for b in nomes)
+# ICONES JA CORRIGIDOS NO SERVIDOR -- os que tem arte recortada em png-bbc/.
+#
+# Sao as 45 bebidas da Mixologia, cujo bundle foi regravado em DXT5 (com canal alfa) e
+# instalado SUBSTITUINDO o do autor. Para eles a etiqueta "fundo" passou a MENTIR, e a
+# previa tinha de mostrar a arte nova -- foi o que confundiu a montagem da placa DRINKS
+# em 15/09: a galeria dizia "sai com quadrado" de icones que ja nao saem.
+#
+# O NOME emitido continua sendo o do autor (AgaveJuiceItem), porque e a classe de verdade.
+# So a APARENCIA da arte mudou.
+CORRIGIDOS = set()
+_pb = os.path.join(AQUI, "png-bbc")
+if os.path.isdir(_pb):
+    CORRIGIDOS = {os.path.splitext(f)[0] for f in os.listdir(_pb) if f.endswith(".png")}
+
+# DE ONDE VEM CADA ICONE -- e quais o cliente nao tem.
+#
+# Gerado por gerar-procedencia.py, que confere contra a fonte que o CLIENTE consulta:
+# o atlas de icones do cliente (jogo base) e o prefab no .unity3d de cada mod. Tres
+# valores: JOGO, MOD:<nome do mod>, ORFAO.
+#
+# ORFAO e o que importa: ninguem entrega aquele nome, entao copiar a tag da
+# ENGRENAGEM na placa. Sao 108 -- 94 sao os *Group, que sao agrupamentos internos do
+# GoodPrice e nao itens; o resto e mod que nao temos, classe abstrata do jogo
+# (SkillBookItem) e um erro de digitacao do proprio GoodPrice (HewnLogGoup).
+#
+# Isto ja custou duas placas em campo: a DRINKS da Kris em 15/09 e a da netcrazy em
+# 21/09. A galeria AVISA em vez de esconder -- regra do Raul, de 12/09 -- mas agora
+# avisa pela pergunta certa ("o cliente entrega este icone?") e nao pela anterior
+# ("este nome e uma classe?"), que deixava passar os *Group e os mods ausentes.
+PROC, MODDE = {}, {}
+_pr = os.path.join(AQUI, "procedencia.txt")
+if os.path.exists(_pr):
+    for _l in open(_pr, encoding="utf-8"):
+        _q = _l.rstrip().split("|")
+        if len(_q) == 3:
+            PROC[_q[0]] = _q[2]
+            if _q[2].startswith("MOD:"):
+                MODDE[_q[0]] = _q[2][4:]
+ORFAO = {k for k, v in PROC.items() if v == "ORFAO"}
+
+
+def _card(b):
+    corrigido = b in CORRIGIDOS
+    solido = 1 if (b in SOLIDOS and not corrigido) else 0
+    if corrigido:
+        img = "png-bbc/%s.png" % b
+    elif b in _so_mod:
+        img = "png-mod/%s.png" % b
+    else:
+        img = "png/%s.png" % b
+    sel = ""
+    if b in SOLIDOS and not corrigido and b not in BBC:
+        sel = '<b class="fundo" title="sem recorte: sai com quadrado na placa, mesmo com nobg">fundo</b>'
+    elif corrigido:
+        sel = '<b class="ok" title="arte recortada instalada no servidor: sai sem quadrado">ok</b>'
+    modn = MODDE.get(b, "")
+    return ('<figure data-n="%s" data-solido="%d" data-cat="%s" data-bbc="%s" data-real="%s"'
+            ' data-mod="%s" data-orfao="%d">'
+            '<img src="%s" loading="lazy" alt="">%s%s%s%s<figcaption>%s</figcaption></figure>'
+            % (html.escape(b.lower()), solido,
+               html.escape(CAT.get(b, "Diversos")), html.escape(BBC.get(b, "")),
+               html.escape(REAL.get(b, "")), html.escape(modn), 1 if b in ORFAO else 0,
+               html.escape(img), sel,
+               '<b class="bbc" title="temos versao recortada no nosso mod">BBC</b>' if b in BBC else '',
+               # etiqueta MOD: este icone vem de um mod, nao do jogo base. O title diz
+               # de QUAL mod -- se aquele mod sair do servidor, o icone para de existir
+               # e a placa que o usa passa a mostrar engrenagem.
+               ('<b class="mod" title="icone do mod %s -- se este mod sair do servidor, a placa passa a mostrar engrenagem">mod</b>' % html.escape(modn)) if modn else '',
+               '<b class="duvida" title="NENHUM mod instalado nem o jogo entrega este icone: copiar esta tag mostra ENGRENAGEM na placa">!</b>' if b in ORFAO else '',
+               html.escape(b)))
+
+cards = "\n".join(_card(b) for b in nomes)
 
 # cartoes da vista por categoria: icone representativo + nome + contagem
 _porcat = {}
@@ -204,10 +316,19 @@ figure .fundo{position:absolute;top:6px;right:6px;background:#8a2f2f;color:#ffe9
 figure[data-solido="1"] img{outline:2px dashed #8a2f2f;outline-offset:-2px}
 figure .bbc{position:absolute;top:6px;left:6px;background:#2f6b4f;color:#e7f0ea;font-size:10px;
   font-weight:700;letter-spacing:.04em;padding:1px 5px;border-radius:3px}
+/* arte ja recortada e instalada no servidor -- este NAO sai com quadrado */
+figure .ok{position:absolute;top:6px;right:6px;background:#2f6b4f;color:#e7f0ea;font-size:10px;
+  font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:1px 5px;border-radius:3px}
 /* com os icones BBC ligados, o aviso de "sai com fundo" nao vale: a nossa versao tem alfa */
 figure[data-bbc]:not([data-bbc=""]) img{outline:none}
-figure .duvida{position:absolute;bottom:34px;right:6px;background:#7a5a12;color:#ffeec2;font-size:11px;
+/* NAO EXISTE para o cliente: copiar esta tag da engrenagem na placa. Vermelho, nao
+   amarelo -- o aviso anterior ("?") era sobre nome de classe e nao pegava os *Group. */
+figure .duvida{position:absolute;bottom:34px;right:6px;background:#8a2f2f;color:#ffe9e9;font-size:11px;
   font-weight:700;padding:0 6px;border-radius:3px}
+figure[data-orfao="1"] img{opacity:.45;filter:grayscale(.7)}
+/* icone que vem de MOD, nao do jogo base. O title diz de qual mod. */
+figure .mod{position:absolute;bottom:34px;left:6px;background:#2a4a6b;color:#dce9f5;font-size:10px;
+  font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:1px 5px;border-radius:3px}
 footer{padding:16px 22px;font-size:14.5px;opacity:.8}
 /* DOIS IDIOMAS DENTRO DA PAGINA. Nao ha traducao por arquivo separado de proposito:
    um arquivo so nunca fica com metade traduzida, e a bandeira troca na hora. */
@@ -324,10 +445,18 @@ Os <b style="background:#8a2f2f;color:#ffe9e9;padding:1px 5px;border-radius:3px;
 problema de um mod só. Os que temos versão recortada aparecem com a etiqueta
 <b style="background:#2f6b4f;color:#e7f0ea;padding:1px 5px;border-radius:3px;font-size:10px">BBC</b>:
 com a caixa <b>ícones BBC</b> ligada, a placa sai com o nome do nosso mod.<br>
-O <b style="background:#7a5a12;color:#ffeec2;padding:0 6px;border-radius:3px;font-size:11px">?</b> marca
-__D__ nomes que <b>não correspondem a nenhuma classe do jogo</b> (quase todos <code>*Group</code>, que são
-agrupamentos do GoodPrice): podem não aparecer na placa. E __R__ ícones de profissão saíam com um
-<code>Item</code> no fim que não existe — agora saem certos (<code>TailoringSkill</code>, não
+O <b style="background:#8a2f2f;color:#ffe9e9;padding:0 6px;border-radius:3px;font-size:11px">!</b> marca
+__O__ ícones que <b>nem o jogo nem nenhum mod instalado entrega</b> — copiar a tag deles mostra
+<b>engrenagem</b> na placa. Quase todos são <code>*Group</code>, que são agrupamentos internos do
+GoodPrice e não itens; o resto é mod que não temos aqui. Eles ficam apagados e avisados em vez de
+escondidos, mas <b>não use</b>.<br>
+A <b style="background:#2a4a6b;color:#dce9f5;padding:1px 5px;border-radius:3px;font-size:10px">MOD</b>
+marca __M__ ícones que vêm de um <b>mod</b>, não do jogo base — passe o mouse para ver de qual. Se
+aquele mod sair do servidor, a placa que usa o ícone passa a mostrar engrenagem.<br>
+Esta lista é conferida contra <b>o que o cliente realmente tem</b>: o atlas de ícones do jogo e o
+pacote de cada mod instalado. Foi assim que entraram __X__ ícones de mod que faltavam aqui — entre
+eles o da <b>profissão IceCream</b>. E __R__ ícones de profissão saíam com um <code>Item</code> no
+fim que não existe — agora saem certos (<code>TailoringSkill</code>, não
 <code>TailoringSkillItem</code>).<br>
 Também do binário, ainda pouco usados: <code>iconcolor='RRGGBBAA'</code> (tinge o ícone, com canal alfa) e <code>overlayimg='X' overlaycolor='RRGGBBAA'</code>. Aspas <b>simples</b> nesses dois.</span>
 <span class="en">Tags from the game itself: &lt;align&gt;, &lt;color&gt;, &lt;size&gt;, &lt;b&gt; and &lt;icon&gt;
@@ -339,9 +468,17 @@ base game</b> (garbage, scrap, filters, upgrades) and 123 from mods, so it is no
 Icons we have re-cut show the
 <b style="background:#2f6b4f;color:#e7f0ea;padding:1px 5px;border-radius:3px;font-size:10px">BBC</b>
 badge: the sign command then uses our mod's name.<br>
-The <b style="background:#7a5a12;color:#ffeec2;padding:0 6px;border-radius:3px;font-size:11px">?</b>
-badge marks __D__ names that <b>match no class in the game</b> (nearly all <code>*Group</code>, which are
-GoodPrice groupings): they may not show up. And __R__ profession icons used to come out with an
+The <b style="background:#8a2f2f;color:#ffe9e9;padding:0 6px;border-radius:3px;font-size:11px">!</b>
+badge marks __O__ icons that <b>neither the game nor any installed mod delivers</b> — copying their tag
+shows a <b>cogwheel</b> on the sign. Nearly all are <code>*Group</code>, internal GoodPrice groupings
+rather than items; the rest belong to mods we don't run. They are dimmed and flagged instead of
+hidden, but <b>don't use them</b>.<br>
+The <b style="background:#2a4a6b;color:#dce9f5;padding:1px 5px;border-radius:3px;font-size:10px">MOD</b>
+badge marks __M__ icons that come from a <b>mod</b>, not the base game — hover to see which one. If
+that mod leaves the server, any sign using the icon starts showing a cogwheel.<br>
+This list is checked against <b>what the client actually has</b>: the game's icon atlas and each
+installed mod's asset bundle. That is how __X__ missing mod icons got in — including the
+<b>IceCream profession</b>. And __R__ profession icons used to come out with an
 <code>Item</code> suffix that does not exist — they are correct now (<code>TailoringSkill</code>, not
 <code>TailoringSkillItem</code>).<br>
 Also from the binary, still little used: <code>iconcolor='RRGGBBAA'</code> (tints the icon, with an alpha
@@ -389,7 +526,7 @@ function monta(){
   const cls=$('nobg').checked?'':'bg';
   // Com "icones BBC" ligado, a previa desenha a versao RECORTADA -- senao ela mostraria
   // o quadrado que o nosso mod justamente tira, e mentiria sobre o resultado na placa.
-  const src=n=>BBC[n] ? `png-bbc/${n}.png` : `png/${n}.png`;
+  const src=n=>BBC[n] ? `png-bbc/${n}.png` : (SOMOD.has(n) ? `png-mod/${n}.png` : `png/${n}.png`);
   const imgs=(lista)=>lista.map(n=>`<img src="${src(n)}" class="${BBC[n]?'':cls}" alt="">`).join('');
   const H=linhas.map((l,i)=>pintaHtml(l,i));
   const pvLinhas=H.map((t,i)=>imgs(icones.filter(o=>o.pos==='antes'&&o.linha===i+1).map(o=>o.n))+t+imgs(icones.filter(o=>o.pos==='depois'&&o.linha===i+1).map(o=>o.n)));
@@ -403,7 +540,7 @@ function monta(){
 $('halo').addEventListener('change',palavras);   // as fichas de palavra tambem ganham/perdem o halo
 $('txt').addEventListener('input',()=>{palavras();mostraIcones();});
 /* COPIAR -- por que nao e so navigator.clipboard: essa API so existe em pagina SEGURA (https ou
-   localhost). Dentro do painel do servidor a pagina e http://ENDERECO-DO-SERVIDOR:27041/placas/, entao
+   localhost). Dentro do painel do servidor a pagina e http://<ip-do-servidor>:<porta-do-painel>/placas/, entao
    navigator.clipboard vem UNDEFINED, a linha estourava e o botao nao fazia nada nem avisava
    (defeito relatado pelo Raul em 10/09). Agora: tenta a API, cai para o execCommand antigo, que
    funciona em http, e se nem isso der, seleciona o texto e pede Ctrl+C. Sempre avisa. */
@@ -431,7 +568,7 @@ $('copiar').onclick=()=>copia($('cmd').value,'comando copiado; cole no texto da 
 function mostraIcones(){const s=$('iconesel'); if(!icones.length){s.innerHTML='<small>'+(document.body.classList.contains('en')?'no icon chosen (the text comes out without icons)':'nenhum ícone escolhido (o texto sai sem ícone)')+'</small>';return;}
   const nl=Math.max(1,$('txt').value.split('\\n').length); icones.forEach(o=>{if(o.linha>nl)o.linha=nl;});
   const optL=(o)=>Array.from({length:nl},(_,k)=>`<option value="${k+1}"${o.linha===k+1?' selected':''}>linha ${k+1}</option>`).join('');
-  s.innerHTML=icones.map((o,i)=>`<span style="display:inline-flex;align-items:center;gap:6px;background:#3a2c20;border:1px solid #6b4c2a;border-radius:6px;padding:3px 6px"><img src="png/${o.n}.png" alt=""><span>${o.n}</span>
+  s.innerHTML=icones.map((o,i)=>`<span style="display:inline-flex;align-items:center;gap:6px;background:${ORFAOS.has(o.n)?'#4a1f1f':'#3a2c20'};border:1px solid ${ORFAOS.has(o.n)?'#8a2f2f':'#6b4c2a'};border-radius:6px;padding:3px 6px"><img src="${BBC[o.n]?`png-bbc/${o.n}.png`:(SOMOD.has(o.n)?`png-mod/${o.n}.png`:`png/${o.n}.png`)}" alt=""><span>${o.n}</span>${ORFAOS.has(o.n)?'<b style="background:#8a2f2f;color:#ffe9e9;font-size:10px;padding:1px 5px;border-radius:3px" title="ninguem entrega este icone: vai sair ENGRENAGEM na placa">sai engrenagem</b>':''}
     <select data-pos="${i}" style="padding:3px 6px"><option value="antes"${o.pos==='antes'?' selected':''}>antes do texto</option><option value="depois"${o.pos==='depois'?' selected':''}>depois do texto</option><option value="abaixo"${o.pos==='abaixo'?' selected':''}>linha de ícones embaixo</option></select>
     <select data-lin="${i}" style="padding:3px 6px"${o.pos==='abaixo'?' disabled':''}>${optL(o)}</select>
     <button class="sec" data-i="${i}" style="padding:2px 7px">x</button></span>`).join(' ')
@@ -444,6 +581,12 @@ $('limpar').onclick=()=>{$('txt').value='';icones=[];coresPalavra={};palavraSel=
 function escolhe(nome){icones.push({n:nome,pos:'antes',linha:1});mostraIcones();monta();}
 const g=$('g'), f=$('f'), n=$('n'); const figs=[...g.children];
 const BBC=__BBCJSON__;
+// Icones que vieram do bundle de um MOD e nao existem em png/. Sem isto a lista
+// do montador pedia png/<nome>.png e desenhava imagem quebrada nos 84 novos.
+const SOMOD=new Set(__SOMODJSON__);
+// Nomes que NINGUEM entrega: dao engrenagem na placa. O montador avisa em vez de
+// deixar a pessoa descobrir no jogo -- foi o que aconteceu com a placa da netcrazy.
+const ORFAOS=new Set(__ORFAOJSON__);
 // IDIOMA. Os textos visiveis existem nos DOIS idiomas dentro da pagina (classes .pt/.en),
 // e o CSS esconde um. Aqui ficam so os que sao ATRIBUTO, que o CSS nao alcanca.
 // Por que dois idiomas no mesmo arquivo, e nao um arquivo por lingua: arquivo separado
@@ -509,7 +652,7 @@ function trocaImagens(){
 g.onclick=e=>{const fig=e.target.closest('figure'); if(!fig)return; const nome=fig.querySelector('figcaption').textContent;
   const real=nomeReal(fig); const tag='<icon name="'+real+'"'+($('nobg').checked?' type="nobg"':' type=""')+'></icon>'; copia(tag,'ícone copiado: '+tag);
   figs.forEach(x=>x.classList.remove('copiado')); fig.classList.add('copiado'); n.textContent='copiado: '+tag; escolhe(nome); window.scrollTo({top:0,behavior:'smooth'});};
-</script></body></html>""".replace("__N__", str(len(nomes))).replace("__S__", str(len(SOLIDOS))).replace("__CATCARDS__", catcards).replace("__CATENJSON__", __import__("json").dumps(CAT_EN, ensure_ascii=False)).replace("__D__", str(len(DUVIDOSO))).replace("__R__", str(len(REAL))).replace("__BBCJSON__", __import__("json").dumps(BBC, ensure_ascii=False)).replace("__CARDS__", cards)
+</script></body></html>""".replace("__N__", str(len(nomes))).replace("__S__", str(len(SOLIDOS))).replace("__CATCARDS__", catcards).replace("__CATENJSON__", __import__("json").dumps(CAT_EN, ensure_ascii=False)).replace("__O__", str(len(ORFAO))).replace("__M__", str(len(MODDE))).replace("__X__", str(len(_so_mod))).replace("__R__", str(len(REAL))).replace("__BBCJSON__", __import__("json").dumps(BBC, ensure_ascii=False)).replace("__SOMODJSON__", __import__("json").dumps(sorted(_so_mod), ensure_ascii=False)).replace("__ORFAOJSON__", __import__("json").dumps(sorted(ORFAO), ensure_ascii=False)).replace("__CARDS__", cards)
 with open(os.path.join(AQUI, "icones.html"), "w", encoding="utf-8") as fh:
     fh.write(pagina)
 print("icones.html com", len(nomes), "icones + montador")

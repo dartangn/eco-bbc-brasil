@@ -1,0 +1,84 @@
+AdvancedMixologyCoffeeExpertTalentGroup|Grupos de item
+AdvancedMixologyFocusedWorkflowTalentGroup|Grupos de item
+AdvancedMixologyFrugalWorkspaceTalentGroup|Grupos de item
+AdvancedMixologyLavishWorkspaceTalentGroup|Grupos de item
+AdvancedMixologyParallelProcessingTalentGroup|Grupos de item
+AdvancedMixologySkill|Profissões
+AdvancedMixologySkillBook|Pesquisa
+AdvancedMixologySkillScroll|Pesquisa
+AdvancedMixologyTeaExpertTalentGroup|Grupos de item
+CastleDrawBridgeItem|Blocos e construção
+CocktailHandsTalentGroup|Grupos de item
+CocktailItem|Comida
+CoffeeItem|Comida
+CoffeeMasterTalentGroup|Grupos de item
+ConstructableItem|Diversos
+ContainerItem|Diversos
+CrushedRockItem|Diversos
+Ecopulse|Diversos
+ExcavatableItem|Diversos
+FoodTuktukItem|Diversos
+GasolineWhetstoneItem|Ferramentas
+GateCornerBorderFenceBarForm|Blocos e construção
+GateCornerBorderFenceForm|Blocos e construção
+GateCornerBorderSpikeForm|Blocos e construção
+GateCornerBorderSpikeHalfForm|Blocos e construção
+GateCornerBorderSpikeLowForm|Blocos e construção
+GateCornerFenceBarForm|Blocos e construção
+GateCornerFenceForm|Blocos e construção
+GateCornerSpikeForm|Blocos e construção
+GateCornerSpikeHalfForm|Blocos e construção
+GateCornerSpikeLowForm|Blocos e construção
+GateDiagonalFenceForm|Blocos e construção
+GateDiagonalSpikeForm|Blocos e construção
+GateDiagonalSpikeHalfForm|Blocos e construção
+GateDiagonalSpikeLowForm|Blocos e construção
+GateWallBorderFenceBarForm|Blocos e construção
+GateWallBorderFenceForm|Blocos e construção
+GateWallBorderSpikeForm|Blocos e construção
+GateWallBorderSpikeHalfForm|Blocos e construção
+GateWallBorderSpikeLowForm|Blocos e construção
+GateWallFenceBarForm|Blocos e construção
+GateWallFenceForm|Blocos e construção
+GateWallSpikeAscending1Form|Blocos e construção
+GateWallSpikeAscending2Form|Blocos e construção
+GateWallSpikeForm|Blocos e construção
+GateWallSpikeHalfForm|Blocos e construção
+GateWallSpikeLowForm|Blocos e construção
+Grande_PoubelleItem|Diversos
+IceCreamHuckleberriesConeTalentGroup|Grupos de item
+IceCreamMysticForestTalentGroup|Grupos de item
+IceCreamPineappleConeTalentGroup|Grupos de item
+IceCreamPinkPotionTalentGroup|Grupos de item
+IceCreamSkill|Profissões
+IceCreamSkillBook|Pesquisa
+IceCreamSkillScroll|Pesquisa
+IronWhetstoneItem|Ferramentas
+JuiceItem|Comida
+MarketModEcopedia|Lojas
+MixologyDesertExpertTalentGroup|Grupos de item
+MixologyFieldExpertTalentGroup|Grupos de item
+MixologyFocusedWorkflowTalentGroup|Grupos de item
+MixologyForrestExpertTalentGroup|Grupos de item
+MixologyFrugalWorkspaceTalentGroup|Grupos de item
+MixologyLavishProteinTalentGroup|Grupos de item
+MixologyLavishWorkspaceTalentGroup|Grupos de item
+MixologyParallelProcessingTalentGroup|Grupos de item
+MixologyProteinExpertTalentGroup|Grupos de item
+MixologySkill|Profissões
+MixologySkillBook|Pesquisa
+MixologySkillScroll|Pesquisa
+MixologyTropicalExpertTalentGroup|Grupos de item
+PumpgasItem|Diversos
+RepairToolItem|Ferramentas
+SilicaItem|Diversos
+SlowHandsTalentGroup|Grupos de item
+SteelWhetstoneItem|Ferramentas
+StoneWhetstoneItem|Ferramentas
+TeaItem|Comida
+TeaLoverTalentGroup|Grupos de item
+ToolBreakerItem|Diversos
+Totem_EnglishItem|Diversos
+TractorWhetstoneItem|Ferramentas
+WoodWhetstoneItem|Ferramentas
+WoodenDrawBridgeItem|Blocos e construção
