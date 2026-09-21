@@ -1,6 +1,6 @@
 # Mods do servidor Eco — BBC-Brasil
 
-Arquivos que **modificam o jogo** no servidor [BBC-Brasil 5X](http://ENDERECO-DO-SERVIDOR:27041)
+Arquivos que **modificam o jogo** no servidor BBC-Brasil 5X
 (Eco 0.14.1.1, Linux). São mods próprios em C#, geradores que os produzem, e scripts que
 ajustam a configuração do jogo.
 

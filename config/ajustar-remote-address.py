@@ -3,12 +3,15 @@
 """
 ajustar-remote-address.py -- grava RemoteAddress e WebServerUrl no Network.eco.
 
-    sudo -u ecosrv python3 /opt/eco/scripts-py/ajustar-remote-address.py --seco   # so mostra
-    sudo -u ecosrv python3 /opt/eco/scripts-py/ajustar-remote-address.py          # grava
+    python3 ajustar-remote-address.py --host SEU.HOST --seco   # so mostra
+    python3 ajustar-remote-address.py --host SEU.HOST          # grava
+
+--host e o endereco PUBLICO do seu servidor (IP ou DNS). As portas NAO sao
+pedidas: elas vem do proprio Network.eco, porque cada servidor usa as suas.
 
 RODAR COM O SERVIDOR PARADO (o Eco regrava os Configs ao desligar).
 
-Por que (07/09/2026): jogadoras entram por IP direto (ENDERECO-DO-SERVIDOR:27040) mas pela LISTA
+Por que (07/09/2026): jogadoras entravam por IP direto, mas pela LISTA
 publica "aparece e nao baixa nada". No arranque das 16:50 o servidor logou
 "No UPnP device with public ip was found" e o Network.eco tem RemoteAddress = "" e
 WebServerUrl = "". A wiki oficial (Server_Configuration/Network.eco) e o texto do proprio
@@ -20,17 +23,32 @@ exato tira a adivinhacao do caminho. Formato do jogo: remote_host[:port].
 import json, shutil, sys, time
 
 CFG = "/opt/eco/server/Configs/Network.eco"
-REMOTO = "ENDERECO-DO-SERVIDOR:27040"
-WEB = "http://ENDERECO-DO-SERVIDOR:27041"
 SECO = "--seco" in sys.argv
+
+# O host publico vem da linha de comando. Sem ele o script SAI sem tocar em nada --
+# gravar o endereco de outro servidor seria pior que nao gravar (o jogador entraria
+# pela lista e cairia em outro lugar).
+HOST = ""
+for i, a in enumerate(sys.argv):
+    if a == "--host" and i + 1 < len(sys.argv):
+        HOST = sys.argv[i + 1]
+    elif a.startswith("--host="):
+        HOST = a.split("=", 1)[1]
+if not HOST:
+    sys.exit("[XX] falta --host SEU.HOST (o endereco publico do SEU servidor)")
 
 with open(CFG, "r", encoding="utf-8") as f:
     d = json.load(f)
 for k in ("RemoteAddress", "WebServerUrl", "GameServerPort", "WebServerPort"):
     if k not in d:
         sys.exit("[XX] nao achei %s no Network.eco -- nao vou tocar" % k)
-if d["GameServerPort"] != 27040 or d["WebServerPort"] != 27041:
-    sys.exit("[XX] portas inesperadas: %s/%s" % (d["GameServerPort"], d["WebServerPort"]))
+# As portas sao LIDAS, nao exigidas. A versao anterior abortava com "portas
+# inesperadas" em qualquer servidor que nao usasse as nossas -- ou seja, em todos.
+for k in ("GameServerPort", "WebServerPort"):
+    if not isinstance(d[k], int) or not (1 <= d[k] <= 65535):
+        sys.exit("[XX] %s nao e uma porta valida: %r" % (k, d[k]))
+REMOTO = "%s:%d" % (HOST, d["GameServerPort"])
+WEB = "http://%s:%d" % (HOST, d["WebServerPort"])
 print("=== Network.eco ===")
 print("  RemoteAddress  %r -> %r" % (d["RemoteAddress"], REMOTO))
 print("  WebServerUrl   %r -> %r" % (d["WebServerUrl"], WEB))

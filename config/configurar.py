@@ -61,6 +61,23 @@ DESC = base64.b64decode(DESC_B64).decode("utf-8")
 ADMINS = [
 ]
 
+# O endereco PUBLICO do seu servidor, e as portas que ele usa.
+#
+# HOST_PUBLICO alimenta RemoteAddress e WebServerUrl. PROVADO EM CAMPO em
+# 07/09/2026: sem esses dois campos o servidor APARECE na lista publica e entrar
+# por ela nao baixa nada -- quando o UPnP falha (atras de NAT), a deteccao
+# automatica do endereco nao acha o IP publico. Por IP direto sempre funcionou, e
+# foi isso que escondeu o problema por semanas. Formato do jogo: host[:porta].
+#
+# Vazio de proposito, porque este repositorio e publico: deixando vazio o script
+# NAO ENCOSTA nesses dois campos e avisa, em vez de gravar o endereco de outro
+# servidor. Preencha com o IP ou o DNS do seu.
+#
+# As portas comecam nos PADROES do Eco. Troque se o seu servidor usa outras.
+HOST_PUBLICO = ""
+PORTA_JOGO = 3000     # UDP apenas
+PORTA_WEB = 3001      # TCP apenas
+
 
 def playtime():
     """168 caracteres, um por hora, comecando SEGUNDA 00h GMT.
@@ -167,14 +184,20 @@ net, alvo = carregar("Network.eco")
 if net is not None:
     por(net, "Name", NOME)
     por(net, "DetailedDescription", DESC)
-    por(net, "GameServerPort", 27040)      # UDP apenas
-    por(net, "WebServerPort", 27041)       # TCP apenas
+    por(net, "GameServerPort", PORTA_JOGO)
+    por(net, "WebServerPort", PORTA_WEB)
     por(net, "PublicServer", False)        # religar ao abrir de verdade
     # 07/09/2026, provado em campo: sem estes dois, o servidor aparece na lista publica
     # mas entrar por ela nao baixa nada (UPnP falha atras do MikroTik e a deteccao
     # automatica do endereco nao acha o IP publico). Por IP direto sempre funcionou.
-    por(net, "RemoteAddress", "ENDERECO-DO-SERVIDOR:27040")   # host:porta do jogo
-    por(net, "WebServerUrl", "http://ENDERECO-DO-SERVIDOR:27041")
+    if HOST_PUBLICO:
+        por(net, "RemoteAddress", "%s:%d" % (HOST_PUBLICO, PORTA_JOGO))
+        por(net, "WebServerUrl", "http://%s:%d" % (HOST_PUBLICO, PORTA_WEB))
+    else:
+        print("    [!!] HOST_PUBLICO vazio -- RemoteAddress e WebServerUrl NAO")
+        print("         foram tocados. Sem eles, entrar pela LISTA publica pode")
+        print("         nao baixar nada (ver o comentario no topo). Por IP direto")
+        print("         funciona de qualquer forma.")
     por(net, "Password", "")
     por(net, "DefaultSlots", -1)
     por(net, "ServerCategory", "Beginner")
@@ -280,11 +303,18 @@ if SECO:
     print("  modo seco: nada foi gravado, nada a conferir")
 else:
     checagens = [
-        ("Network.eco", "GameServerPort", 27040),
-        ("Network.eco", "WebServerPort", 27041),
+        ("Network.eco", "GameServerPort", PORTA_JOGO),
+        ("Network.eco", "WebServerPort", PORTA_WEB),
         ("Network.eco", "PublicServer", False),
-        ("Network.eco", "RemoteAddress", "ENDERECO-DO-SERVIDOR:27040"),
-        ("Network.eco", "WebServerUrl", "http://ENDERECO-DO-SERVIDOR:27041"),
+    ]
+    if HOST_PUBLICO:
+        checagens += [
+            ("Network.eco", "RemoteAddress",
+             "%s:%d" % (HOST_PUBLICO, PORTA_JOGO)),
+            ("Network.eco", "WebServerUrl",
+             "http://%s:%d" % (HOST_PUBLICO, PORTA_WEB)),
+        ]
+    checagens += [
         ("Network.eco", "ServerCategory", "Beginner"),
         ("Difficulty.eco", "GameSettings/AnimalBehavior", "DefensiveOnly"),
         ("Difficulty.eco",
